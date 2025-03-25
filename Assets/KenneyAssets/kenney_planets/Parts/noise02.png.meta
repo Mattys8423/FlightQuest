@@ -1,0 +1,1180 @@
+fileFormatVersion: 2
+guid: 4e407d7a17091b9408f4ffcb8a7efc79
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3094400425371146288
+    second: noise02_0
+  - first:
+      213: -5121303783567509497
+    second: noise02_1
+  - first:
+      213: 8971009085319718499
+    second: noise02_2
+  - first:
+      213: -7669355059615332499
+    second: noise02_3
+  - first:
+      213: 8472043076107724988
+    second: noise02_4
+  - first:
+      213: 7287025612870644116
+    second: noise02_5
+  - first:
+      213: 7240559239898060103
+    second: noise02_6
+  - first:
+      213: -6701450768164293432
+    second: noise02_7
+  - first:
+      213: -5599807648861279781
+    second: noise02_8
+  - first:
+      213: 1324141706421602151
+    second: noise02_9
+  - first:
+      213: -3615085836192170466
+    second: noise02_10
+  - first:
+      213: 4082388159696338374
+    second: noise02_11
+  - first:
+      213: 3444371646045509570
+    second: noise02_12
+  - first:
+      213: -5500726373979186787
+    second: noise02_13
+  - first:
+      213: -2669404726470823322
+    second: noise02_14
+  - first:
+      213: -150991910279184319
+    second: noise02_15
+  - first:
+      213: 7593777901664291853
+    second: noise02_16
+  - first:
+      213: 3676759069997953696
+    second: noise02_17
+  - first:
+      213: 3782890189568602011
+    second: noise02_18
+  - first:
+      213: -2142830713887967787
+    second: noise02_19
+  - first:
+      213: 3866579339668740760
+    second: noise02_20
+  - first:
+      213: 8550035201380678667
+    second: noise02_21
+  - first:
+      213: -47566267834704369
+    second: noise02_22
+  - first:
+      213: -4314034504788366022
+    second: noise02_23
+  - first:
+      213: -8794152598521902513
+    second: noise02_24
+  - first:
+      213: -994948505978214222
+    second: noise02_25
+  - first:
+      213: 5014565235068855593
+    second: noise02_26
+  - first:
+      213: 6935238736126905267
+    second: noise02_27
+  - first:
+      213: -3650944143796177152
+    second: noise02_28
+  - first:
+      213: -6826708239510311071
+    second: noise02_29
+  - first:
+      213: -990320180955208766
+    second: noise02_30
+  - first:
+      213: -2168804556426057095
+    second: noise02_31
+  - first:
+      213: -7226548675302234018
+    second: noise02_32
+  - first:
+      213: 7516066570366820558
+    second: noise02_33
+  - first:
+      213: -8891860931202087979
+    second: noise02_34
+  - first:
+      213: -6714674105963617596
+    second: noise02_35
+  - first:
+      213: -4824639602865853453
+    second: noise02_36
+  - first:
+      213: 1751486500228513094
+    second: noise02_37
+  - first:
+      213: -1910294529469781171
+    second: noise02_38
+  - first:
+      213: 7771705918772145017
+    second: noise02_39
+  - first:
+      213: -7991607741249642489
+    second: noise02_40
+  - first:
+      213: -2055632023681897272
+    second: noise02_41
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: noise02_0
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 862
+        width: 326
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d76fec353b7e05d0800000000000000
+      internalID: -3094400425371146288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_1
+      rect:
+        serializedVersion: 2
+        x: 522
+        y: 1010
+        width: 56
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7083899b7597de8b0800000000000000
+      internalID: -5121303783567509497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_2
+      rect:
+        serializedVersion: 2
+        x: 658
+        y: 985
+        width: 32
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 366a84f8b3d6f7c70800000000000000
+      internalID: 8971009085319718499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_3
+      rect:
+        serializedVersion: 2
+        x: 430
+        y: 941
+        width: 38
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d67884f053af09590800000000000000
+      internalID: -7669355059615332499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_4
+      rect:
+        serializedVersion: 2
+        x: 506
+        y: 913
+        width: 213
+        height: 65
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb865397a4eb29570800000000000000
+      internalID: 8472043076107724988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 737
+        width: 125
+        height: 133
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 491f354cf27b02560800000000000000
+      internalID: 7287025612870644116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_6
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 541
+        width: 608
+        height: 390
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 745db4d3442ab7460800000000000000
+      internalID: 7240559239898060103
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_7
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 849
+        width: 37
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c47ccb380aaff2a0800000000000000
+      internalID: -6701450768164293432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_8
+      rect:
+        serializedVersion: 2
+        x: 830
+        y: 847
+        width: 31
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd9ab17cc9c7942b0800000000000000
+      internalID: -5599807648861279781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_9
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 495
+        width: 166
+        height: 391
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7670a8bcddb406210800000000000000
+      internalID: 1324141706421602151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_10
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 581
+        width: 97
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1e3835e592a4ddc0800000000000000
+      internalID: -3615085836192170466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_11
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 650
+        width: 55
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6cdf5fdd66e87a830800000000000000
+      internalID: 4082388159696338374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_12
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 707
+        width: 34
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c758f453cddccf20800000000000000
+      internalID: 3444371646045509570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_13
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 613
+        width: 47
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d991958c18e79a3b0800000000000000
+      internalID: -5500726373979186787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_14
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 612
+        width: 23
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 66235fc5b8e54fad0800000000000000
+      internalID: -2669404726470823322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_15
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 557
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1400ad758a197edf0800000000000000
+      internalID: -150991910279184319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_16
+      rect:
+        serializedVersion: 2
+        x: 406
+        y: 498
+        width: 112
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d0c49eb94c4826960800000000000000
+      internalID: 7593777901664291853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_17
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 536
+        width: 62
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a27ce3d4e8760330800000000000000
+      internalID: 3676759069997953696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_18
+      rect:
+        serializedVersion: 2
+        x: 5
+        y: 486
+        width: 7
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9feb85b5968f7430800000000000000
+      internalID: 3782890189568602011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_19
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 486
+        width: 13
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d539e4a1d22342e0800000000000000
+      internalID: -2142830713887967787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_20
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 393
+        width: 78
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89ad1d46c69d8a530800000000000000
+      internalID: 3866579339668740760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_21
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 495
+        width: 45
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0c716337b3d7a670800000000000000
+      internalID: 8550035201380678667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_22
+      rect:
+        serializedVersion: 2
+        x: 301
+        y: 502
+        width: 30
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0edb6e3bb2075ff0800000000000000
+      internalID: -47566267834704369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_23
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 431
+        width: 59
+        height: 101
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a3daf4189787124c0800000000000000
+      internalID: -4314034504788366022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_24
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 125
+        width: 333
+        height: 410
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f4a06881ec4e4f580800000000000000
+      internalID: -8794152598521902513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_25
+      rect:
+        serializedVersion: 2
+        x: 1017
+        y: 475
+        width: 7
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b8ec53fa9b3132f0800000000000000
+      internalID: -994948505978214222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_26
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 419
+        width: 11
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9256d435380579540800000000000000
+      internalID: 5014565235068855593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_27
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 50
+        width: 527
+        height: 408
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3bb8f53d2eaee3060800000000000000
+      internalID: 6935238736126905267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_28
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 449
+        width: 23
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0077c3e05ad355dc0800000000000000
+      internalID: -3650944143796177152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_29
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 377
+        width: 13
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 16f61ce8609a241a0800000000000000
+      internalID: -6826708239510311071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_30
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 322
+        width: 176
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c3a348da0da142f0800000000000000
+      internalID: -990320180955208766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_31
+      rect:
+        serializedVersion: 2
+        x: 982
+        y: 402
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97ae9fa2fbbd6e1e0800000000000000
+      internalID: -2168804556426057095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_32
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 322
+        width: 29
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e586a88844426bb90800000000000000
+      internalID: -7226548675302234018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_33
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 299
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec027e259be6e4860800000000000000
+      internalID: 7516066570366820558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_34
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 261
+        width: 31
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d3868b1893c99480800000000000000
+      internalID: -8891860931202087979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_35
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 120
+        width: 92
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c2668bf97fa0d2a0800000000000000
+      internalID: -6714674105963617596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_36
+      rect:
+        serializedVersion: 2
+        x: 803
+        y: 99
+        width: 42
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3fb26edd7df6b0db0800000000000000
+      internalID: -4824639602865853453
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_37
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 36
+        width: 42
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64d330331b78e4810800000000000000
+      internalID: 1751486500228513094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_38
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 40
+        width: 54
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4be4922f354d75e0800000000000000
+      internalID: -1910294529469781171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_39
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 32
+        width: 170
+        height: 85
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 97be63b5b55aadb60800000000000000
+      internalID: 7771705918772145017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_40
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 23
+        width: 112
+        height: 54
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 700ad86c91b181190800000000000000
+      internalID: -7991607741249642489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: noise02_41
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 9
+        width: 124
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cce58fc09de873e0800000000000000
+      internalID: -2055632023681897272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
