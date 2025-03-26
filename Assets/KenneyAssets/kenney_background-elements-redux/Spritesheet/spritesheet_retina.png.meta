@@ -697,7 +697,30 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spritesheet_retina_0: 7876778663456921573
+      spritesheet_retina_1: -6189056439477425443
+      spritesheet_retina_10: -3510261339708307186
+      spritesheet_retina_11: 6494885282418824180
+      spritesheet_retina_12: 3195036490490572488
+      spritesheet_retina_13: -330007082908663308
+      spritesheet_retina_14: -9041869980429160024
+      spritesheet_retina_15: 4259875303197601842
+      spritesheet_retina_16: 59830549468455560
+      spritesheet_retina_17: -825557678669739629
+      spritesheet_retina_18: 8708046284482021551
+      spritesheet_retina_19: -6131623884240652173
+      spritesheet_retina_2: -4396228115839296232
+      spritesheet_retina_20: -9219349313646832486
+      spritesheet_retina_21: -6428316220948859356
+      spritesheet_retina_22: 2072291361677650194
+      spritesheet_retina_3: -1120644204975126484
+      spritesheet_retina_4: 5521840067270907411
+      spritesheet_retina_5: 398203176456871842
+      spritesheet_retina_6: -5887492580168509961
+      spritesheet_retina_7: -5492113219944081501
+      spritesheet_retina_8: 4548254963727186364
+      spritesheet_retina_9: -3329229026845536354
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

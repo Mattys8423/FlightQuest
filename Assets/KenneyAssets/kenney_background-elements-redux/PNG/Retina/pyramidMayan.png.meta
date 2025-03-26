@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      pyramidMayan_0: 1233406283554871835
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

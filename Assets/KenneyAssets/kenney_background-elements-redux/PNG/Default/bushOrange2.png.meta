@@ -147,7 +147,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      bushOrange2_0: 857996531349543635
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
