@@ -3,14 +3,15 @@ using UnityEngine;
 
 public class PlaneActions : MonoBehaviour
 {
+    private Vector2 startPos;
+    private bool isDragging = false;
+    private bool isFlying = false;
+    private Rigidbody2D rb;
+
     public float launchForce = 10f;
     public int NumberOfLaunch;
     public int trajectoryPoints = 30;
     public LineRenderer lineRenderer;
-
-    private Vector2 startPos;
-    private bool isDragging = false;
-    private Rigidbody2D rb;
 
     public float alpha = 45f; // Angle de lancement en degrés
     public float f2 = 0.1f; // Coefficient de friction
@@ -19,7 +20,7 @@ public class PlaneActions : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        rb.gravityScale = 1;
+        rb.gravityScale = 0;
         rb.isKinematic = true;
 
         lineRenderer.positionCount = trajectoryPoints;
@@ -48,7 +49,9 @@ public class PlaneActions : MonoBehaviour
                     Vector2 direction = startPos - endPos;
 
                     rb.isKinematic = false;
-                    rb.linearVelocity = direction * launchForce;
+                    isFlying = true;
+                    rb.AddForce(direction * launchForce, ForceMode2D.Impulse);
+                    this.GetComponent<Animator>().SetBool("IsFlying", true);
 
                     lineRenderer.enabled = false;
                     isDragging = false;
@@ -60,7 +63,15 @@ public class PlaneActions : MonoBehaviour
         }
     }
 
-    // Fonction pour afficher la trajectoire avec friction
+    void FixedUpdate()
+    {
+        if (isFlying)
+        {
+            // Appliquer la gravité personnalisée
+            rb.linearVelocity += new Vector2(0, -g * Time.fixedDeltaTime);
+        }
+    }
+
     void ShowTrajectory(Vector2 start, Vector2 velocity)
     {
         lineRenderer.enabled = true;
@@ -69,18 +80,15 @@ public class PlaneActions : MonoBehaviour
         Vector2 pos = start;
         Vector2 vel = velocity;
 
-        float dt = 0.1f;  // Intervalle de temps
+        float dt = 0.1f;
         List<float> liste_x = new List<float> { 0 };
         List<float> liste_y = new List<float> { 0 };
 
         float vx = vel.x;
         float vy = vel.y;
 
-        // Convertir alpha en radians
         float angleRad = alpha * Mathf.Deg2Rad;
-
-        // Initialiser la vitesse initiale en fonction de l'angle
-        float v0 = velocity.magnitude; // Vitesse initiale
+        float v0 = velocity.magnitude;
 
         // Calculer la trajectoire avec friction
         for (int i = 0; i < trajectoryPoints; i++)
@@ -98,5 +106,16 @@ public class PlaneActions : MonoBehaviour
 
         lineRenderer.positionCount = points.Count > trajectoryPoints ? trajectoryPoints : points.Count;
         lineRenderer.SetPositions(points.ToArray());
+    }
+
+//--------------------------------------------------------------------------//
+
+    public void StopPlane()
+    {
+        rb.isKinematic = true;
+        rb.constraints = RigidbodyConstraints2D.FreezePosition;
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        this.GetComponent<Animator>().SetBool("IsFlying", true);
+        isFlying = false;
     }
 }
