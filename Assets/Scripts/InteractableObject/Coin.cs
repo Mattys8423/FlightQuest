@@ -1,23 +1,20 @@
 using System.Collections;
 using UnityEngine;
 
-public class DetectLanding : MonoBehaviour
+public class Coin : MonoBehaviour
 {
+    [SerializeField] private WinCondition script;
+    [SerializeField] private GameObject Sparkles;
     private void OnTriggerEnter2D(Collider2D other)
     {
         Debug.Log(gameObject.name + " est entré en collision avec " + other.gameObject.name);
 
         // Vérifier si c'est un objet spécifique (ex: un joueur)
         if (other.CompareTag("Player"))
-        {
-            StartCoroutine(StopVelocity(other));
-            Debug.Log("PlayerHasWin");
+        {            
+            this.GetComponent<SpriteRenderer>().enabled = false;
+            Sparkles.GetComponent<Animator>().SetTrigger("Sparkles");
+            script.AddCoin(1);
         }
-    }
-
-    IEnumerator StopVelocity(Collider2D other)
-    {
-        yield return new WaitForSeconds(.1f);
-        other.attachedRigidbody.linearVelocity = Vector2.zero;
     }
 }
