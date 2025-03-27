@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +8,7 @@ public class PlaneActions : MonoBehaviour
     private bool isDragging = false;
     private bool isFlying = false;
     private Rigidbody2D rb;
+    [SerializeField] private Puff script;
 
     public float launchForce = 10f;
     public int NumberOfLaunch;
@@ -33,8 +35,10 @@ public class PlaneActions : MonoBehaviour
             case > 0:
                 if (Input.GetMouseButtonDown(0))
                 {
+                    StopPlane();
                     startPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                     isDragging = true;
+                    script.PlacePuff();
                 }
                 else if (Input.GetMouseButton(0) && isDragging)
                 {
@@ -48,6 +52,7 @@ public class PlaneActions : MonoBehaviour
                     Vector2 endPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                     Vector2 direction = startPos - endPos;
 
+                    StartCoroutine(script.LaunchPuff());
                     rb.isKinematic = false;
                     isFlying = true;
                     rb.AddForce(direction * launchForce, ForceMode2D.Impulse);
@@ -115,7 +120,7 @@ public class PlaneActions : MonoBehaviour
         rb.isKinematic = true;
         rb.constraints = RigidbodyConstraints2D.FreezePosition;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-        this.GetComponent<Animator>().SetBool("IsFlying", true);
+        this.GetComponent<Animator>().SetBool("IsFlying", false);
         isFlying = false;
     }
 }
