@@ -10,6 +10,7 @@ public class TutoText : MonoBehaviour
     [SerializeField] GameObject flèche2;
 
     private bool isHolding = false;
+    private bool hasDJ = false;
     private float holdTime = 0f;
     private float requiredHoldTime = .8f;
     private float requiredHoldTime2 = 4f;
@@ -45,21 +46,22 @@ public class TutoText : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButtonUp(0))
+        if (Input.GetMouseButtonUp(0) && !hasDJ)
         {
             isHolding = false;
             Texte.SetActive(false);
             flèche.SetActive(false);
             StartCoroutine(ShowDJ());
+            hasDJ = true;
         }
     }
 
     IEnumerator ShowDJ()
     {
-        yield return new WaitForSeconds(1.2f);
-        TexteTuto.SetText("press space bar to double jump");
+        yield return new WaitForSeconds(.8f);
+        TexteTuto.SetText("press space bar or click to double jump");
         Time.timeScale = 0f;
-        while (!Input.GetKeyDown(KeyCode.Space))
+        while (!Input.GetMouseButton(0))
         {
             yield return null;
         }

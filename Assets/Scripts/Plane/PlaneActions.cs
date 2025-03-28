@@ -7,7 +7,8 @@ public class PlaneActions : MonoBehaviour
     private Vector2 startPos;
     private bool isDragging = false;
     private bool isFlying = false;
-    private bool DoubleJump = false;
+    private bool DoubleJumpUse = false;
+    private bool IsGrounded = true;
     private Rigidbody2D rb;
     [SerializeField] private Puff script;
 
@@ -34,9 +35,9 @@ public class PlaneActions : MonoBehaviour
         switch (NumberOfLaunch)
         {
             case > 0:
-                if (Input.GetMouseButtonDown(0))
+                if (Input.GetMouseButtonDown(0) && IsGrounded)
                 {
-                    StopPlane();
+                    StopPlane(true);
                     startPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                     isDragging = true;
                     script.PlacePuff();
@@ -61,6 +62,7 @@ public class PlaneActions : MonoBehaviour
 
                     lineRenderer.enabled = false;
                     isDragging = false;
+                    IsGrounded = false;
                     NumberOfLaunch -= 1;
                 }
                 break;
@@ -74,10 +76,10 @@ public class PlaneActions : MonoBehaviour
         if (isFlying)
         {
             rb.linearVelocity += new Vector2(0, -g * Time.fixedDeltaTime);
-            if (Input.GetKey(KeyCode.Space) && !DoubleJump)
+            if (Input.GetMouseButton(0) && !DoubleJumpUse)
             {
                 rb.linearVelocity += new Vector2(0, 10);
-                DoubleJump = true;
+                DoubleJumpUse = true;
             }
         }
     }
@@ -120,12 +122,14 @@ public class PlaneActions : MonoBehaviour
 
 //--------------------------------------------------------------------------//
 
-    public void StopPlane()
+    public void StopPlane(bool animation)
     {
         rb.isKinematic = true;
         rb.constraints = RigidbodyConstraints2D.FreezePosition;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
-        this.GetComponent<Animator>().SetBool("IsFlying", false);
+        this.GetComponent<Animator>().SetBool("IsFlying", animation);
         isFlying = false;
     }
+
+    public void SetGrounded(bool grounded) { IsGrounded = grounded; }
 }

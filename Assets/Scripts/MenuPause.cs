@@ -5,7 +5,7 @@ public class MenuPause : MonoBehaviour
 {
     [SerializeField] private InputActionReference inputActions;
     [SerializeField] private GameObject Menu;
-    [SerializeField] private GameObject Player;
+    [SerializeField] private GameObject PlaneGame;
     private bool isPaused = false;
 
     private void Awake()
@@ -36,12 +36,20 @@ public class MenuPause : MonoBehaviour
 
         if (Menu.activeSelf)
         {
-            Player.GetComponent<PlaneActions>().enabled = false;
+            PlaneGame.GetComponent<PlaneActions>().enabled = false;
         }
         else
         {
-            Player.GetComponent<PlaneActions>().enabled = true;
+            PlaneGame.GetComponent<PlaneActions>().enabled = true;
         }
+    }
+
+    public void DisplayPause()
+    {
+        Menu.SetActive(true);
+        isPaused = true;
+        Time.timeScale = 0f;
+        PlaneGame.GetComponent<PlaneActions>().enabled = false;
     }
 
     public void CrossPause()
@@ -49,6 +57,6 @@ public class MenuPause : MonoBehaviour
         Menu.SetActive(false);
         isPaused = false;
         Time.timeScale = 1f;
-        Player.GetComponent<PlaneActions>().enabled = true;
+        PlaneGame.GetComponent<PlaneActions>().enabled = true;
     }
 }
