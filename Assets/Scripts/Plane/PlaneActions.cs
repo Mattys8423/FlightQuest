@@ -7,6 +7,7 @@ public class PlaneActions : MonoBehaviour
     private Vector2 startPos;
     private bool isDragging = false;
     private bool isFlying = false;
+    private bool DoubleJump = false;
     private Rigidbody2D rb;
     [SerializeField] private Puff script;
 
@@ -72,8 +73,12 @@ public class PlaneActions : MonoBehaviour
     {
         if (isFlying)
         {
-            // Appliquer la gravité personnalisée
             rb.linearVelocity += new Vector2(0, -g * Time.fixedDeltaTime);
+            if (Input.GetKey(KeyCode.Space) && !DoubleJump)
+            {
+                rb.linearVelocity += new Vector2(0, 10);
+                DoubleJump = true;
+            }
         }
     }
 

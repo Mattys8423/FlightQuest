@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 
@@ -6,12 +7,13 @@ public class TutoText : MonoBehaviour
     [SerializeField] TMP_Text TexteTuto;
     [SerializeField] GameObject Texte;
     [SerializeField] GameObject flèche;
+    [SerializeField] GameObject flèche2;
 
     private bool isHolding = false;
     private float holdTime = 0f;
     private float requiredHoldTime = .8f;
     private float requiredHoldTime2 = 4f;
-    private float requiredHoldTime3 = 8f;
+    private float requiredHoldTime3 = 6f;
 
     void Update()
     {
@@ -46,9 +48,27 @@ public class TutoText : MonoBehaviour
         if (Input.GetMouseButtonUp(0))
         {
             isHolding = false;
-            TexteTuto.gameObject.SetActive(false);
             Texte.SetActive(false);
             flèche.SetActive(false);
+            StartCoroutine(ShowDJ());
         }
+    }
+
+    IEnumerator ShowDJ()
+    {
+        yield return new WaitForSeconds(1.2f);
+        TexteTuto.SetText("press space bar to double jump");
+        Time.timeScale = 0f;
+        while (!Input.GetKeyDown(KeyCode.Space))
+        {
+            yield return null;
+        }
+        Time.timeScale = 1f;
+        yield return new WaitForSeconds(.3f);
+        flèche2.SetActive(true);
+        TexteTuto.SetText("Pay attention to your number of launch it can be useful !");
+        yield return new WaitForSeconds(2f);
+        flèche2.SetActive(false);
+        TexteTuto.gameObject.SetActive(false);
     }
 }
