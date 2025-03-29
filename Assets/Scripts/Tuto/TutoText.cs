@@ -30,7 +30,7 @@ public class TutoText : MonoBehaviour
 
             if (holdTime >= requiredHoldTime)
             {
-                TexteTuto.SetText("Drag the mouse to see the trajectory of the plane");
+                TexteTuto.SetText("Drag to see the trajectory of the plane");
             }
             if (holdTime >= requiredHoldTime2)
             {
@@ -40,7 +40,7 @@ public class TutoText : MonoBehaviour
             }
             if (holdTime >= requiredHoldTime3)
             {
-                TexteTuto.SetText("Release the left click to lauch your plane");
+                TexteTuto.SetText("Release the click to lauch your plane");
                 Texte.SetActive(false);
                 flèche.SetActive(false);
             }
@@ -59,7 +59,7 @@ public class TutoText : MonoBehaviour
     IEnumerator ShowDJ()
     {
         yield return new WaitForSeconds(.8f);
-        TexteTuto.SetText("press space bar or click to double jump");
+        TexteTuto.SetText("click to double jump");
         Time.timeScale = 0f;
         while (!Input.GetMouseButton(0))
         {
@@ -72,5 +72,13 @@ public class TutoText : MonoBehaviour
         yield return new WaitForSeconds(2f);
         flèche2.SetActive(false);
         TexteTuto.gameObject.SetActive(false);
+    }
+
+    public void SetHasDj()
+    {
+        if (!hasDJ)
+        {
+            hasDJ = false;
+        }
     }
 }

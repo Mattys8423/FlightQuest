@@ -45,14 +45,14 @@ public class PlaneActions : MonoBehaviour
                 else if (Input.GetMouseButton(0) && isDragging)
                 {
                     Vector2 currentPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                    Vector2 direction = startPos - currentPos;
+                    Vector2 direction = currentPos - startPos;
 
                     ShowTrajectory(transform.position, direction * launchForce);
                 }
                 else if (Input.GetMouseButtonUp(0) && isDragging)
                 {
                     Vector2 endPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                    Vector2 direction = startPos - endPos;
+                    Vector2 direction = endPos - startPos;
 
                     StartCoroutine(script.LaunchPuff());
                     rb.isKinematic = false;
