@@ -1441,6 +1441,7 @@ MonoBehaviour:
   Stars1: {fileID: 534188533}
   Stars2: {fileID: 298959348}
   Stars3: {fileID: 101969129}
+  script4: {fileID: 997254783193132640}
   Level: Level1
 --- !u!1 &357579592
 GameObject:
@@ -1705,7 +1706,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 299.5}
+  m_AnchoredPosition: {x: 0, y: 322}
   m_SizeDelta: {x: 330, y: 169}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &520760601
@@ -1723,6 +1724,7 @@ MonoBehaviour:
   Stars1: {fileID: 557374155}
   Stars2: {fileID: 1118774110}
   Stars3: {fileID: 2004506164}
+  script4: {fileID: 997254783193132640}
   Level: Level3
 --- !u!1 &534188533
 GameObject:
@@ -3008,6 +3010,52 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 803698180}
   m_CullTransparentMesh: 1
+--- !u!1 &820096248
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 820096250}
+  - component: {fileID: 820096249}
+  m_Layer: 0
+  m_Name: StarsData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &820096249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820096248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a1ef03ec835604da2422f25ae499b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  starsdata:
+    levelstar: []
+--- !u!4 &820096250
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 820096248}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.32601604, y: -0.5490133, z: 0.050127033}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &842413713
 GameObject:
   m_ObjectHideFlags: 0
@@ -4427,6 +4475,7 @@ MonoBehaviour:
   Stars1: {fileID: 842413713}
   Stars2: {fileID: 1302341799}
   Stars3: {fileID: 743684890}
+  script4: {fileID: 997254783193132640}
   Level: Level2
 --- !u!1 &1667541867
 GameObject:
@@ -4482,6 +4531,7 @@ MonoBehaviour:
   Stars1: {fileID: 585456904}
   Stars2: {fileID: 716714531}
   Stars3: {fileID: 598902284}
+  script4: {fileID: 997254783193132640}
   Level: Level4
 --- !u!1 &1872555142
 GameObject:
@@ -4757,7 +4807,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 299.5}
+  m_AnchoredPosition: {x: 0, y: 322}
   m_SizeDelta: {x: 330, y: 169}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2026431465
@@ -4775,6 +4825,7 @@ MonoBehaviour:
   Stars1: {fileID: 1372275275}
   Stars2: {fileID: 484943550}
   Stars3: {fileID: 1583516542}
+  script4: {fileID: 997254783193132640}
   Level: Level5
 --- !u!1 &2101210641
 GameObject:
@@ -5100,6 +5151,17 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 8845167967748384987, guid: 69a79babe8d875640a373ce7e0adaa5f, type: 3}
   m_PrefabInstance: {fileID: 997254783193132638}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &997254783193132640 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1218166949605542180, guid: 69a79babe8d875640a373ce7e0adaa5f, type: 3}
+  m_PrefabInstance: {fileID: 997254783193132638}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6a1ef03ec835604da2422f25ae499b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -5107,6 +5169,7 @@ SceneRoots:
   - {fileID: 755055969}
   - {fileID: 880346765}
   - {fileID: 997254783193132638}
+  - {fileID: 820096250}
   - {fileID: 1398104144}
   - {fileID: 2101868187}
   - {fileID: 2101210644}

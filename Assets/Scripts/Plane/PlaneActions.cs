@@ -10,6 +10,7 @@ public class PlaneActions : MonoBehaviour
     private bool DoubleJumpUse = false;
     private bool IsGrounded = true;
     private Rigidbody2D rb;
+    //private Vector3 Vitesse = Vector3.zero;
     [SerializeField] private Puff script;
 
     public float launchForce = 10f;
@@ -17,9 +18,9 @@ public class PlaneActions : MonoBehaviour
     public int trajectoryPoints = 30;
     public LineRenderer lineRenderer;
 
-    public float alpha = 45f; // Angle de lancement en degrés
-    public float f2 = 0.1f; // Coefficient de friction
-    public float g = 9.81f; // Gravité
+    public float alpha = 45f;
+    public float f2 = 0.1f;
+    public float g = 9.81f;
 
     void Start()
     {
@@ -53,6 +54,7 @@ public class PlaneActions : MonoBehaviour
                 {
                     Vector2 endPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                     Vector2 direction = endPos - startPos;
+                    //Vitesse = direction * launchForce;
 
                     StartCoroutine(script.LaunchPuff());
                     rb.isKinematic = false;
@@ -75,6 +77,9 @@ public class PlaneActions : MonoBehaviour
     {
         if (isFlying)
         {
+            //transform.position += Vitesse * Time.fixedDeltaTime;
+            //Vitesse.y += -g * Time.fixedDeltaTime;
+            //Vitesse.x += f2 * Vitesse.x * Time.fixedDeltaTime;
             rb.linearVelocity += new Vector2(0, -g * Time.fixedDeltaTime);
             if (Input.GetMouseButton(0) && !DoubleJumpUse)
             {

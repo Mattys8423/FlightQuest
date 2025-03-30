@@ -5,6 +5,7 @@ public class SetStars : MonoBehaviour
     [SerializeField] GameObject Stars1;
     [SerializeField] GameObject Stars2;
     [SerializeField] GameObject Stars3;
+    [SerializeField] private SaveStars script4;
     public string Level;
 
     private int NbStars;
@@ -12,7 +13,7 @@ public class SetStars : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        NbStars = GameInstance.instance.GetStars(Level);
+        NbStars = script4.GetStars(Level);
         switch (NbStars)
         {
             case 0:

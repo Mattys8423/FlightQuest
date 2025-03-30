@@ -6,6 +6,7 @@ public class GroundCollideTuto : MonoBehaviour
     [SerializeField] private PlaneActions script;
     [SerializeField] private WinCondition script2;
     [SerializeField] private EndLevelMenu script3;
+    [SerializeField] private SaveStars script4;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -24,11 +25,11 @@ public class GroundCollideTuto : MonoBehaviour
         {
             case true:
                 StartCoroutine(script3.ShowMenuVictory());
-                GameInstance.instance.SetStars("Level1", script2.GetCoin());
+                script4.SetStars("Level1", script2.GetCoin());
                 break;
             case false:
                 StartCoroutine(script3.ShowMenuDefeat());
-                GameInstance.instance.SetStars("Level1", 0);
+                script4.SetStars("Level1", 0);
                 break;
         }
     }
