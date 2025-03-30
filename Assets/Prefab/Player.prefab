@@ -891,11 +891,11 @@ AudioSource:
   m_GameObject: {fileID: 8255284339526671355}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: -8286337842720643612, guid: 6e091fa7ab3d2e748babf1f997453089, type: 2}
+  OutputAudioMixerGroup: {fileID: -1210467694537464524, guid: 6e091fa7ab3d2e748babf1f997453089, type: 2}
   m_audioClip: {fileID: 8300000, guid: 19bbeabcf184b3942b7a0f98f72557e7, type: 3}
   m_Resource: {fileID: 8300000, guid: 19bbeabcf184b3942b7a0f98f72557e7, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 0
   Mute: 0
