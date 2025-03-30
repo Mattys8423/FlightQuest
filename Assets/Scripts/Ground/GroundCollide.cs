@@ -9,23 +9,33 @@ public class GroundCollide : MonoBehaviour
 
     public string LevelName;
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        this.gameObject.GetComponent<PolygonCollider2D>().isTrigger = false;
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
             script.SetGrounded(true);
             script.StopPlane(false);
-            switch (script2.GetCondition())
+            if (script.NumberOfLaunch > 0) { }
+            else
             {
-                case true:
-                    StartCoroutine(script3.ShowMenuVictory());
-                    script4.SetStars(LevelName, script2.GetCoin());
-                    break;
-                case false:
-                    StartCoroutine(script3.ShowMenuDefeat());
-                    script4.SetStars(LevelName, 0);
-                    break;
+                switch (script2.GetCondition() && script.NumberOfLaunch != 0)
+                {
+                    case true:
+                        StartCoroutine(script3.ShowMenuVictory());
+                        script4.SetStars(LevelName, script2.GetCoin());
+                        break;
+                    case false:
+                        StartCoroutine(script3.ShowMenuDefeat());
+                        script4.SetStars(LevelName, 0);
+                        break;
+                }
             }
+            this.gameObject.GetComponent<PolygonCollider2D>().isTrigger = true;
         }
     }
 }

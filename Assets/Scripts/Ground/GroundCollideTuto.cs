@@ -8,13 +8,24 @@ public class GroundCollideTuto : MonoBehaviour
     [SerializeField] private EndLevelMenu script3;
     [SerializeField] private SaveStars script4;
 
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        this.gameObject.GetComponent<PolygonCollider2D>().isTrigger = false;
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            Debug.Log("grounded");
             script.SetGrounded(true);
             script.StopPlane(false);
-            StartCoroutine(WaitForTutoEnd());
+            if (script.NumberOfLaunch > 0 ) {}
+            else
+            {
+                StartCoroutine(WaitForTutoEnd());
+            }
+            this.gameObject.GetComponent<PolygonCollider2D>().isTrigger = true;
         }
     }
 

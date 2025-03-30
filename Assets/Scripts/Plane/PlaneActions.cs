@@ -58,6 +58,7 @@ public class PlaneActions : MonoBehaviour
 
                     StartCoroutine(script.LaunchPuff());
                     rb.isKinematic = false;
+                    rb.constraints = RigidbodyConstraints2D.None;
                     isFlying = true;
                     rb.AddForce(direction * launchForce, ForceMode2D.Impulse);
                     this.GetComponent<Animator>().SetBool("IsFlying", true);
@@ -137,4 +138,8 @@ public class PlaneActions : MonoBehaviour
     }
 
     public void SetGrounded(bool grounded) { IsGrounded = grounded; }
+
+    public bool GetDJ() { return DoubleJumpUse; }
+
+    public bool GetIsFlying() {  return isFlying; }
 }
