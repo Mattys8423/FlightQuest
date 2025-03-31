@@ -17,7 +17,6 @@ public class GroundCollideTuto : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("grounded");
             script.SetGrounded(true);
             script.StopPlane(false);
             if (script.NumberOfLaunch > 0 ) {}

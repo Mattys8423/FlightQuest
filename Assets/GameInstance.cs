@@ -2,14 +2,15 @@
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
-
+using UnityEngine.Audio;
 
 public class GameInstance : MonoBehaviour
 {
     public static GameInstance instance;
-    private float VolumeMusic;
-    private float VolumeEffects;
-    private float VolumeMaster;
+    [SerializeField] private AudioMixer Main;
+    private float VolumeMusic = 0.5f;
+    private float VolumeEffects = 0.5f;
+    private float VolumeMaster = 0.5f;
 
     private void Awake()
     {

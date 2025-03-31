@@ -818,6 +818,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 488456d9c82a76b409a5607115db6f6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Plane: {fileID: 2032143320}
+  Explosion: {fileID: 610609225}
   script: {fileID: 2032143319}
   script2: {fileID: 517077310}
   script3: {fileID: 551144743}
@@ -1156,6 +1158,11 @@ MonoBehaviour:
   - {x: 0.5, y: -0.5, z: 0}
   - {x: 0.5, y: 0.5, z: 0}
   - {x: -0.5, y: 0.5, z: 0}
+--- !u!1 &610609225 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6796247392474512400, guid: a4cd26b69b31f464b808c595a53bbb54, type: 3}
+  m_PrefabInstance: {fileID: 2032143318}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &674219990
 GameObject:
   m_ObjectHideFlags: 0
@@ -1668,6 +1675,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 488456d9c82a76b409a5607115db6f6c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Plane: {fileID: 2032143320}
+  Explosion: {fileID: 610609225}
   script: {fileID: 2032143319}
   script2: {fileID: 517077310}
   script3: {fileID: 551144743}
@@ -3146,10 +3155,6 @@ PrefabInstance:
     - target: {fileID: 293664758915248985, guid: a4cd26b69b31f464b808c595a53bbb54, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2082865146105918914, guid: a4cd26b69b31f464b808c595a53bbb54, type: 3}
-      propertyPath: g
-      value: 9.81
       objectReference: {fileID: 0}
     - target: {fileID: 2082865146105918914, guid: a4cd26b69b31f464b808c595a53bbb54, type: 3}
       propertyPath: NumberOfLaunch

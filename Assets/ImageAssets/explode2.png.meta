@@ -1,0 +1,431 @@
+fileFormatVersion: 2
+guid: 58fcde17bcb2e1846b12967dfaf42363
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6647843483411692235
+    second: explode2_0
+  - first:
+      213: 2447271389749087417
+    second: explode2_1
+  - first:
+      213: 5391517553630301550
+    second: explode2_2
+  - first:
+      213: 2878504815201262006
+    second: explode2_3
+  - first:
+      213: -8961075480592871791
+    second: explode2_4
+  - first:
+      213: 1447459983403684166
+    second: explode2_5
+  - first:
+      213: 916567562537327453
+    second: explode2_6
+  - first:
+      213: 4124669989899289267
+    second: explode2_7
+  - first:
+      213: -1322876795760952153
+    second: explode2_8
+  - first:
+      213: -3176998065558608656
+    second: explode2_9
+  - first:
+      213: 1247863682618112307
+    second: explode2_10
+  - first:
+      213: 2573417580600847370
+    second: explode2_11
+  - first:
+      213: 8557479428430870594
+    second: explode2_12
+  - first:
+      213: -324019815678166380
+    second: explode2_13
+  - first:
+      213: -4454803825717182218
+    second: explode2_14
+  - first:
+      213: 5755717228059089837
+    second: explode2_15
+  - first:
+      213: -5832292323910583211
+    second: explode2_16
+  - first:
+      213: 1990633992049430581
+    second: explode2_17
+  - first:
+      213: -8819639445367499299
+    second: explode2_18
+  - first:
+      213: 4828698515767665969
+    second: explode2_19
+  - first:
+      213: -1801209853711038590
+    second: explode2_20
+  - first:
+      213: -4863940454903536642
+    second: explode2_21
+  - first:
+      213: 5230234568992182108
+    second: explode2_22
+  - first:
+      213: -8528434024926005312
+    second: explode2_23
+  - first:
+      213: 5843605326926886446
+    second: explode2_24
+  - first:
+      213: 6751354491568612576
+    second: explode2_25
+  - first:
+      213: -5062493723100202217
+    second: explode2_26
+  - first:
+      213: 8701172106867335599
+    second: explode2_27
+  - first:
+      213: -5564137163003180094
+    second: explode2_28
+  - first:
+      213: 8542637857763731323
+    second: explode2_29
+  - first:
+      213: -7655698409627093201
+    second: explode2_30
+  - first:
+      213: 4274617616055808875
+    second: explode2_31
+  - first:
+      213: -5472973005406837897
+    second: explode2_32
+  - first:
+      213: -4089017721767898630
+    second: explode2_33
+  - first:
+      213: 5392404941441553009
+    second: explode2_34
+  - first:
+      213: 7807435294790591113
+    second: explode2_35
+  - first:
+      213: -3225316582585876934
+    second: explode2_36
+  - first:
+      213: 8808242255751338059
+    second: explode2_37
+  - first:
+      213: 2556970108448025412
+    second: explode2_38
+  - first:
+      213: -5629641929307646458
+    second: explode2_39
+  - first:
+      213: -4789225018997970355
+    second: explode2_40
+  - first:
+      213: 5407987453701489660
+    second: explode2_41
+  - first:
+      213: 3724878225565484278
+    second: explode2_42
+  - first:
+      213: 4973715050633070583
+    second: explode2_43
+  - first:
+      213: -200605338779492791
+    second: explode2_44
+  - first:
+      213: -1745418785819748998
+    second: explode2_45
+  - first:
+      213: 3458721993069438230
+    second: explode2_46
+  - first:
+      213: 6944708124364630782
+    second: explode2_47
+  - first:
+      213: 735999812016872520
+    second: explode2_48
+  - first:
+      213: -4770102346039414978
+    second: explode2_49
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: explode2_0
+      rect:
+        serializedVersion: 2
+        x: 117
+        y: 398
+        width: 161
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 535c9d8d29d1eb3a0800000000000000
+      internalID: -6647843483411692235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explode2_1
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 375
+        width: 270
+        height: 233
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bc88fedc5476f120800000000000000
+      internalID: 2447271389749087417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explode2_2
+      rect:
+        serializedVersion: 2
+        x: 602
+        y: 357
+        width: 192
+        height: 224
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6dca6846a482da40800000000000000
+      internalID: 5391517553630301550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explode2_3
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 97
+        width: 206
+        height: 221
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b99252e0e082f720800000000000000
+      internalID: 2878504815201262006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explode2_4
+      rect:
+        serializedVersion: 2
+        x: 412
+        y: 111
+        width: 181
+        height: 177
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19e8cc5045dd3a380800000000000000
+      internalID: -8961075480592871791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: explode2_5
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 127
+        width: 112
+        height: 114
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6419e599f29661410800000000000000
+      internalID: 1447459983403684166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 24e481aff6c065c4f961014272fa5120
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      explode2_0: -6647843483411692235
+      explode2_1: 2447271389749087417
+      explode2_2: 5391517553630301550
+      explode2_3: 2878504815201262006
+      explode2_4: -8961075480592871791
+      explode2_5: 1447459983403684166
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

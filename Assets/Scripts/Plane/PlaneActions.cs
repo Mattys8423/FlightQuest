@@ -51,22 +51,26 @@ public class PlaneActions : MonoBehaviour
                     ShowTrajectory(transform.position, direction * launchForce);
                 }
                 else if (Input.GetMouseButtonUp(0) && isDragging)
-                {
+                {                   
                     Vector2 endPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                    Vector2 direction = endPos - startPos;
-                    //Vitesse = direction * launchForce;
+                    if (Vector2.Distance(endPos, startPos) < 1f || endPos.y - startPos.y < 1) { }
+                    else
+                    {
+                        Vector2 direction = endPos - startPos;
+                        //Vitesse = direction * launchForce;
 
-                    StartCoroutine(script.LaunchPuff());
-                    rb.isKinematic = false;
-                    rb.constraints = RigidbodyConstraints2D.None;
-                    isFlying = true;
-                    rb.AddForce(direction * launchForce, ForceMode2D.Impulse);
-                    this.GetComponent<Animator>().SetBool("IsFlying", true);
+                        StartCoroutine(script.LaunchPuff());
+                        rb.isKinematic = false;
+                        rb.constraints = RigidbodyConstraints2D.None;
+                        isFlying = true;
+                        rb.AddForce(direction * launchForce, ForceMode2D.Impulse);
+                        this.GetComponent<Animator>().SetBool("IsFlying", true);
 
-                    lineRenderer.enabled = false;
-                    isDragging = false;
-                    IsGrounded = false;
-                    NumberOfLaunch -= 1;
+                        lineRenderer.enabled = false;
+                        isDragging = false;
+                        IsGrounded = false;
+                        NumberOfLaunch -= 1;
+                    }
                 }
                 break;
             case <= 0:

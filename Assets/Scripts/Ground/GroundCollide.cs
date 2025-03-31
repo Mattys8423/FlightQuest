@@ -1,8 +1,11 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GroundCollide : MonoBehaviour
 {
+    [SerializeField] private GameObject Plane;
+    [SerializeField] private GameObject Explosion;
     [SerializeField] private PlaneActions script;
     [SerializeField] private WinCondition script2;
     [SerializeField] private EndLevelMenu script3;
@@ -25,22 +28,39 @@ public class GroundCollide : MonoBehaviour
         {
             script.SetGrounded(true);
             script.StopPlane(false);
-            if (script.NumberOfLaunch > 0) { }
+            if (Plane.transform.rotation.eulerAngles.z > 40f && Plane.transform.rotation.eulerAngles.z < 320f)
+            {
+                StartCoroutine(DefeatExplode());
+            }
             else
             {
-                switch (script2.GetCondition())
+                if (script.NumberOfLaunch > 0) { }
+                else
                 {
-                    case true:
-                        StartCoroutine(script3.ShowMenuVictory());
-                        script4.SetStars(LevelName, script2.GetCoin());
-                        break;
-                    case false:
-                        StartCoroutine(script3.ShowMenuDefeat());
-                        script4.SetStars(LevelName, 0);
-                        break;
+                    switch (script2.GetCondition())
+                    {
+                        case true:
+                            StartCoroutine(script3.ShowMenuVictory());
+                            script4.SetStars(LevelName, script2.GetCoin());
+                            break;
+                        case false:
+                            StartCoroutine(script3.ShowMenuDefeat());
+                            script4.SetStars(LevelName, 0);
+                            break;
+                    }
                 }
             }
             this.gameObject.GetComponent<PolygonCollider2D>().isTrigger = true;
         }
     }
+
+    IEnumerator DefeatExplode()
+    {
+        Plane.GetComponent<SpriteRenderer>().enabled = false;
+        Explosion.SetActive(true);
+        yield return new WaitForSeconds(.6f);
+        StartCoroutine(script3.ShowMenuDefeat());
+        script4.SetStars(LevelName, 0);
+    }
 }
+
