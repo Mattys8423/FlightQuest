@@ -547,6 +547,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: LandingZone_0
       objectReference: {fileID: 0}
+    - target: {fileID: 7033451099561090273, guid: 7f3337411da5e254aa3867a7b36206ae, type: 3}
+      propertyPath: m_Color.b
+      value: 0.6622273
+      objectReference: {fileID: 0}
+    - target: {fileID: 7033451099561090273, guid: 7f3337411da5e254aa3867a7b36206ae, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6084906
+      objectReference: {fileID: 0}
+    - target: {fileID: 7033451099561090273, guid: 7f3337411da5e254aa3867a7b36206ae, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8254199063122286772, guid: 7f3337411da5e254aa3867a7b36206ae, type: 3}
       propertyPath: script
       value: 
@@ -715,6 +727,8 @@ GameObject:
   m_Component:
   - component: {fileID: 455416586}
   - component: {fileID: 455416587}
+  - component: {fileID: 455416589}
+  - component: {fileID: 455416590}
   m_Layer: 0
   m_Name: brickIceTower_0
   m_TagString: Untagged
@@ -792,6 +806,85 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &455416589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455416585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 488456d9c82a76b409a5607115db6f6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script: {fileID: 2032143319}
+  script2: {fileID: 517077310}
+  script3: {fileID: 551144743}
+  script4: {fileID: 517077312}
+--- !u!60 &455416590
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 455416585}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1.46, y: 0.12}
+    newSize: {x: 1.46, y: 0.12}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.72999996, y: -0.050517354}
+      - {x: -0.72999996, y: -0.06}
+      - {x: -0.25866222, y: -0.06}
+      - {x: -0.16540313, y: -0.04940183}
+      - {x: -0.39999998, y: -0.04549386}
+    - - {x: -0.12478821, y: -0.04636394}
+      - {x: -0.17, y: -0.049999997}
+      - {x: 0.00025734305, y: -0.055668715}
+      - {x: 0.16, y: -0.06}
+      - {x: 0.17, y: -0.049999997}
+      - {x: 0.17, y: -0.039619435}
+    - - {x: 0.41, y: -0.048281994}
+      - {x: 0.17177978, y: -0.041337438}
+      - {x: 0.17744818, y: -0.06}
+      - {x: 0.72999996, y: -0.06}
+      - {x: 0.7429938, y: -0.048282}
+  m_UseDelaunayMesh: 0
 --- !u!1001 &517077308
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1455,12 +1548,12 @@ PolygonCollider2D:
       - {x: 0.53, y: -0.81}
       - {x: 0.55, y: 0.45999998}
       - {x: 0.72999996, y: 0.65999997}
-      - {x: 0.72999996, y: 1.26}
-      - {x: 0.55, y: 1.4699999}
-      - {x: 0.08, y: 2.45}
-      - {x: -0.11, y: 2.45}
-      - {x: -0.64, y: 1.26}
-      - {x: -0.72999996, y: 1.25}
+      - {x: 0.7401518, y: 1.1280203}
+      - {x: 0.42309648, y: 1.1298983}
+      - {x: 0.24243551, y: 1.1251268}
+      - {x: -0.36050832, y: 1.1238672}
+      - {x: -0.6146194, y: 1.1280203}
+      - {x: -0.72999996, y: 1.1281725}
       - {x: -0.72999996, y: 0.65999997}
       - {x: -0.55, y: 0.45999998}
       - {x: -0.53999996, y: -0.82}
@@ -3055,6 +3148,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2082865146105918914, guid: a4cd26b69b31f464b808c595a53bbb54, type: 3}
+      propertyPath: g
+      value: 9.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 2082865146105918914, guid: a4cd26b69b31f464b808c595a53bbb54, type: 3}
       propertyPath: NumberOfLaunch
       value: 2
       objectReference: {fileID: 0}
@@ -3121,14 +3218,14 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 254844105}
+  - {fileID: 517077308}
+  - {fileID: 827381784}
   - {fileID: 2124431127}
   - {fileID: 1583953739}
   - {fileID: 1941035892}
   - {fileID: 1024557304}
-  - {fileID: 517077308}
   - {fileID: 1406125914}
   - {fileID: 158623294}
   - {fileID: 1771316617}
   - {fileID: 2032143318}
-  - {fileID: 827381784}
   - {fileID: 551144742}

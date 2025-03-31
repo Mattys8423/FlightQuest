@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class TutoText : MonoBehaviour
 {
@@ -8,6 +9,9 @@ public class TutoText : MonoBehaviour
     [SerializeField] GameObject Texte;
     [SerializeField] GameObject flèche;
     [SerializeField] GameObject flèche2;
+    [SerializeField] GameObject Tap;
+    [SerializeField] GameObject Click;
+    [SerializeField] WinCondition script;
 
     private bool isHolding = false;
     private bool hasDJ = false;
@@ -31,6 +35,7 @@ public class TutoText : MonoBehaviour
             if (holdTime >= requiredHoldTime)
             {
                 TexteTuto.SetText("Drag to see the trajectory of the plane");
+                Tap.GetComponent<Animator>().SetTrigger("Dragg");
             }
             if (holdTime >= requiredHoldTime2)
             {
@@ -43,6 +48,7 @@ public class TutoText : MonoBehaviour
                 TexteTuto.SetText("Release the click to lauch your plane");
                 Texte.SetActive(false);
                 flèche.SetActive(false);
+                Tap.GetComponent<Animator>().SetTrigger("Release");
             }
         }
 
@@ -51,6 +57,7 @@ public class TutoText : MonoBehaviour
             isHolding = false;
             Texte.SetActive(false);
             flèche.SetActive(false);
+            Tap.SetActive(false);
             StartCoroutine(ShowDJ());
             hasDJ = true;
         }
@@ -58,7 +65,11 @@ public class TutoText : MonoBehaviour
 
     IEnumerator ShowDJ()
     {
-        yield return new WaitForSeconds(.8f);
+        while (script.GetCoin() < 2)
+        {
+            yield return null;
+        }
+        Click.SetActive(true);
         TexteTuto.SetText("click to double jump");
         Time.timeScale = 0f;
         while (!Input.GetMouseButton(0))
@@ -70,6 +81,8 @@ public class TutoText : MonoBehaviour
         flèche2.SetActive(true);
         TexteTuto.SetText("Pay attention to your number of launch it can be useful !");
         yield return new WaitForSeconds(2f);
+        Click.SetActive(false);
+        Tap.SetActive(false);
         flèche2.SetActive(false);
         TexteTuto.gameObject.SetActive(false);
     }

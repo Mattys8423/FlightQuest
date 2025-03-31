@@ -13,9 +13,11 @@ public class Coin : MonoBehaviour
         if (other.CompareTag("Player"))
         {            
             this.GetComponent<SpriteRenderer>().enabled = false;
+            this.GetComponent<CircleCollider2D>().enabled = false;
             Sparkles.GetComponent<Animator>().SetTrigger("Sparkles");
             audio.PlayOneShot(CoinSuccess);
             script.AddCoin(1);
+            Debug.Log(script.GetCoin());
         }
     }
 }
