@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 76c7576a1dd93f14bad02a789a1ea1de
+guid: 8040f137edda49d49b030c516dbac6c4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8030570891474961867
-    second: splash_0
+      213: 4886158609036015627
+    second: Rover_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,30 +109,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: splash_0
+      name: Rover_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 2524
-        height: 1312
+        y: 19
+        width: 268
+        height: 261
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 53afa0e625ead8090800000000000000
-      internalID: -8030570891474961867
+      spriteID: b08fecfed5f1fc340800000000000000
+      internalID: 4886158609036015627
       vertices: []
       indices: 
       edges: []
@@ -160,8 +147,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      splash_0: -8030570891474961867
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

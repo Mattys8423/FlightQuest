@@ -4,6 +4,8 @@ using UnityEngine.Audio;
 
 public class SliderSound : MonoBehaviour
 {
+    [SerializeField] GameObject MenuSettings;
+    private bool hasbeeninitialized = false;
     [SerializeField] private Slider MusicSlider;
     [SerializeField] private Slider MasterSlider;
     [SerializeField] private Slider EffectsSlider;
@@ -11,26 +13,29 @@ public class SliderSound : MonoBehaviour
 
     void Update()
     {
-        MusicSlider.value = GameInstance.instance.GetMusicVolume();
-        MasterSlider.value = GameInstance.instance.GetMasterVolume();
-        EffectsSlider.value = GameInstance.instance.GetEffectsVolume();
+        if (MenuSettings.activeSelf && !hasbeeninitialized)
+        {
+            MusicSlider.value = GameInstance.instance.GetMusicVolume();
+            MasterSlider.value = GameInstance.instance.GetMasterVolume();
+            EffectsSlider.value = GameInstance.instance.GetEffectsVolume();
+            hasbeeninitialized = true;
+        }
     }
 
-    public void ChangeVolumeMaster()
+    public void ChangeVolumeApply()
     {
         Main.SetFloat("Master", Mathf.Log10(MasterSlider.value) * 20);
-        GameInstance.instance.SetEffectsVolume(MasterSlider.value);
-    }
+        GameInstance.instance.SetMasterVolume(MasterSlider.value);
 
-    public void ChangeVolumeMusic()
-    {
         Main.SetFloat("Music", Mathf.Log10(MusicSlider.value)*20);
-        GameInstance.instance.SetEffectsVolume(MusicSlider.value);
-    }
+        GameInstance.instance.SetMusicVolume(MusicSlider.value);
 
-    public void ChangeVolumeEffects()
-    {
         Main.SetFloat("Effects", Mathf.Log10(EffectsSlider.value) * 20);
         GameInstance.instance.SetEffectsVolume(EffectsSlider.value);
+    }
+
+    public void SetHasBeenInitialized(bool choice)
+    {
+        hasbeeninitialized = choice;
     }
 }

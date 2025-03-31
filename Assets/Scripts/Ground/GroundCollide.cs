@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GroundCollide : MonoBehaviour
 {
@@ -6,8 +7,12 @@ public class GroundCollide : MonoBehaviour
     [SerializeField] private WinCondition script2;
     [SerializeField] private EndLevelMenu script3;
     [SerializeField] private SaveStars script4;
+    private string LevelName;
 
-    public string LevelName;
+    private void Start()
+    {
+        LevelName = SceneManager.GetActiveScene().name;
+    }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -23,7 +28,7 @@ public class GroundCollide : MonoBehaviour
             if (script.NumberOfLaunch > 0) { }
             else
             {
-                switch (script2.GetCondition() && script.NumberOfLaunch != 0)
+                switch (script2.GetCondition())
                 {
                     case true:
                         StartCoroutine(script3.ShowMenuVictory());

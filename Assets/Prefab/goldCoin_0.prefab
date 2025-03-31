@@ -127,6 +127,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   script: {fileID: 0}
   Sparkles: {fileID: 5669350994771305335}
+  audio: {fileID: 0}
+  CoinSuccess: {fileID: 8300000, guid: e319c0ba67a5f5c4e8fe761847422558, type: 3}
 --- !u!58 &2352754846062237516
 CircleCollider2D:
   m_ObjectHideFlags: 0

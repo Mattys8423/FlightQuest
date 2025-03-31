@@ -6,9 +6,6 @@ public class DetectLanding : MonoBehaviour
     [SerializeField] private WinCondition script;
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log(gameObject.name + " est entré en collision avec " + other.gameObject.name);
-
-        // Vérifier si c'est un objet spécifique (ex: un joueur)
         if (other.CompareTag("Player"))
         {
             StartCoroutine(StopVelocity(other));

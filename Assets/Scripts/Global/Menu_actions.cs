@@ -10,6 +10,11 @@ public class Menu_actions : MonoBehaviour
         StartCoroutine(WaitAndPlay(SceneIndex));
     }
 
+    public void retry()
+    {
+        StartCoroutine(WaitAndPlay(SceneManager.GetActiveScene().buildIndex));
+    }
+
     public void quit()
     {
         StartCoroutine(WaitAndQuit());

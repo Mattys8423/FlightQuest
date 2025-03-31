@@ -1290,6 +1290,10 @@ PrefabInstance:
       value: goldCoin_3
       objectReference: {fileID: 0}
     - target: {fileID: 8562012007394179809, guid: be8d92a4108d0b9469426db55cc4dfdc, type: 3}
+      propertyPath: audio
+      value: 
+      objectReference: {fileID: 1102710521}
+    - target: {fileID: 8562012007394179809, guid: be8d92a4108d0b9469426db55cc4dfdc, type: 3}
       propertyPath: script
       value: 
       objectReference: {fileID: 1102710523}
@@ -2135,9 +2139,17 @@ PrefabInstance:
       value: goldCoin_1
       objectReference: {fileID: 0}
     - target: {fileID: 8562012007394179809, guid: be8d92a4108d0b9469426db55cc4dfdc, type: 3}
+      propertyPath: audio
+      value: 
+      objectReference: {fileID: 1102710521}
+    - target: {fileID: 8562012007394179809, guid: be8d92a4108d0b9469426db55cc4dfdc, type: 3}
       propertyPath: script
       value: 
       objectReference: {fileID: 1102710523}
+    - target: {fileID: 8562012007394179809, guid: be8d92a4108d0b9469426db55cc4dfdc, type: 3}
+      propertyPath: CoinSuccess
+      value: 
+      objectReference: {fileID: 8300000, guid: e319c0ba67a5f5c4e8fe761847422558, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2994,6 +3006,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: StarCoin1
       objectReference: {fileID: 0}
+    - target: {fileID: 8562012007394179809, guid: be8d92a4108d0b9469426db55cc4dfdc, type: 3}
+      propertyPath: audio
+      value: 
+      objectReference: {fileID: 1102710521}
     - target: {fileID: 8562012007394179809, guid: be8d92a4108d0b9469426db55cc4dfdc, type: 3}
       propertyPath: script
       value: 

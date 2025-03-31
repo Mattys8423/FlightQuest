@@ -84,6 +84,7 @@ public class PlaneActions : MonoBehaviour
             rb.linearVelocity += new Vector2(0, -g * Time.fixedDeltaTime);
             if (Input.GetMouseButton(0) && !DoubleJumpUse)
             {
+                //Vitesse.y += 15;
                 rb.linearVelocity += new Vector2(0, 10);
                 DoubleJumpUse = true;
             }
