@@ -34,20 +34,23 @@ public class GroundCollide : MonoBehaviour
             }
             else
             {
-                if (script.NumberOfLaunch > 0) { }
-                else
+                switch (script2.GetCondition())
                 {
-                    switch (script2.GetCondition())
-                    {
-                        case true:
-                            StartCoroutine(script3.ShowMenuVictory());
-                            script4.SetStars(LevelName, script2.GetCoin());
+                    case true:
+                        StartCoroutine(script3.ShowMenuVictory());
+                        script4.SetStars(LevelName, script2.GetCoin());
+                        break;
+                    case false:
+                        if (script.NumberOfLaunch > 0) 
+                        {
                             break;
-                        case false:
+                        }
+                        else
+                        {
                             StartCoroutine(script3.ShowMenuDefeat());
                             script4.SetStars(LevelName, 0);
                             break;
-                    }
+                        }
                 }
             }
             this.gameObject.GetComponent<PolygonCollider2D>().isTrigger = true;

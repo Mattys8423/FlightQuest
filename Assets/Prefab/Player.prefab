@@ -1010,6 +1010,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1889728971192461665}
     - target: {fileID: 782544886290118865, guid: b3d424afc01377a478bc3b196d0b30ac, type: 3}
+      propertyPath: launchForce
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 782544886290118865, guid: b3d424afc01377a478bc3b196d0b30ac, type: 3}
       propertyPath: NumberOfLaunch
       value: 1
       objectReference: {fileID: 0}

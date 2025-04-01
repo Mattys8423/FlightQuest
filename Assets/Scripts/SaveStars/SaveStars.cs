@@ -14,9 +14,7 @@ public class SaveStars : MonoBehaviour
     {
         string data = JsonUtility.ToJson(starsdata);
         string filePath = Application.persistentDataPath + "/StarsData.json";
-        Debug.Log(filePath);
         System.IO.File.WriteAllText(filePath, data);
-        Debug.Log("Sauvegarde réussi");
     }
 
     public void LoadFromJson()
@@ -37,16 +35,16 @@ public class SaveStars : MonoBehaviour
             if (levelEntry.number < Stars)
             {
                 levelEntry.number = Stars;
+                starsdata.StarsNb += Stars;
                 SaveToJson();
             }
-            Debug.Log(level + " a maintenant " + levelEntry.number + " étoiles.");
         }
         else
         {
             levelEntry = new LevelStars { name = level, number = Stars };
             starsdata.levelstar.Add(levelEntry);
+            starsdata.StarsNb += Stars;
             SaveToJson();
-            Debug.Log(level + " a maintenant " + levelEntry.number + " étoiles.");
         }
     }
 
@@ -57,14 +55,17 @@ public class SaveStars : MonoBehaviour
 
         if (levelEntry != null)
         {
-            Debug.Log(levelEntry.number + " étoiles.");
             return levelEntry.number;
         }
         else
         {
-            Debug.Log("Le niveau " + level + " n'existe pas");
             return 0;
         }
+    }
+
+    public int GetTotalStars()
+    {
+        return starsdata.StarsNb;
     }
 
 }
@@ -73,6 +74,7 @@ public class SaveStars : MonoBehaviour
 public class StarData
 {
     public List<LevelStars> levelstar = new List<LevelStars>();
+    public int StarsNb;
 }
 
 [System.Serializable]

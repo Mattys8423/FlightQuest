@@ -9,11 +9,11 @@ public class PlaneActions : MonoBehaviour
     private bool isFlying = false;
     private bool DoubleJumpUse = false;
     private bool IsGrounded = true;
+    private bool FirstLaunch= true;
     private Rigidbody2D rb;
-    //private Vector3 Vitesse = Vector3.zero;
     [SerializeField] private Puff script;
 
-    public float launchForce = 10f;
+    public float launchForce = 2f;
     public int NumberOfLaunch;
     public int trajectoryPoints = 30;
     public LineRenderer lineRenderer;
@@ -53,23 +53,49 @@ public class PlaneActions : MonoBehaviour
                 else if (Input.GetMouseButtonUp(0) && isDragging)
                 {                   
                     Vector2 endPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                    if (Vector2.Distance(endPos, startPos) < 1f || endPos.y - startPos.y < 1) { }
-                    else
+                    Debug.Log(IsGrounded);
+                    switch (FirstLaunch)
                     {
-                        Vector2 direction = endPos - startPos;
-                        //Vitesse = direction * launchForce;
+                        case false:
+                            if (Vector2.Distance(endPos, startPos) < 1f || endPos.y - startPos.y < 2) { }
+                            else
+                            {
+                                Vector2 direction = endPos - startPos;
 
-                        StartCoroutine(script.LaunchPuff());
-                        rb.isKinematic = false;
-                        rb.constraints = RigidbodyConstraints2D.None;
-                        isFlying = true;
-                        rb.AddForce(direction * launchForce, ForceMode2D.Impulse);
-                        this.GetComponent<Animator>().SetBool("IsFlying", true);
+                                StartCoroutine(script.LaunchPuff());
+                                rb.isKinematic = false;
+                                rb.constraints = RigidbodyConstraints2D.None;
+                                isFlying = true;
+                                rb.AddForce(direction * launchForce, ForceMode2D.Impulse);
+                                this.GetComponent<Animator>().SetBool("IsFlying", true);
 
-                        lineRenderer.enabled = false;
-                        isDragging = false;
-                        IsGrounded = false;
-                        NumberOfLaunch -= 1;
+                                lineRenderer.enabled = false;
+                                isDragging = false;
+                                IsGrounded = false;
+                                FirstLaunch = false;
+                                NumberOfLaunch -= 1;
+                            }
+                            break;
+                        case true:
+                            if (Vector2.Distance(endPos, startPos) < 1f) { }
+                            else
+                            {
+                                Vector2 direction = endPos - startPos;
+
+                                StartCoroutine(script.LaunchPuff());
+                                rb.isKinematic = false;
+                                rb.constraints = RigidbodyConstraints2D.None;
+                                isFlying = true;
+                                rb.AddForce(direction * launchForce, ForceMode2D.Impulse);
+                                this.GetComponent<Animator>().SetBool("IsFlying", true);
+
+                                lineRenderer.enabled = false;
+                                isDragging = false;
+                                IsGrounded = false;
+                                FirstLaunch = false;
+                                NumberOfLaunch -= 1;
+                            }
+                            break;
                     }
                 }
                 break;
@@ -82,13 +108,9 @@ public class PlaneActions : MonoBehaviour
     {
         if (isFlying)
         {
-            //transform.position += Vitesse * Time.fixedDeltaTime;
-            //Vitesse.y += -g * Time.fixedDeltaTime;
-            //Vitesse.x += f2 * Vitesse.x * Time.fixedDeltaTime;
             rb.linearVelocity += new Vector2(0, -g * Time.fixedDeltaTime);
             if (Input.GetMouseButton(0) && !DoubleJumpUse)
             {
-                //Vitesse.y += 15;
                 rb.linearVelocity += new Vector2(0, 10);
                 DoubleJumpUse = true;
             }
