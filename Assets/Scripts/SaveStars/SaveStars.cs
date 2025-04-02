@@ -63,6 +63,17 @@ public class SaveStars : MonoBehaviour
         }
     }
 
+    public void SetTotalStars()
+    {
+        starsdata.StarsNb = 0;
+        foreach (LevelStars levelEntry in starsdata.levelstar)
+        {
+            starsdata.StarsNb += levelEntry.number;
+        }
+        SaveToJson();
+    }
+
+
     public int GetTotalStars()
     {
         return starsdata.StarsNb;
