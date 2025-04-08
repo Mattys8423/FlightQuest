@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class EndLevelMenu : MonoBehaviour
 {
@@ -36,6 +37,13 @@ public class EndLevelMenu : MonoBehaviour
         MenuPause.SetActive(false);
         Menu.SetActive(true);
         Defeat.SetActive(true);
+
+        Button NextLevelButton = GameObject.Find("ButtonNextLevel")?.GetComponent<Button>();
+        if (NextLevelButton != null)
+        {
+            NextLevelButton.interactable = false;
+        }
+
         if (script2.GetCoin() == 1)
         {
             yield return new WaitForSeconds(.5f);

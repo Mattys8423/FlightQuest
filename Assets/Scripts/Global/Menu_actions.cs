@@ -15,6 +15,11 @@ public class Menu_actions : MonoBehaviour
         StartCoroutine(WaitAndPlay(SceneManager.GetActiveScene().buildIndex));
     }
 
+    public void nextLevel()
+    {
+        StartCoroutine(WaitAndPlay(SceneManager.GetActiveScene().buildIndex+1));
+    }
+
     public void quit()
     {
         StartCoroutine(WaitAndQuit());

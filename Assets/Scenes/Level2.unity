@@ -3225,6 +3225,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1748877166}
+    - target: {fileID: 5377009449357936613, guid: 920b6cb204ffa514c9a0305ffe8b2ef0, type: 3}
+      propertyPath: m_SpriteState.m_DisabledSprite
+      value: 
+      objectReference: {fileID: -697676565333083181, guid: af10192eaff79824fbebc59dd8ea21f3, type: 3}
+    - target: {fileID: 5377009449357936613, guid: 920b6cb204ffa514c9a0305ffe8b2ef0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1748877167}
+    - target: {fileID: 5377009449357936613, guid: 920b6cb204ffa514c9a0305ffe8b2ef0, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1748877166}
     - target: {fileID: 6192364215162299081, guid: 920b6cb204ffa514c9a0305ffe8b2ef0, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.0803

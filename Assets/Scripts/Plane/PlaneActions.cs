@@ -169,4 +169,9 @@ public class PlaneActions : MonoBehaviour
     public bool GetDJ() { return DoubleJumpUse; }
 
     public bool GetIsFlying() {  return isFlying; }
+
+    public void AddForceY(float value)
+    {
+        rb.AddForce(new Vector2(0, value), ForceMode2D.Impulse);
+    }
 }
