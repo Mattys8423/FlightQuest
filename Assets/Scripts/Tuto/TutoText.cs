@@ -15,7 +15,6 @@ public class TutoText : MonoBehaviour
 
     private bool isHolding = false;
     private bool hasDJ = false;
-    private bool hasTouchedCircle = false;
     private float holdTime = 0f;
     private float requiredHoldTime = .8f;
     private float requiredHoldTime2 = 4f;
@@ -66,8 +65,7 @@ public class TutoText : MonoBehaviour
 
     IEnumerator ShowDJ()
     {
-
-        while (script.GetCoin() < 2 && !hasTouchedCircle)
+        while (script.GetCoin() < 2)
         {
             yield return null;
         }
@@ -95,10 +93,5 @@ public class TutoText : MonoBehaviour
         {
             hasDJ = false;
         }
-    }
-
-    public void SetCircle(bool answer)
-    {
-        hasTouchedCircle = answer;
     }
 }

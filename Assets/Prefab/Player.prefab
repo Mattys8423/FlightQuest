@@ -479,7 +479,7 @@ GameObject:
   - component: {fileID: 6343348519112882732}
   - component: {fileID: 461447490477980228}
   m_Layer: 5
-  m_Name: Skill
+  m_Name: double Jump
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -532,7 +532,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Skill
+  m_text: Jump
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 85ceed50176d72741ae9759edb3924ab, type: 2}
   m_sharedMaterial: {fileID: -1825441733382929449, guid: 85ceed50176d72741ae9759edb3924ab, type: 2}
