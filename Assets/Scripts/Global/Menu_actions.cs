@@ -10,6 +10,11 @@ public class Menu_actions : MonoBehaviour
         StartCoroutine(WaitAndPlay(SceneIndex));
     }
 
+    public void playlevel(string SceneName)
+    {
+        StartCoroutine(WaitAndPlayName(SceneName));
+    }
+
     public void retry()
     {
         StartCoroutine(WaitAndPlay(SceneManager.GetActiveScene().buildIndex));
@@ -29,6 +34,12 @@ public class Menu_actions : MonoBehaviour
     {
         yield return new WaitForSeconds(.5f);
         SceneManager.LoadScene(SceneIndex);
+    }
+
+    IEnumerator WaitAndPlayName(string SceneName)
+    {
+        yield return new WaitForSeconds(.5f);
+        SceneManager.LoadScene(SceneName);
     }
 
     IEnumerator WaitAndQuit()

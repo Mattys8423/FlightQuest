@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +8,7 @@ public class PlaneActions : MonoBehaviour
     private Vector2 startPos;
     private bool isDragging = false;
     private bool isFlying = false;
-    private bool DoubleJumpUse = false;
+    private bool Skill = false;
     private bool IsGrounded = true;
     private bool FirstLaunch= true;
     private Rigidbody2D rb;
@@ -16,6 +17,7 @@ public class PlaneActions : MonoBehaviour
     public float launchForce = 2f;
     public int NumberOfLaunch;
     public int trajectoryPoints = 30;
+    public int SkillNumber = 0;
     public LineRenderer lineRenderer;
 
     public float alpha = 45f;
@@ -109,10 +111,10 @@ public class PlaneActions : MonoBehaviour
         if (isFlying)
         {
             rb.linearVelocity += new Vector2(0, -g * Time.fixedDeltaTime);
-            if (Input.GetMouseButton(0) && !DoubleJumpUse)
+            if (Input.GetMouseButton(0) && !Skill)
             {
-                rb.linearVelocity += new Vector2(0, 10);
-                DoubleJumpUse = true;
+                SpecialSkill();
+                Skill = true;
             }
         }
     }
@@ -153,7 +155,17 @@ public class PlaneActions : MonoBehaviour
         lineRenderer.SetPositions(points.ToArray());
     }
 
-//--------------------------------------------------------------------------//
+    private void SpecialSkill()
+    {
+        switch (SkillNumber)
+        {
+            case 0:
+                rb.linearVelocity += new Vector2(0, 10);
+                break;
+        }
+    }
+
+    //--------------------------------------------------------------------------//
 
     public void StopPlane(bool animation)
     {
@@ -166,7 +178,7 @@ public class PlaneActions : MonoBehaviour
 
     public void SetGrounded(bool grounded) { IsGrounded = grounded; }
 
-    public bool GetDJ() { return DoubleJumpUse; }
+    public bool GetDJ() { return Skill; }
 
     public bool GetIsFlying() {  return isFlying; }
 
