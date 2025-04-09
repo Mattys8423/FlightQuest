@@ -32,19 +32,19 @@ public class Menu_actions : MonoBehaviour
 
     IEnumerator WaitAndPlay(int SceneIndex)
     {
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.25f);
         SceneManager.LoadScene(SceneIndex);
     }
 
     IEnumerator WaitAndPlayName(string SceneName)
     {
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.25f);
         SceneManager.LoadScene(SceneName);
     }
 
     IEnumerator WaitAndQuit()
     {
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.25f);
         Application.Quit();
     }
 }
