@@ -69,7 +69,7 @@ MonoBehaviour:
   m_text: 'Launch :'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 85ceed50176d72741ae9759edb3924ab, type: 2}
-  m_sharedMaterial: {fileID: -1825441733382929449, guid: 85ceed50176d72741ae9759edb3924ab, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: f8d9f98de29926a4fa8845283b7c53cf, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -324,7 +324,7 @@ MonoBehaviour:
   m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 85ceed50176d72741ae9759edb3924ab, type: 2}
-  m_sharedMaterial: {fileID: -1825441733382929449, guid: 85ceed50176d72741ae9759edb3924ab, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: f8d9f98de29926a4fa8845283b7c53cf, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -535,7 +535,7 @@ MonoBehaviour:
   m_text: Skill
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 85ceed50176d72741ae9759edb3924ab, type: 2}
-  m_sharedMaterial: {fileID: -1825441733382929449, guid: 85ceed50176d72741ae9759edb3924ab, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: f8d9f98de29926a4fa8845283b7c53cf, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -960,6 +960,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 293664758915248985}
+  - component: {fileID: 3078821113366113686}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -985,6 +986,33 @@ Transform:
   - {fileID: 700619237108123414}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3078821113366113686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7936674187694807749}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ced3da473eb647f44bf5485faae2d82c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  overrideControllerTemplate: {fileID: 22100000, guid: d2b2783246f55fc4883a3149749e54ca, type: 2}
+  baseController: {fileID: 9100000, guid: a6874cd2f0215124584c511918e58ae7, type: 2}
+  possibleAnimationsIdle: []
+  possibleAnimationsActive:
+  - {fileID: 7400000, guid: da9e1e8777776a8478a1e9f8308a0ab4, type: 2}
+  - {fileID: 7400000, guid: afd04f65493cdd24585ed91fd55e5251, type: 2}
+  - {fileID: 7400000, guid: d97b0d1bf83e48d4d94514a24a3e2c16, type: 2}
+  - {fileID: 7400000, guid: 95b8bca8eddf5b24eb66d8143b6a0aa0, type: 2}
+  planeSprites:
+  - {fileID: 2882909381789517479, guid: 214f244ba11f479449c60c0396ba6384, type: 3}
+  - {fileID: 8801610105746337820, guid: c7618dda501d9334f8d8b7c94fbbd610, type: 3}
+  - {fileID: 2414759349547216495, guid: 192e6f03c80687349808287d3ccb63c7, type: 3}
+  - {fileID: -6840797934148311557, guid: 694d72ec6ac319c4ca4fa502b20bae44, type: 3}
+  script: {fileID: 0}
+  Plane: {fileID: 2849224948896669272}
 --- !u!1001 &1602149782329068819
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1087,6 +1115,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a32d03847a880b4ba7a03bbdb684834, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!212 &2849224948896669272 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 3580784207353025355, guid: b3d424afc01377a478bc3b196d0b30ac, type: 3}
+  m_PrefabInstance: {fileID: 1602149782329068819}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2877544967877325599 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3590755773979557388, guid: b3d424afc01377a478bc3b196d0b30ac, type: 3}

@@ -1233,6 +1233,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2082865146105918914, guid: a4cd26b69b31f464b808c595a53bbb54, type: 3}
+      propertyPath: Main
+      value: 
+      objectReference: {fileID: 1102710524}
+    - target: {fileID: 3078821113366113686, guid: a4cd26b69b31f464b808c595a53bbb54, type: 3}
+      propertyPath: script
+      value: 
+      objectReference: {fileID: 1102710524}
     - target: {fileID: 7936674187694807749, guid: a4cd26b69b31f464b808c595a53bbb54, type: 3}
       propertyPath: m_Name
       value: PlayerDJ

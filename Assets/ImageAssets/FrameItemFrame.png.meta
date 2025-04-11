@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 885c2ac229f8da449ba42469c38f1609
+guid: 7203c11443952f442a8b3c972b62c8f7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6919348689375657533
-    second: cadenas_0
+      213: 7060840916980045033
+    second: FrameItemFrame_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cadenas_0
+      name: FrameItemFrame_0
       rect:
         serializedVersion: 2
-        x: 184
-        y: 21
-        width: 232
-        height: 307
+        x: 629
+        y: 225
+        width: 596
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3c103bcf60989ff90800000000000000
-      internalID: -6919348689375657533
+      spriteID: 9e4932077652df160800000000000000
+      internalID: 7060840916980045033
       vertices: []
       indices: 
       edges: []
@@ -164,7 +164,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      cadenas_0: -6919348689375657533
+      FrameItemFrame_0: 7060840916980045033
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

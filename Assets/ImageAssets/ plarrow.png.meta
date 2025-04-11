@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 885c2ac229f8da449ba42469c38f1609
+guid: e5d61a8b46c58e043aab42282d370061
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6919348689375657533
-    second: cadenas_0
+      213: 895675289855191926
+    second: ' plarrow_0'
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cadenas_0
+      name: ' plarrow_0'
       rect:
         serializedVersion: 2
-        x: 184
-        y: 21
-        width: 232
-        height: 307
+        x: 87
+        y: 138
+        width: 1012
+        height: 928
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3c103bcf60989ff90800000000000000
-      internalID: -6919348689375657533
+      spriteID: 67be9ed3ee31e6c00800000000000000
+      internalID: 895675289855191926
       vertices: []
       indices: 
       edges: []
@@ -164,7 +164,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -173,8 +173,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      cadenas_0: -6919348689375657533
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

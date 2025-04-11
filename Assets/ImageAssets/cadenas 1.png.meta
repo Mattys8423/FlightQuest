@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 885c2ac229f8da449ba42469c38f1609
+guid: 35ae3bf096a0b284cabb40b9d94f6715
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -142,12 +142,12 @@ TextureImporter:
       name: cadenas_0
       rect:
         serializedVersion: 2
-        x: 184
-        y: 21
-        width: 232
-        height: 307
+        x: 211
+        y: 212
+        width: 180
+        height: 116
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -160,11 +160,33 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: cadenas 1_0
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 16
+        width: 228
+        height: 203
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7d8a3183635d154bb3bc3fe1c8e7227
+      internalID: -1118512337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 8fcbbdbd8ca83c147b71d64ed988c3aa
     internalID: 0
     vertices: []
     indices: 
@@ -174,6 +196,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+      cadenas 1_0: -1118512337
       cadenas_0: -6919348689375657533
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0

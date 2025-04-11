@@ -1,77 +1,68 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
+using TMPro;
 
 public class ScrollSnapToCenter : MonoBehaviour
 {
+    [SerializeField] SaveStars script;
+
     public ScrollRect scrollRect;
     public RectTransform content;
-    public RectTransform viewport;
-    public float snapSpeed = 10f;
-    public float snapThreshold = 0.1f;
+    public RectTransform SampleListItem;
+    public HorizontalLayoutGroup horizontalLayoutGroup;
+    public TMP_Text Name;
 
-    private bool isDragging;
-    private RectTransform closestItem;
+    public string[] ItemNames;
+
+    private bool IsSnapped;
+
+    public float snapForce;
+    public int ItemNumber;
+    float snapSpeed;
+
+    private void Start()
+    {
+        IsSnapped = false;
+    }
 
     void Update()
     {
-        if (!isDragging)
+        int currentItem = Mathf.RoundToInt((0 - content.localPosition.x / (SampleListItem.rect.width + horizontalLayoutGroup.spacing)));
+        ItemNumber = currentItem;
+
+        if (scrollRect.velocity.magnitude < 200)
         {
-            SnapToClosestItem();
+            scrollRect.velocity = Vector2.zero;
+            snapSpeed += snapForce * Time.deltaTime;
+            content.localPosition = new Vector3(
+                Mathf.MoveTowards(content.localPosition.x, 0 - (currentItem * (SampleListItem.rect.width + horizontalLayoutGroup.spacing)), snapSpeed),
+                content.localPosition.y,
+                content.localPosition.z);
+            Name.text = ItemNames[currentItem];
+            if (content.localPosition.x == 0 - (currentItem) * (SampleListItem.rect.width + horizontalLayoutGroup.spacing))
+            {
+                IsSnapped = true;
+            }
+        }
+        if (scrollRect.velocity.magnitude > 200)
+        {
+            Name.text = "  ";
+            IsSnapped = false;
+            snapSpeed = 0;
         }
     }
 
-    void SnapToClosestItem()
+    public void Apply()
     {
-        float closestDistance = float.MaxValue;
-        RectTransform closestItem = null;
+        Image currentImage = content.GetChild(ItemNumber).GetComponent<Image>();
 
-        // Position centrale du viewport EN LOCAL
-        Vector3 viewportLocalCenter = viewport.localPosition;
-
-        foreach (RectTransform child in content)
+        if (currentImage != null)
         {
-            // Convertir position locale du bouton par rapport au viewport
-            Vector3 childLocalPos = content.InverseTransformPoint(child.position);
-            float distance = Mathf.Abs(childLocalPos.x);
-
-            if (distance < closestDistance)
+            if (!currentImage.GetComponent<Lock>().GetIsLocked())
             {
-                closestDistance = distance;
-                closestItem = child;
+                script.SetPlane(ItemNumber);
             }
         }
-
-        if (closestItem != null)
-        {
-            // Convertir position cible en local
-            Vector3 childLocalPos = content.InverseTransformPoint(closestItem.position);
-            Vector3 diff = new Vector3(childLocalPos.x, 0f, 0f);
-
-            Vector3 targetPos = content.localPosition - diff;
-
-            // Snap progressif vers targetPos
-            if (Vector3.Distance(content.localPosition, targetPos) > 0.1f)
-            {
-                content.localPosition = Vector3.Lerp(content.localPosition, targetPos, Time.deltaTime * snapSpeed);
-            }
-            else
-            {
-                content.localPosition = targetPos;
-            }
-        }
-    }
-
-
-
-
-    public void OnBeginDrag()
-    {
-        isDragging = true;
-    }
-
-    public void OnEndDrag()
-    {
-        isDragging = false;
     }
 }

@@ -2650,6 +2650,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2082865146105918914, guid: a4cd26b69b31f464b808c595a53bbb54, type: 3}
+      propertyPath: Main
+      value: 
+      objectReference: {fileID: 1745249859}
+    - target: {fileID: 2082865146105918914, guid: a4cd26b69b31f464b808c595a53bbb54, type: 3}
       propertyPath: NumberOfLaunch
       value: 2
       objectReference: {fileID: 0}
@@ -2657,6 +2661,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.x
       value: -0.18
       objectReference: {fileID: 0}
+    - target: {fileID: 3078821113366113686, guid: a4cd26b69b31f464b808c595a53bbb54, type: 3}
+      propertyPath: script
+      value: 
+      objectReference: {fileID: 1745249859}
     - target: {fileID: 5056445711641692332, guid: a4cd26b69b31f464b808c595a53bbb54, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0

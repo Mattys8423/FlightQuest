@@ -383,6 +383,7 @@ GameObject:
   - component: {fileID: 269940047}
   - component: {fileID: 269940046}
   - component: {fileID: 269940045}
+  - component: {fileID: 269940048}
   m_Layer: 0
   m_Name: rockLava_0
   m_TagString: Untagged
@@ -538,6 +539,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1828726407}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &269940048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 269940044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f14248de19a6ee4409b3302ec87b9e5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Plane: {fileID: 1425852893}
+  Explosion: {fileID: 1286221812}
+  script: {fileID: 1425852894}
+  script3: {fileID: 1750594281}
+  script4: {fileID: 1748877170}
 --- !u!1001 &277163970
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1995,9 +2013,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2082865146105918914, guid: a4cd26b69b31f464b808c595a53bbb54, type: 3}
-      propertyPath: NumberOfLaunch
-      value: 1
-      objectReference: {fileID: 0}
+      propertyPath: Main
+      value: 
+      objectReference: {fileID: 1748877170}
+    - target: {fileID: 3078821113366113686, guid: a4cd26b69b31f464b808c595a53bbb54, type: 3}
+      propertyPath: script
+      value: 
+      objectReference: {fileID: 1748877170}
+    - target: {fileID: 5226554371929102952, guid: a4cd26b69b31f464b808c595a53bbb54, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: d2b2783246f55fc4883a3149749e54ca, type: 2}
     - target: {fileID: 7936674187694807749, guid: a4cd26b69b31f464b808c595a53bbb54, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2876,6 +2902,7 @@ GameObject:
   - component: {fileID: 2008531771}
   - component: {fileID: 2008531770}
   - component: {fileID: 2008531769}
+  - component: {fileID: 2008531772}
   m_Layer: 0
   m_Name: rockDownLava_0 (1)
   m_TagString: Untagged
@@ -3027,6 +3054,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1828726407}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2008531772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2008531768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f14248de19a6ee4409b3302ec87b9e5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Plane: {fileID: 1425852893}
+  Explosion: {fileID: 1286221812}
+  script: {fileID: 1425852894}
+  script3: {fileID: 1750594281}
+  script4: {fileID: 1748877170}
 --- !u!1 &2043377804
 GameObject:
   m_ObjectHideFlags: 0
@@ -3038,6 +3082,7 @@ GameObject:
   - component: {fileID: 2043377807}
   - component: {fileID: 2043377806}
   - component: {fileID: 2043377805}
+  - component: {fileID: 2043377808}
   m_Layer: 0
   m_Name: rockDownLava_0
   m_TagString: Untagged
@@ -3189,6 +3234,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1828726407}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2043377808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043377804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f14248de19a6ee4409b3302ec87b9e5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Plane: {fileID: 1425852893}
+  Explosion: {fileID: 1286221812}
+  script: {fileID: 1425852894}
+  script3: {fileID: 1750594281}
+  script4: {fileID: 1748877170}
 --- !u!1001 &2062399260
 PrefabInstance:
   m_ObjectHideFlags: 0

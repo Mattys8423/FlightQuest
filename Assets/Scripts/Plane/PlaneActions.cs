@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlaneActions : MonoBehaviour
 {
+    [SerializeField] SaveStars Main;
+
     private Vector2 startPos;
     private bool isDragging = false;
     private bool isFlying = false;
@@ -26,6 +28,8 @@ public class PlaneActions : MonoBehaviour
 
     void Start()
     {
+        SkillNumber = Main.GetPlane();
+        Debug.Log(SkillNumber + "is your plane");
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;
         rb.isKinematic = true;
@@ -162,13 +166,57 @@ public class PlaneActions : MonoBehaviour
             case 0:
                 rb.linearVelocity += new Vector2(0, 10);
                 break;
+
+            case 1:
+                rb.linearVelocity += new Vector2(10, 0);
+                break;
+
+            case 2:
+                StartCoroutine(DoLooping());
+                break;
         }
     }
+
+    private IEnumerator DoLooping()
+    {
+        float duration = 0.6f;
+        float radius = -2f;
+        float angle = 0f;
+
+        Vector2 originalVelocity = rb.linearVelocity;
+
+        float originalGravity = rb.gravityScale;
+        rb.gravityScale = 0;
+
+        Vector2 center = rb.position + new Vector2(0, -radius);
+        float elapsed = 0f;
+
+        while (elapsed < duration)
+        {
+            float t = elapsed / duration;
+            angle = Mathf.Lerp(0, -360, t);
+            float rad = angle * Mathf.Deg2Rad;
+
+            Vector2 offset = new Vector2(Mathf.Sin(rad), Mathf.Cos(rad)) * radius;
+            rb.MovePosition(center + offset);
+            rb.MoveRotation(-angle);
+
+            elapsed += Time.fixedDeltaTime;
+            yield return new WaitForFixedUpdate();
+        }
+
+        rb.linearVelocity = originalVelocity;
+        rb.gravityScale = originalGravity;
+
+        rb.MoveRotation(0f);
+    }
+
 
     //--------------------------------------------------------------------------//
 
     public void StopPlane(bool animation)
     {
+        StopAllCoroutines();
         rb.isKinematic = true;
         rb.constraints = RigidbodyConstraints2D.FreezePosition;
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;

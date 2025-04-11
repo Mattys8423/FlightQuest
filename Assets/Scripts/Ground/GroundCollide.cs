@@ -59,6 +59,7 @@ public class GroundCollide : MonoBehaviour
 
     IEnumerator DefeatExplode()
     {
+        script.StopPlane(false);
         Plane.GetComponent<SpriteRenderer>().enabled = false;
         Explosion.SetActive(true);
         yield return new WaitForSeconds(.6f);
