@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: IdleGreen
+  m_Name: IdleYellow
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -42,7 +42,7 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 2414759349547216495, guid: 192e6f03c80687349808287d3ccb63c7, type: 3}
+      value: {fileID: 8801610105746337820, guid: c7618dda501d9334f8d8b7c94fbbd610, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -74,7 +74,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 2414759349547216495, guid: 192e6f03c80687349808287d3ccb63c7, type: 3}
+    - {fileID: 8801610105746337820, guid: c7618dda501d9334f8d8b7c94fbbd610, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}

@@ -3,9 +3,7 @@ using UnityEngine.U2D;
 
 public class SetPlaneAsset : MonoBehaviour
 {
-    public AnimatorOverrideController overrideControllerTemplate;
-    public RuntimeAnimatorController baseController;
-    public AnimationClip[] possibleAnimationsActive;
+    public RuntimeAnimatorController[] baseController;
     public Sprite[] planeSprites;
 
     [SerializeField] SaveStars script;
@@ -14,9 +12,7 @@ public class SetPlaneAsset : MonoBehaviour
     private void Start()
     {
         Animator animator = Plane.GetComponent<Animator>();
-        AnimatorOverrideController instanceOverride = new AnimatorOverrideController(overrideControllerTemplate);
-
+        animator.runtimeAnimatorController = baseController[script.GetPlane()];
         Plane.GetComponent<SpriteRenderer>().sprite = planeSprites[script.GetPlane()];
-        instanceOverride["Plane"] = possibleAnimationsActive[script.GetPlane()];
     }
 }

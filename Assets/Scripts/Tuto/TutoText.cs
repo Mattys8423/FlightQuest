@@ -72,7 +72,7 @@ public class TutoText : MonoBehaviour
             yield return null;
         }
         Click.SetActive(true);
-        TexteTuto.SetText("click to double jump");
+        TexteTuto.SetText("click to use your skill");
         Time.timeScale = 0f;
         while (!Input.GetMouseButton(0))
         {
@@ -82,7 +82,7 @@ public class TutoText : MonoBehaviour
         yield return new WaitForSeconds(.3f);
         flèche2.SetActive(true);
         TexteTuto.SetText("Pay attention to your number of launch it can be useful !");
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(3f);
         Click.SetActive(false);
         Tap.SetActive(false);
         flèche2.SetActive(false);

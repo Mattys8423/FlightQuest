@@ -53,8 +53,33 @@ public class PlaneActions : MonoBehaviour
                 {
                     Vector2 currentPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                     Vector2 direction = currentPos - startPos;
+                    Vector2 endPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
-                    ShowTrajectory(transform.position, direction * launchForce);
+                    switch (FirstLaunch)
+                    {
+                        case false:
+                            if (Vector2.Distance(endPos, startPos) < 2f || endPos.y - startPos.y < 2)
+                            {
+                                lineRenderer.enabled = false;
+                            }
+                            else
+                            {
+                                lineRenderer.enabled = true;
+                                ShowTrajectory(transform.position, direction * launchForce);
+                            }
+                            break;
+                        case true:
+                            if (Vector2.Distance(endPos, startPos) < 2f)
+                            {
+                                lineRenderer.enabled = false;
+                            }
+                            else
+                            {
+                                lineRenderer.enabled = true;
+                                ShowTrajectory(transform.position, direction * launchForce);
+                            }
+                            break;
+                    }
                 }
                 else if (Input.GetMouseButtonUp(0) && isDragging)
                 {                   
@@ -63,7 +88,7 @@ public class PlaneActions : MonoBehaviour
                     switch (FirstLaunch)
                     {
                         case false:
-                            if (Vector2.Distance(endPos, startPos) < 1f || endPos.y - startPos.y < 2) { }
+                            if (Vector2.Distance(endPos, startPos) < 2f || endPos.y - startPos.y < 2) { }
                             else
                             {
                                 Vector2 direction = endPos - startPos;
@@ -83,7 +108,7 @@ public class PlaneActions : MonoBehaviour
                             }
                             break;
                         case true:
-                            if (Vector2.Distance(endPos, startPos) < 1f) { }
+                            if (Vector2.Distance(endPos, startPos) < 2f) { }
                             else
                             {
                                 Vector2 direction = endPos - startPos;
@@ -125,7 +150,6 @@ public class PlaneActions : MonoBehaviour
 
     void ShowTrajectory(Vector2 start, Vector2 velocity)
     {
-        lineRenderer.enabled = true;
         List<Vector3> points = new List<Vector3>();
 
         Vector2 pos = start;
@@ -157,6 +181,32 @@ public class PlaneActions : MonoBehaviour
 
         lineRenderer.positionCount = points.Count > trajectoryPoints ? trajectoryPoints : points.Count;
         lineRenderer.SetPositions(points.ToArray());
+
+        Vector2 finalVelocity = new Vector2(vx, vy);
+        float finalSpeed = finalVelocity.magnitude;
+
+        float maxSpeed = 15f;
+        float t = Mathf.Clamp01(finalSpeed / maxSpeed);
+        float tReverse = Mathf.Clamp01(maxSpeed / finalSpeed);
+
+        Color coldColor = Color.white;
+        Color hotColor = new Color(255, 0, 0);
+        Color finalColor = Color.Lerp(coldColor, hotColor, t);
+
+        Gradient gradient = new Gradient();
+        gradient.SetKeys(
+            new GradientColorKey[] {
+            new GradientColorKey(coldColor, 0.0f),
+            new GradientColorKey(finalColor, tReverse)
+            },
+            new GradientAlphaKey[] {
+            new GradientAlphaKey(1.0f, 0.0f),
+            new GradientAlphaKey(t, 1.0f)
+            }
+        );
+
+        lineRenderer.colorGradient = gradient;
+        lineRenderer.material.SetFloat("_TilingAmount", finalSpeed * 1.2f);
     }
 
     private void SpecialSkill()
