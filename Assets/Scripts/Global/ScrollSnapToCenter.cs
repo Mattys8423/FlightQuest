@@ -65,4 +65,10 @@ public class ScrollSnapToCenter : MonoBehaviour
             }
         }
     }
+
+    public bool GetLockCurrentImage()
+    {
+        Image currentImage = content.GetChild(ItemNumber).GetComponent<Image>();
+        return currentImage.GetComponent<Lock>().GetIsLocked();
+    }
 }

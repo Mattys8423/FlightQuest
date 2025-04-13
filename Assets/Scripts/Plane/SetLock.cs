@@ -1,72 +1,54 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class SetLock : MonoBehaviour
 {
     [SerializeField] SaveStars script;
     [SerializeField] ScrollRectStop script2;
-    [SerializeField] GameObject Plane1;
-    [SerializeField] GameObject Plane2;
-    [SerializeField] GameObject Plane3;
-    [SerializeField] GameObject Plane4;
+    [SerializeField] AudioSource Effect;
+    [SerializeField] AudioClip Unlock;
+
+    [SerializeField] List<GameObject> planes;
+
     bool hasAnimate = false;
 
     private void Start()
     {
         int totalStars = script.GetTotalStars();
-        Plane1.GetComponent<Lock>().SetIsLocked(false);
+        planes[0].GetComponent<Lock>().SetIsLocked(false);
 
-        if (totalStars > 10)
+        for (int i = 1; i < planes.Count; i++)
         {
-            Plane2.transform.Find("Locket").GetComponent<Image>().enabled = false;
-            Plane2.GetComponent<Lock>().SetIsLocked(false);
-        }
-        if (totalStars > 20)
-        {
-            Plane3.transform.Find("Locket").GetComponent<Image>().enabled = true;
-            Plane3.GetComponent<Lock>().SetIsLocked(false);
-        }
-        if (totalStars > 30)
-        {
-            Plane4.transform.Find("Locket").GetComponent<Image>().enabled = true;
-            Plane4.GetComponent<Lock>().SetIsLocked(false);
+            if (totalStars > 10 * (i + 1))
+            {
+                GameObject locket = planes[i].transform.Find("Locket")?.gameObject;
+                locket.SetActive(false);
+                planes[i].GetComponent<Lock>().SetIsLocked(false);
+            }
         }
     }
 
     private void Update()
     {
         int totalStars = script.GetTotalStars();
-        if (totalStars >= 10)
+
+        for (int i = 1; i < planes.Count; i++)
         {
-            if (totalStars < 20 && script2.PlaneNumber == 1 && !hasAnimate)
+            if (totalStars >= 10 * i)
             {
-                Animator locket = Plane2.transform.Find("Locket").GetComponent<Animator>();
-                locket.SetTrigger("Unlock");
-                hasAnimate = true;
-            }
-        }
+                planes[i].GetComponent<Lock>().SetIsLocked(false);
 
-        if (totalStars >= 20)
-        {
-            Plane3.GetComponent<Lock>().SetIsLocked(false);
-
-            if (totalStars < 30 && script2.PlaneNumber == 2 && !hasAnimate)
-            {
-                Animator locket = Plane2.transform.Find("Locket").GetComponent<Animator>();
-                locket.SetTrigger("Unlock");
-                hasAnimate = true;
-            }
-        }
-
-        if (totalStars >= 30)
-        {
-            Plane4.GetComponent<Lock>().SetIsLocked(false);
-
-            if (totalStars < 40 && script2.PlaneNumber == 3 && !hasAnimate)
-            {
-                Animator locket = Plane2.transform.Find("Locket").GetComponent<Animator>();
-                locket.SetTrigger("Unlock");
-                hasAnimate = true;
+                if (totalStars < 10 * (i + 1) && script2.PlaneNumber == i && !hasAnimate)
+                {
+                    Animator locket = planes[i].transform.Find("Locket")?.GetComponent<Animator>();
+                    if (locket != null)
+                    {
+                        Effect.PlayOneShot(Unlock);
+                        locket.SetTrigger("Unlock");
+                        hasAnimate = true;
+                    }
+                }
             }
         }
     }

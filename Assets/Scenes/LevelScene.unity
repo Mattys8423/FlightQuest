@@ -249,7 +249,6 @@ MonoBehaviour:
   Stars2: {fileID: 611376571}
   Stars3: {fileID: 2065854898}
   script4: {fileID: 997254783193132640}
-  Level: Level5
 --- !u!1 &28702887
 GameObject:
   m_ObjectHideFlags: 0
@@ -830,9 +829,9 @@ RectTransform:
   - {fileID: 1593888679}
   m_Father: {fileID: 34352928}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 9790, y: -463}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &73451202
@@ -1321,7 +1320,6 @@ MonoBehaviour:
   Stars2: {fileID: 464420258}
   Stars3: {fileID: 1573147669}
   script4: {fileID: 997254783193132640}
-  Level: Level5
 --- !u!1 &101969129
 GameObject:
   m_ObjectHideFlags: 0
@@ -1615,7 +1613,6 @@ MonoBehaviour:
   Stars2: {fileID: 2027972229}
   Stars3: {fileID: 1561478467}
   script4: {fileID: 997254783193132640}
-  Level: Level5
 --- !u!1 &145144182
 GameObject:
   m_ObjectHideFlags: 0
@@ -1917,7 +1914,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Level 5
+  m_Text: Level 7
 --- !u!222 &177873203
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1963,9 +1960,9 @@ RectTransform:
   - {fileID: 520760600}
   m_Father: {fileID: 34352928}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 3040, y: -463}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &180936887
@@ -2575,9 +2572,9 @@ RectTransform:
   - {fileID: 25397913}
   m_Father: {fileID: 34352928}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 10540, y: -463}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &284763584
@@ -2843,7 +2840,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Level 5
+  m_Text: Level 8
 --- !u!222 &298998351
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2975,7 +2972,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 328683252}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 01713c66cdd74b14184fa53dea322456, type: 3}
+  m_Script: {fileID: 11500000, guid: d2822cf077523fa4ca569c564a551e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Stars1: {fileID: 534188533}
@@ -3054,9 +3051,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 34352928}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 12724, y: -397}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 368, y: 368}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &340846577
@@ -3462,7 +3459,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Level 5
+  m_Text: Level 15
 --- !u!222 &415326788
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3978,7 +3975,6 @@ MonoBehaviour:
   Stars2: {fileID: 1118774110}
   Stars3: {fileID: 2004506164}
   script4: {fileID: 997254783193132640}
-  Level: Level3
 --- !u!1 &534188533
 GameObject:
   m_ObjectHideFlags: 0
@@ -4317,9 +4313,9 @@ RectTransform:
   - {fileID: 2135399546}
   m_Father: {fileID: 34352928}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 6790, y: -463}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &583380612
@@ -4778,9 +4774,9 @@ RectTransform:
   - {fileID: 1667541868}
   m_Father: {fileID: 34352928}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 3790, y: -463}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &608698802
@@ -5183,7 +5179,6 @@ MonoBehaviour:
   Stars2: {fileID: 2143737172}
   Stars3: {fileID: 608386710}
   script4: {fileID: 997254783193132640}
-  Level: Level5
 --- !u!1 &650367891
 GameObject:
   m_ObjectHideFlags: 0
@@ -5254,7 +5249,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Level 5
+  m_Text: Level 11
 --- !u!222 &650367894
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6527,9 +6522,9 @@ RectTransform:
   - {fileID: 1666094672}
   m_Father: {fileID: 34352928}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 2290, y: -463}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &765517915
@@ -6903,7 +6898,6 @@ MonoBehaviour:
   Stars2: {fileID: 1581406508}
   Stars3: {fileID: 390214427}
   script4: {fileID: 997254783193132640}
-  Level: Level5
 --- !u!1 &842413713
 GameObject:
   m_ObjectHideFlags: 0
@@ -7224,9 +7218,9 @@ RectTransform:
   - {fileID: 1762952873}
   m_Father: {fileID: 34352928}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 5290, y: -463}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &902492897
@@ -7763,9 +7757,9 @@ RectTransform:
   - {fileID: 86320167}
   m_Father: {fileID: 34352928}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 9040, y: -463}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1005204566
@@ -8208,9 +8202,9 @@ RectTransform:
   - {fileID: 328683253}
   m_Father: {fileID: 34352928}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1540, y: -463}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1169154314
@@ -8257,16 +8251,16 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1169154317}
-        m_TargetAssemblyTypeName: PlayLevel, Assembly-CSharp
+      - m_Target: {fileID: 81485659}
+        m_TargetAssemblyTypeName: Menu_actions, Assembly-CSharp
         m_MethodName: playlevel
-        m_Mode: 1
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 2
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: Level1_Tuto
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 997254783193132639}
@@ -8368,9 +8362,9 @@ RectTransform:
   - {fileID: 2146265844}
   m_Father: {fileID: 34352928}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 12040, y: -463}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1237062775
@@ -8546,7 +8540,6 @@ MonoBehaviour:
   Stars2: {fileID: 798579240}
   Stars3: {fileID: 1638025975}
   script4: {fileID: 997254783193132640}
-  Level: Level5
 --- !u!1 &1255667784
 GameObject:
   m_ObjectHideFlags: 0
@@ -8617,7 +8610,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Level 5
+  m_Text: Level 9
 --- !u!222 &1255667787
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8890,9 +8883,9 @@ RectTransform:
   - {fileID: 840662833}
   m_Father: {fileID: 34352928}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 8290, y: -463}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1296579314
@@ -9158,7 +9151,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Level 5
+  m_Text: Level 12
 --- !u!222 &1304133238
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -9512,9 +9505,9 @@ RectTransform:
   - {fileID: 2026431464}
   m_Father: {fileID: 34352928}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 4540, y: -463}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1355452477
@@ -10064,7 +10057,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Level 5
+  m_Text: Level 13
 --- !u!222 &1404354458
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10143,7 +10136,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Level 5
+  m_Text: Level 10
 --- !u!222 &1436240146
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10881,9 +10874,9 @@ RectTransform:
   - {fileID: 646641028}
   m_Father: {fileID: 34352928}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 7540, y: -463}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1524768142
@@ -11616,7 +11609,6 @@ MonoBehaviour:
   Stars2: {fileID: 308223839}
   Stars3: {fileID: 221489779}
   script4: {fileID: 997254783193132640}
-  Level: Level5
 --- !u!1 &1600487396
 GameObject:
   m_ObjectHideFlags: 0
@@ -11654,9 +11646,9 @@ RectTransform:
   - {fileID: 139822813}
   m_Father: {fileID: 34352928}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 11290, y: -463}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1600487398
@@ -12061,7 +12053,6 @@ MonoBehaviour:
   Stars2: {fileID: 1302341799}
   Stars3: {fileID: 743684890}
   script4: {fileID: 997254783193132640}
-  Level: Level2
 --- !u!1 &1667541867
 GameObject:
   m_ObjectHideFlags: 0
@@ -12117,7 +12108,6 @@ MonoBehaviour:
   Stars2: {fileID: 716714531}
   Stars3: {fileID: 598902284}
   script4: {fileID: 997254783193132640}
-  Level: Level4
 --- !u!1 &1673724377
 GameObject:
   m_ObjectHideFlags: 0
@@ -12567,7 +12557,6 @@ MonoBehaviour:
   Stars2: {fileID: 1648282913}
   Stars3: {fileID: 84250946}
   script4: {fileID: 997254783193132640}
-  Level: Level5
 --- !u!1 &1780965733
 GameObject:
   m_ObjectHideFlags: 0
@@ -13169,7 +13158,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Level 5
+  m_Text: Level 6
 --- !u!222 &1887919877
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13215,9 +13204,9 @@ RectTransform:
   - {fileID: 1237825518}
   m_Father: {fileID: 34352928}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 6040, y: -463}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 500, y: 500}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1904814147
@@ -13993,7 +13982,6 @@ MonoBehaviour:
   Stars2: {fileID: 484943550}
   Stars3: {fileID: 1583516542}
   script4: {fileID: 997254783193132640}
-  Level: Level5
 --- !u!1 &2027972229
 GameObject:
   m_ObjectHideFlags: 0
@@ -14364,7 +14352,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Level 5
+  m_Text: Level 14
 --- !u!222 &2091899742
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14765,7 +14753,6 @@ MonoBehaviour:
   Stars2: {fileID: 1083498545}
   Stars3: {fileID: 724946366}
   script4: {fileID: 997254783193132640}
-  Level: Level5
 --- !u!1 &2139052238
 GameObject:
   m_ObjectHideFlags: 0
@@ -14972,7 +14959,6 @@ MonoBehaviour:
   Stars2: {fileID: 701989131}
   Stars3: {fileID: 691575937}
   script4: {fileID: 997254783193132640}
-  Level: Level5
 --- !u!1001 &997254783193132638
 PrefabInstance:
   m_ObjectHideFlags: 0

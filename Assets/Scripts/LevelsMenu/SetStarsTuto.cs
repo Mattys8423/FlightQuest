@@ -1,11 +1,12 @@
 using UnityEngine;
 
-public class SetStars : MonoBehaviour
+public class SetStarsTuto : MonoBehaviour
 {
     [SerializeField] GameObject Stars1;
     [SerializeField] GameObject Stars2;
     [SerializeField] GameObject Stars3;
     [SerializeField] private SaveStars script4;
+    [SerializeField] private string Level;
 
     private int NbStars;
 
@@ -13,7 +14,7 @@ public class SetStars : MonoBehaviour
     void Start()
     {
         string nomParent = transform.parent.name;
-        NbStars = script4.GetStars(nomParent);
+        NbStars = script4.GetStars(Level);
         switch (NbStars)
         {
             case 0:

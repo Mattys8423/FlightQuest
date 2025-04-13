@@ -1993,6 +1993,7 @@ GameObject:
   - component: {fileID: 1188193115}
   - component: {fileID: 1188193114}
   - component: {fileID: 1188193113}
+  - component: {fileID: 1188193116}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -2076,6 +2077,30 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1188193116}
+        m_TargetAssemblyTypeName: playSound, Assembly-CSharp
+        m_MethodName: playsound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1174731786}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 173e462be7db4064eb87f876c575ec31, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1188193114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2114,6 +2139,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1188193111}
   m_CullTransparentMesh: 1
+--- !u!114 &1188193116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1188193111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59352ebb8df7eb54daca1d8db17e25a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _audioSource: {fileID: 1174731786}
+  _audioClipSuccess: {fileID: 8300000, guid: 3388affe89728b7478729385ada70045, type: 3}
+  _audioClipCant: {fileID: 8300000, guid: eeee0c203d0b19347b9c9d0c450e005b, type: 3}
+  script: {fileID: 1944405883}
 --- !u!1 &1251762279
 GameObject:
   m_ObjectHideFlags: 0
@@ -2824,10 +2865,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   script: {fileID: 1174731788}
   script2: {fileID: 1944405885}
-  Plane1: {fileID: 195117853}
-  Plane2: {fileID: 1449041142}
-  Plane3: {fileID: 1913983356}
-  Plane4: {fileID: 1058562850}
+  Effect: {fileID: 1174731786}
+  Unlock: {fileID: 8300000, guid: 72f7aed5d0406a541890185e1ae1ca7a, type: 3}
+  planes:
+  - {fileID: 195117853}
+  - {fileID: 1449041142}
+  - {fileID: 1913983356}
+  - {fileID: 1058562850}
 --- !u!1 &1739008515
 GameObject:
   m_ObjectHideFlags: 0
