@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ' plarrow_0': 895675289855191926
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

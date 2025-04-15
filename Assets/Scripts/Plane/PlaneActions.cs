@@ -224,6 +224,9 @@ public class PlaneActions : MonoBehaviour
             case 2:
                 StartCoroutine(DoLooping());
                 break;
+            case 3:
+                StartCoroutine(NoGravity());
+                break;
         }
     }
 
@@ -259,6 +262,14 @@ public class PlaneActions : MonoBehaviour
         rb.gravityScale = originalGravity;
 
         rb.MoveRotation(0f);
+    }
+
+    private IEnumerator NoGravity()
+    {
+        float SavedGravity = g;
+        g = 0;
+        yield return new WaitForSeconds(2f);
+        g = SavedGravity;
     }
 
 

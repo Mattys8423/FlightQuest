@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BGSlider_0: -7574963699864840842
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
