@@ -15,7 +15,7 @@ public class DetectLanding : MonoBehaviour
 
     IEnumerator StopVelocity(Collider2D other)
     {
-        yield return new WaitForSeconds(.1f);
+        yield return new WaitForSeconds(.2f);
         other.attachedRigidbody.linearVelocity = Vector2.zero;
     }
 }

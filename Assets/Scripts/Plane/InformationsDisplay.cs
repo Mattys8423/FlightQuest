@@ -38,7 +38,7 @@ public class InformationsDisplay : MonoBehaviour
                 TextDescription[i].SetActive(false);
             }
         }
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(.2f);
         TextDescription[script2.PlaneNumber].SetActive(true);
     }
 
