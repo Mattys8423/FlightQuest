@@ -8,10 +8,13 @@ public class DetectLandingHangar : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player") && script2.GetBool() == true)
+        if (other.CompareTag("Player"))
         {
             StartCoroutine(StopVelocity(other));
-            script.SetCondition(true);
+            if (script2.GetBool() == true)
+            {
+                script.SetCondition(true);
+            }
         }
     }
 
