@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 52410497}
   - component: {fileID: 52410496}
   - component: {fileID: 52410495}
+  - component: {fileID: 52410498}
   m_Layer: 0
   m_Name: Static Sprite (2)
   m_TagString: Untagged
@@ -281,6 +282,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &52410498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52410493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f14248de19a6ee4409b3302ec87b9e5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Plane: {fileID: 2032143320}
+  Explosion: {fileID: 610609225}
+  script: {fileID: 2032143319}
+  script3: {fileID: 551144743}
+  script4: {fileID: 517077312}
 --- !u!1 &114529188
 GameObject:
   m_ObjectHideFlags: 0
@@ -3112,6 +3130,7 @@ GameObject:
   - component: {fileID: 1676847552}
   - component: {fileID: 1676847551}
   - component: {fileID: 1676847550}
+  - component: {fileID: 1676847553}
   m_Layer: 0
   m_Name: Static Sprite
   m_TagString: Untagged
@@ -3262,6 +3281,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1676847553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676847548}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f14248de19a6ee4409b3302ec87b9e5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Plane: {fileID: 2032143320}
+  Explosion: {fileID: 610609225}
+  script: {fileID: 2032143319}
+  script3: {fileID: 551144743}
+  script4: {fileID: 517077312}
 --- !u!1 &1730641633
 GameObject:
   m_ObjectHideFlags: 0
@@ -3274,6 +3310,7 @@ GameObject:
   - component: {fileID: 1730641637}
   - component: {fileID: 1730641636}
   - component: {fileID: 1730641635}
+  - component: {fileID: 1730641638}
   m_Layer: 0
   m_Name: Static Sprite (1)
   m_TagString: Untagged
@@ -3424,6 +3461,23 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1730641638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730641633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f14248de19a6ee4409b3302ec87b9e5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Plane: {fileID: 2032143320}
+  Explosion: {fileID: 610609225}
+  script: {fileID: 2032143319}
+  script3: {fileID: 551144743}
+  script4: {fileID: 517077312}
 --- !u!1001 &1771316617
 PrefabInstance:
   m_ObjectHideFlags: 0

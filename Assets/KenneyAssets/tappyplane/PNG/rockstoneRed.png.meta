@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9603531c671031e42a914f7a4777edd5
+guid: 80b0616c7e403ef4f83120bb8030483d
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 67443485499235874
-    second: lava_stone_large_0
+      213: -6310416069609080872
+    second: rockstoneRed_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: lava_stone_large_0
+      name: rockstoneRed_0
       rect:
         serializedVersion: 2
-        x: 81
-        y: 14
-        width: 1144
-        height: 96
+        x: 0
+        y: 0
+        width: 108
+        height: 239
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 22e98932e7b9fe000800000000000000
-      internalID: 67443485499235874
+      spriteID: 8d7b80ac406ec68a0800000000000000
+      internalID: -6310416069609080872
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      lava_stone_large_0: 67443485499235874
+      rockstoneRed_0: -6310416069609080872
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
