@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ground_stone_broken_0: 7384103453990091647
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      wingMan1_0: -7056297391099374793
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

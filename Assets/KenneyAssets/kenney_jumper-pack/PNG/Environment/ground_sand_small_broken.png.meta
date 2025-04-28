@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ground_sand_small_broken_0: -8037948190056951408
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

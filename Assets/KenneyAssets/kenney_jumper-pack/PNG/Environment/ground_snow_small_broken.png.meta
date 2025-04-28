@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ground_snow_small_broken_0: 7461024646918716408
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

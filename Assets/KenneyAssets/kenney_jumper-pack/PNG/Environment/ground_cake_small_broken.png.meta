@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ground_cake_small_broken_0: 5235994254573545251
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

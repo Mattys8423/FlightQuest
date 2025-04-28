@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spikeBall_2_0: -4594254491167380967
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

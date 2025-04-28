@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ground_Poison_small_0: -4155177856033192669
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

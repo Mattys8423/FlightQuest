@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      flyMan_still_fly_0: 5695385796383070247
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

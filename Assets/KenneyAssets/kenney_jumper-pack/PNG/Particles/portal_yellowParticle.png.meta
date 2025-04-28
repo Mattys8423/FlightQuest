@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      portal_yellowParticle_0: 5590339296609933094
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

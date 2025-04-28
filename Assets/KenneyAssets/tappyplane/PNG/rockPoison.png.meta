@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      rockPoison_0: 8917417366511541084
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

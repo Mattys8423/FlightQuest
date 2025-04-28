@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      ground_wood_broken_0: 4280296085315262089
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: cef6560184181724ba010c6e39e505d1
+guid: a144e21293781a444aa2a7cb961e9b2f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6154613571108409167
-    second: spikeMan_walk2_0
+      213: 2098056265699290441
+    second: groundLavaShort_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,43 +109,17 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: spikeMan_walk2_0
+      name: groundLavaShort_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 307
         y: 0
-        width: 90
-        height: 155
+        width: 190
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f4f07b33f64996550800000000000000
-      internalID: 6154613571108409167
+      spriteID: 94de9c3ce0bcd1d10800000000000000
+      internalID: 2098056265699290441
       vertices: []
       indices: 
       edges: []
@@ -174,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      spikeMan_walk2_0: 6154613571108409167
+      groundLavaShort_0: 2098056265699290441
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

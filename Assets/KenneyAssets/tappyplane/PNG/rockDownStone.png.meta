@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      rockDownStone_0: -2878330266919767142
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
