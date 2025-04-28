@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 0736a8c740555ab4581c28d2786aef0b
+guid: b10f8526a49befb47af96a86d1f31e2e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1005686295000082131
-    second: rockLava2_0
+      213: 2235819765311827454
+    second: play-pause_0
+  - first:
+      213: 5623371531046221943
+    second: play-pause_1
+  - first:
+      213: 6095367655838686262
+    second: play-pause_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,23 +145,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rockLava2_0
+      name: play-pause_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 108
-        height: 239
+        width: 159
+        height: 160
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3d665f06b5ae4fd00800000000000000
-      internalID: 1005686295000082131
+      spriteID: efd653d0b3a370f10800000000000000
+      internalID: 2235819765311827454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: play-pause_1
+      rect:
+        serializedVersion: 2
+        x: 639
+        y: 0
+        width: 161
+        height: 160
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 778fd041d9a3a0e40800000000000000
+      internalID: 5623371531046221943
       vertices: []
       indices: 
       edges: []
@@ -164,7 +192,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 8ffa79e2cb7262d44aa05dc279058c11
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +202,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      rockLava2_0: 1005686295000082131
+      play-pause_0: 2235819765311827454
+      play-pause_1: 5623371531046221943
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

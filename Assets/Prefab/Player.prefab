@@ -495,7 +495,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 51f7a0fb77fb90c4faf78c2f0ce6f072, type: 2}
     - target: {fileID: 278108250126061209, guid: b3d424afc01377a478bc3b196d0b30ac, type: 3}
       propertyPath: m_Parameters.textureScale.x
-      value: 2
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 278108250126061209, guid: b3d424afc01377a478bc3b196d0b30ac, type: 3}
       propertyPath: m_Parameters.widthMultiplier
@@ -549,6 +549,10 @@ PrefabInstance:
       propertyPath: NumberOfLaunch
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 782544886290118865, guid: b3d424afc01377a478bc3b196d0b30ac, type: 3}
+      propertyPath: impactMarkerPrefab
+      value: 
+      objectReference: {fileID: 3064982053072756791, guid: 7d46b7c522f509a48bf86e251b2fa459, type: 3}
     - target: {fileID: 3590755773979557388, guid: b3d424afc01377a478bc3b196d0b30ac, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -633,7 +637,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 0.15
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

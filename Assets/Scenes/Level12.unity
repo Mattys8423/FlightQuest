@@ -450,7 +450,7 @@ GameObject:
   - component: {fileID: 289805686}
   - component: {fileID: 289805685}
   - component: {fileID: 289805684}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: rockDownLava_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1023,7 +1023,7 @@ GameObject:
   - component: {fileID: 743892049}
   - component: {fileID: 743892048}
   - component: {fileID: 743892050}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: groundSnow_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1186,7 +1186,7 @@ GameObject:
   - component: {fileID: 758533507}
   - component: {fileID: 758533506}
   - component: {fileID: 758533505}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: rockDownLava_0 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1666,7 +1666,7 @@ GameObject:
   - component: {fileID: 961943819}
   - component: {fileID: 961943818}
   - component: {fileID: 961943817}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: rockDownLava_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1866,7 +1866,7 @@ GameObject:
   - component: {fileID: 1089922810}
   - component: {fileID: 1089922809}
   - component: {fileID: 1089922808}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: poison_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2145,18 +2145,10 @@ PrefabInstance:
       propertyPath: Main
       value: 
       objectReference: {fileID: 54087391}
-    - target: {fileID: 2082865146105918914, guid: a4cd26b69b31f464b808c595a53bbb54, type: 3}
-      propertyPath: NumberOfLaunch
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 3078821113366113686, guid: a4cd26b69b31f464b808c595a53bbb54, type: 3}
       propertyPath: script
       value: 
       objectReference: {fileID: 54087391}
-    - target: {fileID: 4405241204696138095, guid: a4cd26b69b31f464b808c595a53bbb54, type: 3}
-      propertyPath: Loop
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7936674187694807749, guid: a4cd26b69b31f464b808c595a53bbb54, type: 3}
       propertyPath: m_Name
       value: Player
@@ -2510,7 +2502,7 @@ GameObject:
   - component: {fileID: 1523506904}
   - component: {fileID: 1523506903}
   - component: {fileID: 1523506902}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: groundSnow_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2674,7 +2666,7 @@ GameObject:
   - component: {fileID: 1532293854}
   - component: {fileID: 1532293853}
   - component: {fileID: 1532293852}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: poison_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3076,7 +3068,7 @@ GameObject:
   - component: {fileID: 1698054065}
   - component: {fileID: 1698054064}
   - component: {fileID: 1698054066}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: rockDownLava_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3286,7 +3278,7 @@ GameObject:
   - component: {fileID: 1900944046}
   - component: {fileID: 1900944045}
   - component: {fileID: 1900944044}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: poison_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}

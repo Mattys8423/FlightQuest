@@ -14,6 +14,7 @@ public class PlaneActions : MonoBehaviour
     private bool IsGrounded = true;
     private bool FirstLaunch= true;
     private Rigidbody2D rb;
+    private GameObject activeImpactMarker = null;
     [SerializeField] private Puff script;
 
     public float launchForce = 2f;
@@ -21,6 +22,7 @@ public class PlaneActions : MonoBehaviour
     public int trajectoryPoints = 30;
     public int SkillNumber = 0;
     public LineRenderer lineRenderer;
+    public GameObject impactMarkerPrefab;
 
     public float alpha = 45f;
     public float f2 = 0.1f;
@@ -84,9 +86,8 @@ public class PlaneActions : MonoBehaviour
                 else if (Input.GetMouseButtonUp(0) && isDragging)
                 {                   
                     Vector2 endPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                    Debug.Log(IsGrounded);
                     switch (FirstLaunch)
-                    {
+                    {                        
                         case false:
                             if (Vector2.Distance(endPos, startPos) < 2f || endPos.y - startPos.y < 2) { }
                             else
@@ -105,6 +106,7 @@ public class PlaneActions : MonoBehaviour
                                 IsGrounded = false;
                                 FirstLaunch = false;
                                 NumberOfLaunch -= 1;
+                                activeImpactMarker.SetActive(false);
                             }
                             break;
                         case true:
@@ -125,6 +127,7 @@ public class PlaneActions : MonoBehaviour
                                 IsGrounded = false;
                                 FirstLaunch = false;
                                 NumberOfLaunch -= 1;
+                                activeImpactMarker.SetActive(false);
                             }
                             break;
                     }
@@ -140,6 +143,7 @@ public class PlaneActions : MonoBehaviour
         if (isFlying)
         {
             rb.linearVelocity += new Vector2(0, -g * Time.fixedDeltaTime);
+            rb.linearDamping = f2;
             if (Input.GetMouseButton(0) && !Skill)
             {
                 SpecialSkill();
@@ -155,6 +159,10 @@ public class PlaneActions : MonoBehaviour
         Vector2 pos = start;
         Vector2 vel = velocity;
 
+        float detectionRadius = 0.45f;
+        LayerMask obstacleLayer = LayerMask.GetMask("Obstacle");
+        Vector2 previousPos = pos;
+
         float dt = 0.1f;
         List<float> liste_x = new List<float> { 0 };
         List<float> liste_y = new List<float> { 0 };
@@ -165,49 +173,109 @@ public class PlaneActions : MonoBehaviour
         float angleRad = alpha * Mathf.Deg2Rad;
         float v0 = velocity.magnitude;
 
+        bool collisionDetected = false;
+        int collisionIndex = -1; // ← on mémorise où la collision est arrivée
+
         // Calculer la trajectoire avec friction
         for (int i = 0; i < trajectoryPoints; i++)
         {
             points.Add(pos);
-            vx += -f2 * vx * dt; // Mise à jour de la vitesse horizontale avec friction
-            vy += -(g + f2 * vy) * dt; // Mise à jour de la vitesse verticale avec friction
-            pos.x += vx * dt;  // Mise à jour de la position horizontale
-            pos.y += vy * dt;  // Mise à jour de la position verticale
 
-            // Ajouter les positions à la liste
+            Vector2 deltaPos = pos - previousPos;
+
+            RaycastHit2D hit = Physics2D.CircleCast(previousPos, detectionRadius, deltaPos.normalized, deltaPos.magnitude, obstacleLayer);
+            if (hit.collider != null)
+            {
+                Debug.Log("Collision détectée avec : " + hit.collider.name);
+
+                collisionDetected = true;
+                collisionIndex = i;
+
+                Vector2 incomingDirection = deltaPos.normalized;
+                Vector2 normal = hit.normal;
+                float angleIncidence = Vector2.Angle(-incomingDirection, normal);
+
+                Debug.Log("Angle d'incidence: " + angleIncidence + "°");
+
+                if (activeImpactMarker == null)
+                {
+                    activeImpactMarker = Instantiate(impactMarkerPrefab, hit.point, Quaternion.identity);
+                    activeImpactMarker.transform.rotation = Quaternion.LookRotation(Vector3.forward, hit.normal);
+                    activeImpactMarker.SetActive(true);
+                }
+                else
+                {
+                    activeImpactMarker.transform.position = hit.point;
+                    activeImpactMarker.transform.rotation = Quaternion.LookRotation(Vector3.forward, hit.normal);
+                    activeImpactMarker.SetActive(true);
+                }
+            }
+
+            vx += -f2 * vx * dt;
+            vy += -(g + f2 * vy) * dt;
+            previousPos = pos;
+            pos.x += vx * dt;
+            pos.y += vy * dt;
+
             liste_x.Add(pos.x);
             liste_y.Add(pos.y);
         }
 
+        if (!collisionDetected && activeImpactMarker != null)
+        {
+            activeImpactMarker.SetActive(false);
+        }
+
+        // Dessiner la trajectoire
         lineRenderer.positionCount = points.Count > trajectoryPoints ? trajectoryPoints : points.Count;
         lineRenderer.SetPositions(points.ToArray());
+
+        // Changer l'apparence selon collision
+        Gradient gradient = new Gradient();
+
+        if (collisionDetected && collisionIndex >= 0)
+        {
+            // Cas où il y a eu collision → rendre la suite transparente
+            float collisionPointTime = (float)collisionIndex / (float)trajectoryPoints;
+
+            gradient.SetKeys(
+                new GradientColorKey[] {
+                new GradientColorKey(Color.white, 0.0f),
+                new GradientColorKey(Color.white, collisionPointTime),
+                new GradientColorKey(new Color(1f, 1f, 1f, 0f), 1.0f) // ← Transparence après collision
+                },
+                new GradientAlphaKey[] {
+                new GradientAlphaKey(1.0f, 0.0f),
+                new GradientAlphaKey(1.0f, collisionPointTime),
+                new GradientAlphaKey(0.0f, 1.0f)
+                }
+            );
+        }
+        else
+        {
+            // Pas de collision → ligne classique
+            gradient.SetKeys(
+                new GradientColorKey[] {
+                new GradientColorKey(Color.white, 0.0f),
+                new GradientColorKey(Color.white, 1.0f)
+                },
+                new GradientAlphaKey[] {
+                new GradientAlphaKey(1.0f, 0.0f),
+                new GradientAlphaKey(1.0f, 1.0f)
+                }
+            );
+        }
+
+        lineRenderer.colorGradient = gradient;
 
         Vector2 finalVelocity = new Vector2(vx, vy);
         float finalSpeed = finalVelocity.magnitude;
 
         float maxSpeed = 15f;
-        float t = Mathf.Clamp01(finalSpeed / maxSpeed);
-        float tReverse = Mathf.Clamp01(maxSpeed / finalSpeed);
-
-        Color coldColor = Color.white;
-        Color hotColor = new Color(255, 0, 0);
-        Color finalColor = Color.Lerp(coldColor, hotColor, t);
-
-        Gradient gradient = new Gradient();
-        gradient.SetKeys(
-            new GradientColorKey[] {
-            new GradientColorKey(coldColor, 0.0f),
-            new GradientColorKey(finalColor, tReverse)
-            },
-            new GradientAlphaKey[] {
-            new GradientAlphaKey(1.0f, 0.0f),
-            new GradientAlphaKey(t, 1.0f)
-            }
-        );
-
-        lineRenderer.colorGradient = gradient;
         lineRenderer.material.SetFloat("_TilingAmount", finalSpeed * 1.2f);
     }
+
+
 
     private void SpecialSkill()
     {
