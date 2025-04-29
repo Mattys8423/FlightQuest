@@ -7,10 +7,17 @@ public class ScrollRectStop : MonoBehaviour
 {
     [SerializeField] ScrollSnapToCenter script;
     [SerializeField] InformationsDisplay script2;
+    [SerializeField] SaveStars script3;
+    [SerializeField] GameObject[] SelectedLogo;
     public ScrollRect scrollRect;
     public int PlaneNumber;
 
     private float timePassed = 0f;
+
+    private void Start()
+    {
+        SelectedLogo[script3.GetPlane()].SetActive(true);
+    }
 
     // Update is called once per frame
     void Update()
@@ -23,7 +30,7 @@ public class ScrollRectStop : MonoBehaviour
         {
             timePassed += Time.deltaTime;
 
-            if (timePassed == 2f)
+            if (timePassed == 1f)
             {
                 script2.SetBool(true);
             }
