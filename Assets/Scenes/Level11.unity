@@ -450,7 +450,7 @@ GameObject:
   - component: {fileID: 301205014}
   - component: {fileID: 301205013}
   - component: {fileID: 301205012}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ground_stone_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1461,7 +1461,7 @@ GameObject:
   - component: {fileID: 763028725}
   - component: {fileID: 763028724}
   - component: {fileID: 763028723}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: rockDownLava_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2908,7 +2908,7 @@ GameObject:
   - component: {fileID: 1698054065}
   - component: {fileID: 1698054064}
   - component: {fileID: 1698054063}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: rockDownLava_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3088,7 +3088,7 @@ GameObject:
   - component: {fileID: 1733857190}
   - component: {fileID: 1733857189}
   - component: {fileID: 1733857188}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ground_stone_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

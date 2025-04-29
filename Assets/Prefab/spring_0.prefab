@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8394170984955707032}
   - component: {fileID: 165989436243123220}
   - component: {fileID: 4861500233455397500}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: spring_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6715170637525562291}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.62, y: -0.29, z: 0}
   m_LocalScale: {x: 0.8409, y: 0.8409, z: 0.8409}
   m_ConstrainProportionsScale: 0

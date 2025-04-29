@@ -216,7 +216,7 @@ GameObject:
   - component: {fileID: 75103215}
   - component: {fileID: 75103214}
   - component: {fileID: 75103216}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: pyramidFaceTransparent_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1305,7 +1305,7 @@ GameObject:
   - component: {fileID: 378730437}
   - component: {fileID: 378730438}
   - component: {fileID: 378730439}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: pyramidFace_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1479,7 +1479,7 @@ GameObject:
   - component: {fileID: 414475336}
   - component: {fileID: 414475335}
   - component: {fileID: 414475334}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2203,7 +2203,7 @@ GameObject:
   - component: {fileID: 1211847748}
   - component: {fileID: 1211847747}
   - component: {fileID: 1211847746}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2708,7 +2708,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1502967824}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: pyramid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2744,7 +2744,7 @@ GameObject:
   - component: {fileID: 1510762595}
   - component: {fileID: 1510762596}
   - component: {fileID: 1510762597}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: pyramidFace_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3642,7 +3642,7 @@ GameObject:
   - component: {fileID: 1981330297}
   - component: {fileID: 1981330296}
   - component: {fileID: 1981330295}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3807,6 +3807,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1745249857}
+    - target: {fileID: 2346249460274928798, guid: e637d5720e498b2468bb01fef737dbba, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1745249857}
+    - target: {fileID: 2346249460274928798, guid: e637d5720e498b2468bb01fef737dbba, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 1745249856}
+    - target: {fileID: 2346249460274928798, guid: e637d5720e498b2468bb01fef737dbba, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayOneShot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2346249460274928798, guid: e637d5720e498b2468bb01fef737dbba, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: play
+      objectReference: {fileID: 0}
     - target: {fileID: 2875495957025731811, guid: e637d5720e498b2468bb01fef737dbba, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 

@@ -509,7 +509,7 @@ GameObject:
   m_Component:
   - component: {fileID: 286119912}
   - component: {fileID: 286119913}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: rockDown_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -667,7 +667,7 @@ GameObject:
   - component: {fileID: 424796994}
   - component: {fileID: 424796995}
   - component: {fileID: 424796996}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ground_stone_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1151,7 +1151,7 @@ GameObject:
   - component: {fileID: 631234975}
   - component: {fileID: 631234974}
   - component: {fileID: 631234973}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ground_stone_0 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1317,7 +1317,7 @@ GameObject:
   - component: {fileID: 653816680}
   - component: {fileID: 653816679}
   - component: {fileID: 653816678}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ground_stone_0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1484,7 +1484,7 @@ GameObject:
   - component: {fileID: 665710291}
   - component: {fileID: 665710292}
   - component: {fileID: 665710293}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ground_stone_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1754,6 +1754,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 534903967}
+    - target: {fileID: 2346249460274928798, guid: e637d5720e498b2468bb01fef737dbba, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 534903967}
+    - target: {fileID: 2346249460274928798, guid: e637d5720e498b2468bb01fef737dbba, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 534903970}
+    - target: {fileID: 2346249460274928798, guid: e637d5720e498b2468bb01fef737dbba, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayOneShot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2346249460274928798, guid: e637d5720e498b2468bb01fef737dbba, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: play
+      objectReference: {fileID: 0}
     - target: {fileID: 2875495957025731811, guid: e637d5720e498b2468bb01fef737dbba, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -3703,7 +3719,7 @@ GameObject:
   - component: {fileID: 2109125933}
   - component: {fileID: 2109125932}
   - component: {fileID: 2109125931}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: spring_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}

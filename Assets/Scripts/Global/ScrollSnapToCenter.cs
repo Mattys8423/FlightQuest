@@ -2,6 +2,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using TMPro;
+using Unity.Android.Gradle.Manifest;
+using System.Collections;
 
 public class ScrollSnapToCenter : MonoBehaviour
 {
@@ -24,6 +26,7 @@ public class ScrollSnapToCenter : MonoBehaviour
     private void Start()
     {
         IsSnapped = false;
+        StartCoroutine(ScrollStart());
     }
 
     void Update()
@@ -70,5 +73,11 @@ public class ScrollSnapToCenter : MonoBehaviour
     {
         Image currentImage = content.GetChild(ItemNumber).GetComponent<Image>();
         return currentImage.GetComponent<Lock>().GetIsLocked();
+    }
+
+    private IEnumerator ScrollStart()
+    {
+        yield return new WaitForSeconds(0.5f);
+        scrollRect.velocity = new Vector2(-(3700 * script.GetPlane()), 0);
     }
 }

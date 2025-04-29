@@ -1282,7 +1282,7 @@ GameObject:
   - component: {fileID: 386820737}
   - component: {fileID: 386820736}
   - component: {fileID: 386820735}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: spring_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2019,6 +2019,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 724451238}
+    - target: {fileID: 2346249460274928798, guid: e637d5720e498b2468bb01fef737dbba, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 724451238}
+    - target: {fileID: 2346249460274928798, guid: e637d5720e498b2468bb01fef737dbba, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 724451240}
+    - target: {fileID: 2346249460274928798, guid: e637d5720e498b2468bb01fef737dbba, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayOneShot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2346249460274928798, guid: e637d5720e498b2468bb01fef737dbba, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: play
+      objectReference: {fileID: 0}
     - target: {fileID: 2875495957025731811, guid: e637d5720e498b2468bb01fef737dbba, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -2648,7 +2664,7 @@ GameObject:
   - component: {fileID: 1225044338}
   - component: {fileID: 1225044337}
   - component: {fileID: 1225044336}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: rock_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4042,7 +4058,7 @@ GameObject:
   - component: {fileID: 1712416178}
   - component: {fileID: 1712416177}
   - component: {fileID: 1712416176}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: rock_0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
