@@ -1,25 +1,10 @@
 fileFormatVersion: 2
-guid: eec91557af995c54cb62f86341bca2cf
+guid: ce8b0f2662f280749a7142ccb7959b58
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7922181180408721274
-    second: ruins_0
-  - first:
-      213: -6057554935709699759
-    second: ruins_1
-  - first:
-      213: -7130116653550812737
-    second: ruins_2
-  - first:
-      213: 3878551187738533971
-    second: ruins_3
-  - first:
-      213: -5645111457522443292
-    second: ruins_4
-  - first:
-      213: 5591798973075241682
-    second: ruins_5
+      213: 3390122607394740877
+    second: pilar2broke_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -61,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -154,35 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ruins_0
+      name: pilar2broke_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 224
-        width: 139
-        height: 217
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: a7feb806fcd31fd60800000000000000
-      internalID: 7922181180408721274
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ruins_1
-      rect:
-        serializedVersion: 2
-        x: 151
-        y: 225
+        y: 34
         width: 137
-        height: 215
+        height: 188
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,96 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 151fb9951ed3feba0800000000000000
-      internalID: -6057554935709699759
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ruins_2
-      rect:
-        serializedVersion: 2
-        x: 302
-        y: 234
-        width: 202
-        height: 179
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fb1c10a3eacbc0d90800000000000000
-      internalID: -7130116653550812737
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ruins_3
-      rect:
-        serializedVersion: 2
-        x: 22
-        y: 15
-        width: 185
-        height: 191
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 350235c71c163d530800000000000000
-      internalID: 3878551187738533971
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ruins_4
-      rect:
-        serializedVersion: 2
-        x: 223
-        y: 13
-        width: 185
-        height: 193
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4eb13e8d90988a1b0800000000000000
-      internalID: -5645111457522443292
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ruins_5
-      rect:
-        serializedVersion: 2
-        x: 431
-        y: 13
-        width: 203
-        height: 179
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2da3b851a8f0a9d40800000000000000
-      internalID: 5591798973075241682
+      spriteID: d8ad8cebc822c0f20800000000000000
+      internalID: 3390122607394740877
       vertices: []
       indices: 
       edges: []
@@ -289,7 +164,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -299,12 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ruins_0: 7922181180408721274
-      ruins_1: -6057554935709699759
-      ruins_2: -7130116653550812737
-      ruins_3: 3878551187738533971
-      ruins_4: -5645111457522443292
-      ruins_5: 5591798973075241682
+      pilar2broke_0: 3390122607394740877
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,25 +1,19 @@
 fileFormatVersion: 2
-guid: eec91557af995c54cb62f86341bca2cf
+guid: b0e26f96aa8c5d44c85d0181ff566fc7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7922181180408721274
-    second: ruins_0
+      213: 4365544765984126881
+    second: Booster_0
   - first:
-      213: -6057554935709699759
-    second: ruins_1
+      213: -8498876596431721108
+    second: Booster_1
   - first:
-      213: -7130116653550812737
-    second: ruins_2
+      213: -8100594544482528049
+    second: Booster_2
   - first:
-      213: 3878551187738533971
-    second: ruins_3
-  - first:
-      213: -5645111457522443292
-    second: ruins_4
-  - first:
-      213: 5591798973075241682
-    second: ruins_5
+      213: 1194090911189275359
+    second: Booster_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -154,133 +148,89 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ruins_0
+      name: Booster_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 224
-        width: 139
-        height: 217
+        x: 21
+        y: 0
+        width: 801
+        height: 422
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a7feb806fcd31fd60800000000000000
-      internalID: 7922181180408721274
+      spriteID: 7af0c7c850e769a48872519158829ccc
+      internalID: 4365544765984126881
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ruins_1
+      name: Booster_1
       rect:
         serializedVersion: 2
-        x: 151
-        y: 225
-        width: 137
-        height: 215
+        x: 822
+        y: 0
+        width: 801
+        height: 422
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 151fb9951ed3feba0800000000000000
-      internalID: -6057554935709699759
+      spriteID: d5b23815e696e1347a90ef846f9ed833
+      internalID: -8498876596431721108
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ruins_2
+      name: Booster_2
       rect:
         serializedVersion: 2
-        x: 302
-        y: 234
-        width: 202
-        height: 179
+        x: 1624
+        y: 0
+        width: 801
+        height: 422
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: fb1c10a3eacbc0d90800000000000000
-      internalID: -7130116653550812737
+      spriteID: f1130a65cf9069047b0880c62d5f3101
+      internalID: -8100594544482528049
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ruins_3
+      name: Booster_3
       rect:
         serializedVersion: 2
-        x: 22
-        y: 15
-        width: 185
-        height: 191
+        x: 2425
+        y: 0
+        width: 801
+        height: 422
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 350235c71c163d530800000000000000
-      internalID: 3878551187738533971
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ruins_4
-      rect:
-        serializedVersion: 2
-        x: 223
-        y: 13
-        width: 185
-        height: 193
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 4eb13e8d90988a1b0800000000000000
-      internalID: -5645111457522443292
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ruins_5
-      rect:
-        serializedVersion: 2
-        x: 431
-        y: 13
-        width: 203
-        height: 179
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 2da3b851a8f0a9d40800000000000000
-      internalID: 5591798973075241682
+      spriteID: e978cbaf43887da4cab27cee9b63718c
+      internalID: 1194090911189275359
       vertices: []
       indices: 
       edges: []
@@ -289,7 +239,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -299,12 +249,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ruins_0: 7922181180408721274
-      ruins_1: -6057554935709699759
-      ruins_2: -7130116653550812737
-      ruins_3: 3878551187738533971
-      ruins_4: -5645111457522443292
-      ruins_5: 5591798973075241682
+      Booster_0: 4365544765984126881
+      Booster_1: -8498876596431721108
+      Booster_2: -8100594544482528049
+      Booster_3: 1194090911189275359
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

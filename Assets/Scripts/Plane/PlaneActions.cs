@@ -106,7 +106,10 @@ public class PlaneActions : MonoBehaviour
                                 IsGrounded = false;
                                 FirstLaunch = false;
                                 NumberOfLaunch -= 1;
-                                activeImpactMarker.SetActive(false);
+                                if (activeImpactMarker != null)
+                                {
+                                    activeImpactMarker.SetActive(false);
+                                }
                             }
                             break;
                         case true:
@@ -127,7 +130,10 @@ public class PlaneActions : MonoBehaviour
                                 IsGrounded = false;
                                 FirstLaunch = false;
                                 NumberOfLaunch -= 1;
-                                activeImpactMarker.SetActive(false);
+                                if (activeImpactMarker != null)
+                                {
+                                    activeImpactMarker.SetActive(false);
+                                }
                             }
                             break;
                     }
@@ -362,5 +368,10 @@ public class PlaneActions : MonoBehaviour
     public void AddForceY(float value)
     {
         rb.AddForce(new Vector2(0, value), ForceMode2D.Impulse);
+    }
+
+    public void AddForceX(float value)
+    {
+        rb.AddForce(new Vector2(value, 0), ForceMode2D.Impulse);
     }
 }
