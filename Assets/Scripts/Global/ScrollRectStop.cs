@@ -14,17 +14,20 @@ public class ScrollRectStop : MonoBehaviour
 
     private float timePassed = 0f;
 
-    private void Start()
-    {
-        SelectedLogo[script3.GetPlane()].SetActive(true);
-    }
-
     // Update is called once per frame
     void Update()
     {
+        if (scrollRect.velocity.magnitude > 100f)
+        {
+            for (int i = 0; i < SelectedLogo.Length; i++)
+            {
+                SelectedLogo[i].SetActive(false);
+            }
+        }
         if (scrollRect.velocity.magnitude < 1)
         {
             PlaneNumber = script.ItemNumber;
+            SelectedLogo[script3.GetPlane()].SetActive(true);
         }
         if (scrollRect.velocity.magnitude == 0f)
         {
