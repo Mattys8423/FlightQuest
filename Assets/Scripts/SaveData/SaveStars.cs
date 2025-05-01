@@ -91,14 +91,38 @@ public class SaveStars : MonoBehaviour
         return starsdata.Plane;
     }
 
-    public void SetBoolStar()
+    public void SetBoolTeStar()
     {
         starsdata.hasTenStars = true;
         SaveToJson();
     }
 
 
-    public bool GetBoolStar()
+    public bool GetBoolTeStar()
+    {
+        return starsdata.hasTenStars;
+    }
+
+    public void SetBoolTwStar()
+    {
+        starsdata.hasTenStars = true;
+        SaveToJson();
+    }
+
+
+    public bool GetBoolTwStar()
+    {
+        return starsdata.hasTenStars;
+    }
+
+    public void SetBoolThStar()
+    {
+        starsdata.hasTenStars = true;
+        SaveToJson();
+    }
+
+
+    public bool GetBoolThStar()
     {
         return starsdata.hasTenStars;
     }
@@ -111,6 +135,8 @@ public class StarData
     public int StarsNb;
     public int Plane;
     public bool hasTenStars;
+    public bool hasTwentyStars;
+    public bool hasThirtyStars;
 }
 
 [System.Serializable]

@@ -8,6 +8,7 @@ public class PlaneActions : MonoBehaviour
     [SerializeField] SaveStars Main;
 
     private Vector2 startPos;
+    private float LimitDrag = 2f;
     private bool isDragging = false;
     private bool isFlying = false;
     private bool Skill = false;
@@ -60,7 +61,7 @@ public class PlaneActions : MonoBehaviour
                     switch (FirstLaunch)
                     {
                         case false:
-                            if (Vector2.Distance(endPos, startPos) < 2f || endPos.y - startPos.y < 2)
+                            if (Vector2.Distance(endPos, startPos) < LimitDrag || endPos.y - startPos.y < LimitDrag)
                             {
                                 lineRenderer.enabled = false;
                             }
@@ -71,7 +72,7 @@ public class PlaneActions : MonoBehaviour
                             }
                             break;
                         case true:
-                            if (Vector2.Distance(endPos, startPos) < 2f)
+                            if (Vector2.Distance(endPos, startPos) < LimitDrag)
                             {
                                 lineRenderer.enabled = false;
                             }
@@ -89,7 +90,7 @@ public class PlaneActions : MonoBehaviour
                     switch (FirstLaunch)
                     {                        
                         case false:
-                            if (Vector2.Distance(endPos, startPos) < 2f || endPos.y - startPos.y < 2) { }
+                            if (Vector2.Distance(endPos, startPos) < LimitDrag || endPos.y - startPos.y < LimitDrag) { }
                             else
                             {
                                 Vector2 direction = endPos - startPos;
@@ -113,7 +114,7 @@ public class PlaneActions : MonoBehaviour
                             }
                             break;
                         case true:
-                            if (Vector2.Distance(endPos, startPos) < 2f) { }
+                            if (Vector2.Distance(endPos, startPos) < LimitDrag) { }
                             else
                             {
                                 Vector2 direction = endPos - startPos;
@@ -373,5 +374,10 @@ public class PlaneActions : MonoBehaviour
     public void AddForceX(float value)
     {
         rb.AddForce(new Vector2(value, 0), ForceMode2D.Impulse);
+    }
+
+    public void changeLimit(float value)
+    {
+        LimitDrag = value;
     }
 }
