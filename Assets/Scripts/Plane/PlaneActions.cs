@@ -83,6 +83,14 @@ public class PlaneActions : MonoBehaviour
                             }
                             break;
                     }
+                    if (endPos.x - startPos.x >= 0)
+                    {
+                        transform.rotation = Quaternion.Euler(0, 0, 0);
+                    }
+                    else
+                    {
+                        transform.rotation = Quaternion.Euler(0, 180, 0);
+                    }
                 }
                 else if (Input.GetMouseButtonUp(0) && isDragging)
                 {                   

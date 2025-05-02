@@ -921,9 +921,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 285ebb9df31e9d3448449ce6a29f03ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelPass: 0
-  LevelCount: 0
-  LevelName: 
   script: {fileID: 997254783193132640}
 --- !u!114 &73451203
 MonoBehaviour:
@@ -2162,9 +2159,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 285ebb9df31e9d3448449ce6a29f03ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelPass: 0
-  LevelCount: 0
-  LevelName: 
   script: {fileID: 997254783193132640}
 --- !u!1 &181534316
 GameObject:
@@ -2672,9 +2666,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 285ebb9df31e9d3448449ce6a29f03ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelPass: 0
-  LevelCount: 0
-  LevelName: 
   script: {fileID: 997254783193132640}
 --- !u!114 &284763585
 MonoBehaviour:
@@ -2764,7 +2755,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 22268d0e1e43ef148a8563d3589b69a4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 59ea585c2a887424f94625b4a0cb0323, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -4418,9 +4409,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 285ebb9df31e9d3448449ce6a29f03ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelPass: 0
-  LevelCount: 0
-  LevelName: 
   script: {fileID: 997254783193132640}
 --- !u!114 &583380613
 MonoBehaviour:
@@ -4989,9 +4977,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 285ebb9df31e9d3448449ce6a29f03ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelPass: 0
-  LevelCount: 0
-  LevelName: 
   script: {fileID: 997254783193132640}
 --- !u!1 &611376571
 GameObject:
@@ -6741,9 +6726,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 285ebb9df31e9d3448449ce6a29f03ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelPass: 0
-  LevelCount: 0
-  LevelName: 
   script: {fileID: 997254783193132640}
 --- !u!1 &787604405
 GameObject:
@@ -7335,9 +7317,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 285ebb9df31e9d3448449ce6a29f03ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelPass: 0
-  LevelCount: 0
-  LevelName: 
   script: {fileID: 997254783193132640}
 --- !u!114 &902492898
 MonoBehaviour:
@@ -7878,9 +7857,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 285ebb9df31e9d3448449ce6a29f03ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelPass: 0
-  LevelCount: 0
-  LevelName: 
   script: {fileID: 997254783193132640}
 --- !u!114 &1005204567
 MonoBehaviour:
@@ -8433,9 +8409,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 285ebb9df31e9d3448449ce6a29f03ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelPass: 0
-  LevelCount: 0
-  LevelName: 
   script: {fileID: 997254783193132640}
 --- !u!1 &1237062773
 GameObject:
@@ -8491,9 +8464,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 285ebb9df31e9d3448449ce6a29f03ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelPass: 0
-  LevelCount: 0
-  LevelName: 
   script: {fileID: 997254783193132640}
 --- !u!114 &1237062776
 MonoBehaviour:
@@ -9016,9 +8986,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 285ebb9df31e9d3448449ce6a29f03ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelPass: 0
-  LevelCount: 0
-  LevelName: 
   script: {fileID: 997254783193132640}
 --- !u!114 &1296579315
 MonoBehaviour:
@@ -9748,9 +9715,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 285ebb9df31e9d3448449ce6a29f03ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelPass: 0
-  LevelCount: 0
-  LevelName: 
   script: {fileID: 997254783193132640}
 --- !u!1 &1372275275
 GameObject:
@@ -11015,9 +10979,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 285ebb9df31e9d3448449ce6a29f03ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelPass: 0
-  LevelCount: 0
-  LevelName: 
   script: {fileID: 997254783193132640}
 --- !u!114 &1524768143
 MonoBehaviour:
@@ -11791,9 +11752,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 285ebb9df31e9d3448449ce6a29f03ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelPass: 0
-  LevelCount: 0
-  LevelName: 
   script: {fileID: 997254783193132640}
 --- !u!114 &1600487399
 MonoBehaviour:
@@ -11883,7 +11841,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 59ea585c2a887424f94625b4a0cb0323, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 22268d0e1e43ef148a8563d3589b69a4, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -13353,9 +13311,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 285ebb9df31e9d3448449ce6a29f03ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  LevelPass: 0
-  LevelCount: 0
-  LevelName: 
   script: {fileID: 997254783193132640}
 --- !u!114 &1904814148
 MonoBehaviour:
