@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
@@ -14,7 +15,7 @@ public class SetButtons : MonoBehaviour
         {
             DisableAllButtonsExceptOne();
         }
-        DisableButtonLevel();
+        StartCoroutine(DisableButtonLevel());
     }
 
     void DisableAllButtonsExceptOne()
@@ -35,8 +36,9 @@ public class SetButtons : MonoBehaviour
         }
     }
 
-    void DisableButtonLevel()
+    IEnumerator DisableButtonLevel()
     {
+        yield return new WaitForSeconds(.2f);
         Button[] buttons = content.GetComponentsInChildren<Button>()
         .Where(b => b.gameObject.name != "GalaxyEasterEgg")
         .ToArray();
@@ -48,8 +50,6 @@ public class SetButtons : MonoBehaviour
 
         for (int i = 0; i < sortedButtons.Count; i++)
         {
-            Debug.Log(sortedButtons[i].GetComponent<PlayLevel>().GetLevelCount());
-            Debug.Log(sortedButtons[i]);
             if (i == 0) continue;
 
             bool previousPassed = sortedButtons[i - 1].GetComponent<PlayLevel>().GetLevelPass();

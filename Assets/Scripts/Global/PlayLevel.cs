@@ -13,15 +13,18 @@ public class PlayLevel : MonoBehaviour
 
     private void Start()
     {
-        string name = gameObject.name;
-        string numberOnly = new string(name.Where(char.IsDigit).ToArray());
-        LevelCount = int.Parse(numberOnly);
-
         string fullName = gameObject.name;
-        Match match = Regex.Match(fullName, @"^Level\d+");
+
+        Match match = Regex.Match(name, @"Level(\d+)");
         if (match.Success)
         {
-            LevelName = match.Value;
+            LevelCount = int.Parse(match.Groups[1].Value);
+        }
+
+        Match match2 = Regex.Match(fullName, @"^Level\d+");
+        if (match2.Success)
+        {
+            LevelName = match2.Value;
         }
 
         if (script.GetStars(LevelName) > 0)
