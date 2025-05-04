@@ -126,6 +126,18 @@ public class SaveStars : MonoBehaviour
     {
         return starsdata.hasTenStars;
     }
+
+    public void SetBoolUnlocked()
+    {
+        starsdata.SecretLevelUnlocked = true;
+        SaveToJson();
+    }
+
+
+    public bool GetBoolUnlocked()
+    {
+        return starsdata.SecretLevelUnlocked;
+    }
 }
 
 [System.Serializable]
@@ -137,6 +149,7 @@ public class StarData
     public bool hasTenStars;
     public bool hasTwentyStars;
     public bool hasThirtyStars;
+    public bool SecretLevelUnlocked;
 }
 
 [System.Serializable]

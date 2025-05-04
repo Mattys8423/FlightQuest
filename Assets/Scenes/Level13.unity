@@ -3126,7 +3126,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 165989436243123220, guid: c687325b999839a49a7a0637dd34c723, type: 3}
       propertyPath: Force
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 165989436243123220, guid: c687325b999839a49a7a0637dd34c723, type: 3}
       propertyPath: script

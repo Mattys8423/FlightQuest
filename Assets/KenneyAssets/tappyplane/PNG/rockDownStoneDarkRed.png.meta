@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      rockDownStoneDarkRed_0: 8502297695315723435
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
