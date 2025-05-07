@@ -6,6 +6,7 @@ public class GroundSetOutSpace : MonoBehaviour
 {
     [SerializeField] private PlaneActions script;
     [SerializeField] private SaveStars script2;
+    [SerializeField] private Animator Transition;
     private string LevelName;
 
     private void Start()
@@ -23,7 +24,8 @@ public class GroundSetOutSpace : MonoBehaviour
 
     IEnumerator WaitAndPlayCine()
     {
-        yield return new WaitForSeconds(5f);
+        Transition.Play("helice");
+        yield return new WaitForSeconds(1.30f);
         script.SetGrounded(true);
         script.StopPlane(false);
         script2.SetBoolUnlocked();
