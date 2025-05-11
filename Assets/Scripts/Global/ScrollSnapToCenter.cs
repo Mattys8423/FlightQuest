@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 using TMPro;
-using Unity.Android.Gradle.Manifest;
 using System.Collections;
 
 public class ScrollSnapToCenter : MonoBehaviour

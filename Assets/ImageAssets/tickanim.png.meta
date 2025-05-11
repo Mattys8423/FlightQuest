@@ -1,10 +1,7 @@
 fileFormatVersion: 2
-guid: d80f3c33ac8277344b5711e5aa9c2dba
+guid: 1c1193085988c8342b714e055e65db1a
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -6231044458718751821
-    second: circle_0
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -109,53 +106,137 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: iOS
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: circle_0
+      name: tickanim_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 2992
-        height: 2986
+        width: 1566
+        height: 1373
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 3b3176a0412e689a0800000000000000
-      internalID: -6231044458718751821
+      spriteID: c63767c184e58fc4d928879e6640ed96
+      internalID: -340679165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tickanim_1
+      rect:
+        serializedVersion: 2
+        x: 1566
+        y: 0
+        width: 1566
+        height: 1373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb610696a03086c408eb573a6d91319a
+      internalID: 723696160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tickanim_2
+      rect:
+        serializedVersion: 2
+        x: 3132
+        y: 0
+        width: 1566
+        height: 1373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f32ead0c641378547a1e3543e2180dde
+      internalID: -148336528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tickanim_3
+      rect:
+        serializedVersion: 2
+        x: 4698
+        y: 0
+        width: 1566
+        height: 1373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec59d1b0476f50e4aa8c4f5a0d840a42
+      internalID: 674020640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tickanim_4
+      rect:
+        serializedVersion: 2
+        x: 6264
+        y: 0
+        width: 1566
+        height: 1373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cd5ce8e81a85db41a6783448fd82e10
+      internalID: 516489776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tickanim_5
+      rect:
+        serializedVersion: 2
+        x: 7830
+        y: 0
+        width: 1566
+        height: 1373
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 215e0bc2eeb971d4980ad5cfb2cdd444
+      internalID: -1890513358
       vertices: []
       indices: 
       edges: []
@@ -164,7 +245,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: fed149e5766639b4c9bc510932f56dbd
     internalID: 0
     vertices: []
     indices: 
@@ -174,7 +255,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      circle_0: -6231044458718751821
+      tickanim_0: -340679165
+      tickanim_1: 723696160
+      tickanim_2: -148336528
+      tickanim_3: 674020640
+      tickanim_4: 516489776
+      tickanim_5: -1890513358
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

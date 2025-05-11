@@ -28,6 +28,9 @@ public class playSound : MonoBehaviour
     IEnumerator Feedback(GameObject Feedback)
     {
         Feedback.SetActive(true);
+        Transform child = Feedback.transform.GetChild(0);
+        GameObject childObject = child.gameObject;
+        childObject.GetComponent<Animator>().SetTrigger("Anim");
         yield return new WaitForSeconds(.5f);
         Feedback.SetActive(false);
     }
