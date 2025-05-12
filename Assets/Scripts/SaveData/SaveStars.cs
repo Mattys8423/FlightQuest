@@ -138,6 +138,14 @@ public class SaveStars : MonoBehaviour
     {
         return starsdata.SecretLevelUnlocked;
     }
+
+    public void ResetSave()
+    {
+        starsdata = new StarData();
+        SaveToJson();
+        Debug.Log("Reset");
+    }
+
 }
 
 [System.Serializable]
