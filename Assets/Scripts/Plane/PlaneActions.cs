@@ -372,6 +372,8 @@ public class PlaneActions : MonoBehaviour
 
     public bool GetDJ() { return Skill; }
 
+    public bool GetFL() { return FirstLaunch; }
+
     public bool GetIsFlying() {  return isFlying; }
 
     public void AddForceY(float value)
