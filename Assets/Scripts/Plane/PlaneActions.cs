@@ -54,8 +54,16 @@ public class PlaneActions : MonoBehaviour
                 }
                 else if (Input.GetMouseButton(0) && isDragging)
                 {
+                    Vector2 direction;
                     Vector2 currentPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-                    Vector2 direction = currentPos - startPos;
+                    if (Main.GetBoolInversed() == true)
+                    {
+                        direction = startPos - currentPos;
+                    }
+                    else
+                    {
+                        direction = currentPos - startPos;
+                    }
                     Vector2 endPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
                     switch (FirstLaunch)
@@ -83,26 +91,47 @@ public class PlaneActions : MonoBehaviour
                             }
                             break;
                     }
-                    if (endPos.x - startPos.x >= 0)
+                    if (Main.GetBoolInversed() == false)
                     {
-                        transform.rotation = Quaternion.Euler(0, 0, 0);
+                        if (endPos.x - startPos.x >= 0)
+                        {
+                            transform.rotation = Quaternion.Euler(0, 0, 0);
+                        }
+                        else
+                        {
+                            transform.rotation = Quaternion.Euler(0, 180, 0);
+                        }
                     }
                     else
                     {
-                        transform.rotation = Quaternion.Euler(0, 180, 0);
+                        if (startPos.x - endPos.x >= 0)
+                        {
+                            transform.rotation = Quaternion.Euler(0, 0, 0);
+                        }
+                        else
+                        {
+                            transform.rotation = Quaternion.Euler(0, 180, 0);
+                        }
                     }
                 }
                 else if (Input.GetMouseButtonUp(0) && isDragging)
                 {                   
                     Vector2 endPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                    Vector2 direction;
+                    if (Main.GetBoolInversed() == true)
+                    {
+                        direction = startPos - endPos;
+                    }
+                    else
+                    {
+                        direction = endPos - startPos;
+                    }
                     switch (FirstLaunch)
                     {                        
                         case false:
                             if (Vector2.Distance(endPos, startPos) < LimitDrag || endPos.y - startPos.y < LimitDrag) { }
                             else
                             {
-                                Vector2 direction = endPos - startPos;
-
                                 StartCoroutine(script.LaunchPuff());
                                 rb.isKinematic = false;
                                 rb.constraints = RigidbodyConstraints2D.None;
@@ -125,8 +154,6 @@ public class PlaneActions : MonoBehaviour
                             if (Vector2.Distance(endPos, startPos) < LimitDrag) { }
                             else
                             {
-                                Vector2 direction = endPos - startPos;
-
                                 StartCoroutine(script.LaunchPuff());
                                 rb.isKinematic = false;
                                 rb.constraints = RigidbodyConstraints2D.None;

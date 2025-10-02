@@ -91,6 +91,19 @@ public class SaveStars : MonoBehaviour
         return starsdata.Plane;
     }
 
+
+    public void SetBoolFC()
+    {
+        starsdata.FirstCinematic = true;
+        SaveToJson();
+    }
+
+    public bool GetBoolFC()
+    {
+        return starsdata.FirstCinematic;
+    }
+
+
     public void SetBoolTeStar()
     {
         starsdata.hasTenStars = true;
@@ -139,6 +152,19 @@ public class SaveStars : MonoBehaviour
         return starsdata.SecretLevelUnlocked;
     }
 
+    public void SetBoolInversed(bool boolean)
+    {
+        starsdata.IsInversed = boolean;
+        Debug.Log("Bool Axis : " + starsdata.IsInversed);
+        SaveToJson();
+    }
+
+
+    public bool GetBoolInversed()
+    {
+        return starsdata.IsInversed;
+    }
+
     public void ResetSave()
     {
         starsdata = new StarData();
@@ -154,10 +180,12 @@ public class StarData
     public List<LevelStars> levelstar = new List<LevelStars>();
     public int StarsNb;
     public int Plane;
+    public bool FirstCinematic;
     public bool hasTenStars;
     public bool hasTwentyStars;
     public bool hasThirtyStars;
     public bool SecretLevelUnlocked;
+    public bool IsInversed = false;
 }
 
 [System.Serializable]
