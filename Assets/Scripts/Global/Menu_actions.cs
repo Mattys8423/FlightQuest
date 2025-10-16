@@ -49,10 +49,10 @@ public class Menu_actions : MonoBehaviour
         if (SaveStars.GetBoolFC() == true)
         {
             SceneManager.LoadScene("LevelScene");
-            SaveStars.SetBoolFC();
         }
         else
         {
+            SaveStars.SetBoolFC();
             SceneManager.LoadScene("FirstCinematique");
         }
     }
