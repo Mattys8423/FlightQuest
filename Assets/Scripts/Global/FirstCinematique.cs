@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FirstCinematique : MonoBehaviour
 {
@@ -10,6 +11,7 @@ public class FirstCinematique : MonoBehaviour
     void Start()
     {
         StartCoroutine(script.TypeText());
+        StartCoroutine(WaitAndScene());
     }
 
     // Update is called once per frame
@@ -18,5 +20,11 @@ public class FirstCinematique : MonoBehaviour
         if (script.isCoroutineRunning == false) { 
             Canvas.SetActive(false);
         }
+    }
+
+    IEnumerator WaitAndScene()
+    {
+        yield return new WaitForSeconds(23.30f);
+        SceneManager.LoadScene("LevelScene");
     }
 }

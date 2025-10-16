@@ -1,13 +1,20 @@
 using System;
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Menu_actions : MonoBehaviour
 {
+    [SerializeField] SaveStars SaveStars;
+
     public void play(int SceneIndex)
     {
         StartCoroutine(WaitAndPlay(SceneIndex));
+    }
+    public void ChooseScenePlay()
+    {
+        StartCoroutine(WaitAndScene());
     }
 
     public void playlevel(string SceneName)
@@ -35,6 +42,21 @@ public class Menu_actions : MonoBehaviour
         yield return new WaitForSeconds(.25f);
         SceneManager.LoadScene(SceneIndex);
     }
+
+    IEnumerator WaitAndScene()
+    {
+        yield return new WaitForSeconds(1.35f);
+        if (SaveStars.GetBoolFC() == true)
+        {
+            SceneManager.LoadScene("LevelScene");
+            SaveStars.SetBoolFC();
+        }
+        else
+        {
+            SceneManager.LoadScene("FirstCinematique");
+        }
+    }
+
 
     IEnumerator WaitAndPlayName(string SceneName)
     {
