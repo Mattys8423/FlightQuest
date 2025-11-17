@@ -8,7 +8,6 @@ public class TutoText : MonoBehaviour
     [SerializeField] TMP_Text TexteTuto;
     [SerializeField] GameObject Texte;
     [SerializeField] GameObject flèche;
-    [SerializeField] GameObject flèche2;
     [SerializeField] GameObject Tap;
     [SerializeField] GameObject Click;
     [SerializeField] WinCondition script;
@@ -80,12 +79,10 @@ public class TutoText : MonoBehaviour
         }
         Time.timeScale = 1f;
         yield return new WaitForSeconds(.3f);
-        flèche2.SetActive(true);
-        TexteTuto.SetText("Pay attention to your number of launch it can be useful !");
+        TexteTuto.SetText("Pay attention to your number of launch and your skill active it can be useful !");
         yield return new WaitForSeconds(3f);
         Click.SetActive(false);
         Tap.SetActive(false);
-        flèche2.SetActive(false);
         TexteTuto.gameObject.SetActive(false);
     }
 
