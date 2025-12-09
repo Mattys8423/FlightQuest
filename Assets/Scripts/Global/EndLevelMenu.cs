@@ -117,5 +117,13 @@ public class EndLevelMenu : MonoBehaviour
             yield return new WaitForSeconds(.5f);
             StarsAudio.PlayOneShot(StarWin3);        
         }
+
+        if (GameObject.FindWithTag("Cinematic"))
+        {
+            CinematicManager cine = GameObject.FindWithTag("Cinematic").GetComponent<CinematicManager>();
+            StartCoroutine(cine.LoadCinematicScene());
+        }
+        else {
+        }
     }
 }
