@@ -16,9 +16,9 @@ public class TutoText : MonoBehaviour
     private bool hasDJ = false;
     private bool hasTouchedCircle = false;
     private float holdTime = 0f;
-    private float requiredHoldTime = .8f;
-    private float requiredHoldTime2 = 4f;
-    private float requiredHoldTime3 = 6f;
+    [SerializeField] private float requiredHoldTime = .8f;
+    [SerializeField] private float requiredHoldTime2 = 4f;
+    [SerializeField] private float requiredHoldTime3 = 6f;
 
     void Update()
     {
