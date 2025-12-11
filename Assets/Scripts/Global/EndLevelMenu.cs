@@ -21,6 +21,16 @@ public class EndLevelMenu : MonoBehaviour
     [SerializeField] AudioClip StarWin3;
     [SerializeField] AudioClip StarsBroken;
 
+    CinematicManager cine;
+
+    private void Start()
+    {
+        if (GameObject.FindWithTag("Cinematic"))
+        {
+            cine = GameObject.FindWithTag("Cinematic").GetComponent<CinematicManager>();
+        }
+    }
+
     public void MenuReset()
     {
         MenuPause.SetActive(true);
@@ -81,6 +91,20 @@ public class EndLevelMenu : MonoBehaviour
 
     public IEnumerator ShowMenuVictory()
     {
+        if (GameObject.FindWithTag("Cinematic"))
+        {
+            cine.DecideMandatory();
+            if (cine.MandatoryCine)
+            {
+                Transform child = Menu.transform.Find("ButtonMenu");
+                Transform child2 = Menu.transform.Find("ButtonNextLevel");
+                Transform child3 = Menu.transform.Find("ButtonRetry");
+                child.gameObject.GetComponent<Button>().interactable = false;
+                child2.gameObject.GetComponent<Button>().interactable = false;
+                child3.gameObject.GetComponent<Button>().interactable = false;
+            }
+        }
+
         MenuPause.SetActive(false);
         Menu.SetActive(true);
         Win.SetActive(true);
@@ -118,12 +142,12 @@ public class EndLevelMenu : MonoBehaviour
             StarsAudio.PlayOneShot(StarWin3);        
         }
 
-        if (GameObject.FindWithTag("Cinematic"))
-        {
-            CinematicManager cine = GameObject.FindWithTag("Cinematic").GetComponent<CinematicManager>();
-            StartCoroutine(cine.LoadCinematicScene());
+        if (GameObject.FindWithTag("Cinematic")){
+            if (cine.MandatoryCine)
+            {
+                StartCoroutine(cine.LoadCinematicScene());
+            }
         }
-        else {
-        }
+
     }
 }

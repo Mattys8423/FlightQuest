@@ -140,6 +140,27 @@ public class SaveStars : MonoBehaviour
         return starsdata.hasTenStars;
     }
 
+    
+    public int GetMaxPlane()
+    {
+        if (GetBoolTeStar())
+        {
+            return 1;
+        }
+        if (GetBoolTwStar())
+        {
+            return 2;
+        }
+        if (GetBoolThStar())
+        {
+            return 3;
+        }
+        else
+        {
+            return 0;
+        }
+    }
+
     public void SetBoolUnlocked()
     {
         starsdata.SecretLevelUnlocked = true;

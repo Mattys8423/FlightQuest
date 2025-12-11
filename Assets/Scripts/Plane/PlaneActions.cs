@@ -32,7 +32,6 @@ public class PlaneActions : MonoBehaviour
     void Start()
     {
         SkillNumber = Main.GetPlane();
-        Debug.Log(SkillNumber + "is your plane");
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0;
         rb.isKinematic = true;
@@ -228,7 +227,6 @@ public class PlaneActions : MonoBehaviour
             RaycastHit2D hit = Physics2D.CircleCast(previousPos, detectionRadius, deltaPos.normalized, deltaPos.magnitude, obstacleLayer);
             if (hit.collider != null)
             {
-                Debug.Log("Collision détectée avec : " + hit.collider.name);
 
                 collisionDetected = true;
                 collisionIndex = i;
@@ -236,8 +234,6 @@ public class PlaneActions : MonoBehaviour
                 Vector2 incomingDirection = deltaPos.normalized;
                 Vector2 normal = hit.normal;
                 float angleIncidence = Vector2.Angle(-incomingDirection, normal);
-
-                Debug.Log("Angle d'incidence: " + angleIncidence + "°");
 
                 if (activeImpactMarker == null)
                 {

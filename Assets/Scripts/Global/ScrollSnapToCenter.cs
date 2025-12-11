@@ -77,6 +77,6 @@ public class ScrollSnapToCenter : MonoBehaviour
     private IEnumerator ScrollStart()
     {
         yield return new WaitForSeconds(0.5f);
-        scrollRect.velocity = new Vector2(-(3700 * script.GetPlane()), 0);
+        scrollRect.velocity = new Vector2(-(3700 * script.GetMaxPlane()), 0);
     }
 }
