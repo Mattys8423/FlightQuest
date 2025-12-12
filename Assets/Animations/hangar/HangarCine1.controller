@@ -53,7 +53,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: HangarCine
+  m_Name: HangarCine1
   serializedVersion: 5
   m_AnimatorParameters: []
   m_AnimatorLayers:
@@ -116,7 +116,7 @@ AnimatorState:
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_TimeParameterActive: 0
-  m_Motion: {fileID: 7400000, guid: f18b2c341a880374e9c7d13f944810ed, type: 2}
+  m_Motion: {fileID: 7400000, guid: e164feb8d0aeba843a123fde885382f4, type: 2}
   m_Tag: 
   m_SpeedParameter: 
   m_MirrorParameter: 

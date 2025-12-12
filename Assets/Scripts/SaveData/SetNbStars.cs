@@ -13,16 +13,19 @@ public class SetNbStars : MonoBehaviour
     {
         if (script.GetTotalStars() >= 10 && !script.GetBoolTeStar())
         {
+            script.SetBoolFromCinematic(true);
             GoHangar.SetActive(true);
             script.SetBoolTeStar();
         }
         if (script.GetTotalStars() >= 20 && !script.GetBoolTwStar())
         {
+            script.SetBoolFromCinematic(true);
             GoHangar.SetActive(true);
             script.SetBoolTwStar();
         }
         if (script.GetTotalStars() >= 30 && !script.GetBoolThStar())
         {
+            script.SetBoolFromCinematic(true);
             GoHangar.SetActive(true);
             script.SetBoolThStar();
         }

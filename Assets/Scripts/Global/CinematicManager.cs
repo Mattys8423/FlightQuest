@@ -22,39 +22,43 @@ public class CinematicManager : MonoBehaviour
             MandatoryCine = true;
         }
         else {
+            SceneToLoad = "NewPlaneCine"+valor.ToString();
         }
     }
 
-    public void DecideMandatory()
+    public bool DecideMandatory(int add_coin)
     {
         switch (valor)
         {
             case ChoiceValor.Un:
-                if (script.GetTotalStars() >= 10 && !script.GetBoolTeStar())
+                if (script.GetTotalStars() + add_coin >= 10 && script.GetBoolTeStar() == false)
                 {
-                    MandatoryCine = true;
                     script.SetBoolTeStar();
+                    return true;
                 }
                 break;
             case ChoiceValor.Deux:
-                if (script.GetTotalStars() >= 20 && !script.GetBoolTwStar())
+                if (script.GetTotalStars() + add_coin >= 20 && script.GetBoolTwStar() == false)
                 {
-                    MandatoryCine = true;
                     script.SetBoolTwStar();
+                    return true;
                 }
                 break;
             case ChoiceValor.Trois:
-                if (script.GetTotalStars() >= 30 && !script.GetBoolThStar())
+                if (script.GetTotalStars() + add_coin >= 30 && script.GetBoolThStar() == false)
                 {
-                    MandatoryCine = true;
                     script.SetBoolThStar();
+                    return true;
+                    
                 }
                 break;
         }
+        return false;
     }
 
     public IEnumerator LoadCinematicScene()
     {
+        script.SetBoolFromCinematic(true);
         yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene(SceneToLoad);
     }

@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: OpenIdle 1
+  m_Name: OpenIdle 2
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -22,8 +22,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 0
         value: {x: 0.015133346, y: 0.012235471, z: 0.012879443}
-        inSlope: {x: -0, y: 0, z: 0}
-        outSlope: {x: -0, y: 0, z: 0}
+        inSlope: {x: 0, y: 0, z: 0}
+        outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
         weightedMode: 0
         inWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
@@ -58,7 +58,7 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 2360520580430891584, guid: 9bfc0798d6b2fff48bff1f6abde15153, type: 3}
+      value: {fileID: -3545727518832415473, guid: 7556fbf6cb6d0a84384523da84bd7332, type: 3}
     attribute: m_Sprite
     path: Canvas (2)/Image
     classID: 114
@@ -99,7 +99,7 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 2360520580430891584, guid: 9bfc0798d6b2fff48bff1f6abde15153, type: 3}
+    - {fileID: -3545727518832415473, guid: 7556fbf6cb6d0a84384523da84bd7332, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -149,8 +149,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 0
         value: 0.015133346
-        inSlope: -0
-        outSlope: -0
+        inSlope: 0
+        outSlope: 0
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
@@ -170,8 +170,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 0
         value: 0.012235471
-        inSlope: -0
-        outSlope: -0
+        inSlope: 0
+        outSlope: 0
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334
@@ -191,8 +191,8 @@ AnimationClip:
       - serializedVersion: 3
         time: 0
         value: 0.012879443
-        inSlope: -0
-        outSlope: -0
+        inSlope: 0
+        outSlope: 0
         tangentMode: 136
         weightedMode: 0
         inWeight: 0.33333334

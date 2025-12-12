@@ -18,8 +18,14 @@ EditorBuildSettings:
     path: Assets/Scenes/FirstCinematique.unity
     guid: 0c206ff1adbfd5d439c83649d6a384bd
   - enabled: 1
-    path: Assets/Scenes/NewPlaneCine.unity
+    path: Assets/Scenes/NewPlaneCineUn.unity
     guid: f670677a6340c1845b48892fa2ed8200
+  - enabled: 1
+    path: Assets/Scenes/NewPlaneCineDeux.unity
+    guid: f4fa6d0bc9d14dc4cb1fbe5346c68f67
+  - enabled: 1
+    path: Assets/Scenes/NewPlaneCineTrois.unity
+    guid: b60b454c2bdfb1546a1a032efe0ccf3c
   - enabled: 1
     path: Assets/Scenes/FalseEndCinematic.unity
     guid: 3024bf187adb4f5499874765c81e08b0
