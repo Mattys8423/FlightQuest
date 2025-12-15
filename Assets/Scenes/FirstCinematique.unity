@@ -751,6 +751,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 846045666288633049, guid: 58b3576d0ecc3f246a60df85b7fdc90c, type: 3}
+      propertyPath: m_Value
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 1308887628315457277, guid: 58b3576d0ecc3f246a60df85b7fdc90c, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -831,6 +835,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3275641133942784765, guid: 58b3576d0ecc3f246a60df85b7fdc90c, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4243683418340586011, guid: 58b3576d0ecc3f246a60df85b7fdc90c, type: 3}
       propertyPath: m_Name
       value: CanvasSkip
@@ -838,6 +846,14 @@ PrefabInstance:
     - target: {fileID: 7339663302391289292, guid: 58b3576d0ecc3f246a60df85b7fdc90c, type: 3}
       propertyPath: SceneToLoad
       value: LevelScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 7339663302391289292, guid: 58b3576d0ecc3f246a60df85b7fdc90c, type: 3}
+      propertyPath: TimeToDeactivate
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7883337822229808489, guid: 58b3576d0ecc3f246a60df85b7fdc90c, type: 3}
+      propertyPath: m_Color.a
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8045094889510923754, guid: 58b3576d0ecc3f246a60df85b7fdc90c, type: 3}
       propertyPath: m_AnchorMax.x

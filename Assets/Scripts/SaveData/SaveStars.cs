@@ -161,6 +161,17 @@ public class SaveStars : MonoBehaviour
         }
     }
 
+    public void AddDeath()
+    {
+        starsdata.Deaths += 1;
+        SaveToJson();
+    }
+
+    public int GetDeaths()
+    {
+        return starsdata.Deaths;
+    }
+
     public void SetBoolUnlocked()
     {
         starsdata.SecretLevelUnlocked = true;
@@ -212,6 +223,7 @@ public class StarData
     public List<LevelStars> levelstar = new List<LevelStars>();
     public int StarsNb;
     public int Plane;
+    public int Deaths;
     public bool FirstCinematic;
     public bool hasTenStars;
     public bool hasTwentyStars;

@@ -49,6 +49,7 @@ public class GroundCollide : MonoBehaviour
                         {
                             StartCoroutine(script3.ShowMenuDefeat());
                             script4.SetStars(LevelName, 0);
+                            script4.AddDeath();
                             break;
                         }
                 }
@@ -65,6 +66,7 @@ public class GroundCollide : MonoBehaviour
         yield return new WaitForSeconds(.6f);
         StartCoroutine(script3.ShowMenuDefeat());
         script4.SetStars(LevelName, 0);
+        script4.AddDeath();
     }
 }
 

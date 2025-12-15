@@ -1769,8 +1769,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1833266321351186479, guid: b3c4e43fc45bae24e80d1acd45de561b, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 4.0886
+      objectReference: {fileID: 0}
+    - target: {fileID: 1833266321351186479, guid: b3c4e43fc45bae24e80d1acd45de561b, type: 3}
       propertyPath: m_LocalPosition.z
       value: -0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1833266321351186479, guid: b3c4e43fc45bae24e80d1acd45de561b, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -1542.9813
       objectReference: {fileID: 0}
     - target: {fileID: 1983352385701459066, guid: b3c4e43fc45bae24e80d1acd45de561b, type: 3}
       propertyPath: m_PixelPerfect
@@ -3453,6 +3461,10 @@ PrefabInstance:
     - target: {fileID: 4243683418340586011, guid: 58b3576d0ecc3f246a60df85b7fdc90c, type: 3}
       propertyPath: m_Name
       value: CanvasSkip
+      objectReference: {fileID: 0}
+    - target: {fileID: 7339663302391289292, guid: 58b3576d0ecc3f246a60df85b7fdc90c, type: 3}
+      propertyPath: TimeToDeactivate
+      value: 10.1
       objectReference: {fileID: 0}
     - target: {fileID: 8045094889510923754, guid: 58b3576d0ecc3f246a60df85b7fdc90c, type: 3}
       propertyPath: m_AnchorMax.x

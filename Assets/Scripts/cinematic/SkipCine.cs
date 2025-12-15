@@ -6,6 +6,7 @@ public class SkipCine : MonoBehaviour
 {
     [SerializeField] private string SceneToLoad;
     [SerializeField] public Slider holdSlider;
+    [SerializeField] private float TimeToDeactivate;
     private bool Hold = false;
     private bool Skipped = false;
     private bool State = true;
@@ -21,6 +22,10 @@ public class SkipCine : MonoBehaviour
         {
             Hold = true;
         }
+        else
+        {
+            Hold = false;
+        }
 
         if (Hold)
         {
@@ -31,8 +36,8 @@ public class SkipCine : MonoBehaviour
             DontHoldTime = 0;
             HoldTime += Time.deltaTime;
         }
-        else 
-        { 
+        else
+        {
             HoldTime = 0;
             DontHoldTime += Time.deltaTime;
         }
@@ -46,6 +51,12 @@ public class SkipCine : MonoBehaviour
         if (DontHoldTime > 1 && State)
         {
             Hide();
+        }
+
+        TimeToDeactivate -= Time.deltaTime;
+        if (TimeToDeactivate <= 0)
+        {
+            gameObject.SetActive(false);
         }
     }
 

@@ -40,6 +40,7 @@ public class GroundCollideTuto : MonoBehaviour
             case false:
                 StartCoroutine(script3.ShowMenuDefeat());
                 script4.SetStars("Level1", 0);
+                script4.AddDeath();
                 break;
         }
     }
