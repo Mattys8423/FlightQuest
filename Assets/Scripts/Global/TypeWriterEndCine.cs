@@ -23,6 +23,7 @@ public class TypewriterEffectEndCine : MonoBehaviour
 
     private void Awake()
     {
+        script.AddCine();
         if (script.GetDeaths() == 0)
         {
             fullText = "Finally, you arrived.\r\nThis is the end of the road.\r\nYou’re back home.\r\n\r\nThis time, there were no second try.\r\nNo hesitation.\r\nNo mistakes.\r\n\r\nSo tell me…\r\nDo you still wonder who I am?\r\n\r\nI am what you never became.\r\nA path you didn’t take.\r\nA failure that never existed.\r\n\r\nYou didn’t leave anything behind.\r\nNo echoes.\r\nNo broken versions of yourself.\r\n\r\nYou reached the end.";

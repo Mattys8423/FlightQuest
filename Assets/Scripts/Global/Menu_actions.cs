@@ -46,14 +46,14 @@ public class Menu_actions : MonoBehaviour
     IEnumerator WaitAndScene()
     {
         yield return new WaitForSeconds(1.35f);
-        if (SaveStars.GetBoolFC() == true)
+        if (SaveStars.GetCine() < 1)
         {
-            SceneManager.LoadScene("LevelScene");
+            SaveStars.AddCine();
+            SceneManager.LoadScene("FirstCinematique");
         }
         else
         {
-            SaveStars.SetBoolFC();
-            SceneManager.LoadScene("FirstCinematique");
+            SceneManager.LoadScene("LevelScene");
         }
     }
 

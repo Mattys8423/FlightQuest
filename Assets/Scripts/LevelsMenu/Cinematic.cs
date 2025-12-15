@@ -9,9 +9,9 @@ public class Cinematic : MonoBehaviour
 
     private void Start()
     {
-        if (script.GetBoolFC() == false)
+        if (script.GetCine() > 1)
         {
-            script.SetBoolFC();
+            script.AddCine();
             SceneManager.LoadScene("FirstCinematique");
         }
     }

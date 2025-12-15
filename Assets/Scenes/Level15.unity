@@ -894,7 +894,7 @@ Transform:
   m_GameObject: {fileID: 208621373}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 0.66, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1039,6 +1039,7 @@ GameObject:
   - component: {fileID: 293431358}
   - component: {fileID: 293431357}
   - component: {fileID: 293431359}
+  - component: {fileID: 293431360}
   m_Layer: 0
   m_Name: OutSpace
   m_TagString: Untagged
@@ -1055,8 +1056,8 @@ Transform:
   m_GameObject: {fileID: 293431353}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.7059488, w: 0.7082629}
-  m_LocalPosition: {x: 4.94, y: 8.52, z: 0}
-  m_LocalScale: {x: 1, y: 6.154369, z: 1}
+  m_LocalPosition: {x: 4.5, y: 8.52, z: 0}
+  m_LocalScale: {x: 1, y: 7.2313833, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 473631416}
@@ -1177,6 +1178,23 @@ MonoBehaviour:
   script: {fileID: 1127499196}
   script2: {fileID: 54087391}
   Transition: {fileID: 930617286}
+--- !u!114 &293431360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 293431353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f14248de19a6ee4409b3302ec87b9e5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Plane: {fileID: 1127499195}
+  Explosion: {fileID: 1127499197}
+  script: {fileID: 1127499196}
+  script3: {fileID: 955316301}
+  script4: {fileID: 54087391}
 --- !u!1001 &314891478
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3868,11 +3886,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 293664758915248985, guid: a4cd26b69b31f464b808c595a53bbb54, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.360001
+      value: -8.64
       objectReference: {fileID: 0}
     - target: {fileID: 293664758915248985, guid: a4cd26b69b31f464b808c595a53bbb54, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.47
+      value: -1.81
       objectReference: {fileID: 0}
     - target: {fileID: 293664758915248985, guid: a4cd26b69b31f464b808c595a53bbb54, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3910,6 +3928,14 @@ PrefabInstance:
       propertyPath: Main
       value: 
       objectReference: {fileID: 54087391}
+    - target: {fileID: 2877544967877325599, guid: a4cd26b69b31f464b808c595a53bbb54, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2877544967877325599, guid: a4cd26b69b31f464b808c595a53bbb54, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3078821113366113686, guid: a4cd26b69b31f464b808c595a53bbb54, type: 3}
       propertyPath: script
       value: 
@@ -6191,6 +6217,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3471143525163650917, guid: 84397528751ff47459cb6004c5df1634, type: 3}
+      propertyPath: valor
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3471143525163650917, guid: 84397528751ff47459cb6004c5df1634, type: 3}
+      propertyPath: script
+      value: 
+      objectReference: {fileID: 54087391}
+    - target: {fileID: 3471143525163650917, guid: 84397528751ff47459cb6004c5df1634, type: 3}
+      propertyPath: SceneToLoad
+      value: FalseEndCinematic
+      objectReference: {fileID: 0}
     - target: {fileID: 5109959422359696134, guid: 84397528751ff47459cb6004c5df1634, type: 3}
       propertyPath: m_Name
       value: CinematicManager

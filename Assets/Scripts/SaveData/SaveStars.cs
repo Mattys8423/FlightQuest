@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class SaveStars : MonoBehaviour
@@ -92,17 +92,16 @@ public class SaveStars : MonoBehaviour
     }
 
 
-    public void SetBoolFC()
+    public void AddCine()
     {
-        starsdata.FirstCinematic = true;
+        starsdata.NbCinematic += 1;
         SaveToJson();
     }
 
-    public bool GetBoolFC()
+    public int GetCine()
     {
-        return starsdata.FirstCinematic;
+        return starsdata.NbCinematic;
     }
-
 
     public void SetBoolTeStar()
     {
@@ -224,7 +223,7 @@ public class StarData
     public int StarsNb;
     public int Plane;
     public int Deaths;
-    public bool FirstCinematic;
+    public int NbCinematic = 0;
     public bool hasTenStars;
     public bool hasTwentyStars;
     public bool hasThirtyStars;
