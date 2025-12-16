@@ -974,7 +974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8110c84eae1b6904f90b152d2e14ddc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  script: {fileID: 2043249688}
+  script: {fileID: 0}
   script2: {fileID: 1102710523}
   script3: {fileID: 96637276}
   script4: {fileID: 1102710524}
@@ -1128,7 +1128,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &731034440
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1312,6 +1312,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a4cd26b69b31f464b808c595a53bbb54, type: 3}
+--- !u!114 &734549435 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2082865146105918914, guid: a4cd26b69b31f464b808c595a53bbb54, type: 3}
+  m_PrefabInstance: {fileID: 734549434}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043249687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a32d03847a880b4ba7a03bbdb684834, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &833634779
 GameObject:
   m_ObjectHideFlags: 0
@@ -1730,7 +1741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8110c84eae1b6904f90b152d2e14ddc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  script: {fileID: 2043249688}
+  script: {fileID: 734549435}
   script2: {fileID: 1102710523}
   script3: {fileID: 96637276}
   script4: {fileID: 1102710524}
@@ -1895,7 +1906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9021e1bde6dbfd459187e3b42acd038, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  script: {fileID: 2043249688}
+  script: {fileID: 734549435}
   lineRenderer: {fileID: 939637622}
   trajectoryPoints: 8
   dt: 0.1
@@ -1960,7 +1971,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Your goal is to reach the landing zone
+  m_text: Hold the screen
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 85ceed50176d72741ae9759edb3924ab, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 1886709b65a719d4f9e08d6d27992009, type: 2}
@@ -3238,7 +3249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8110c84eae1b6904f90b152d2e14ddc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  script: {fileID: 2043249688}
+  script: {fileID: 0}
   script2: {fileID: 1102710523}
   script3: {fileID: 96637276}
   script4: {fileID: 1102710524}
@@ -3518,17 +3529,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8255284339526671355, guid: a4cd26b69b31f464b808c595a53bbb54, type: 3}
   m_PrefabInstance: {fileID: 734549434}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2043249688 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2082865146105918914, guid: a4cd26b69b31f464b808c595a53bbb54, type: 3}
-  m_PrefabInstance: {fileID: 734549434}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2043249687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a32d03847a880b4ba7a03bbdb684834, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &377107714442120025
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3597,7 +3597,7 @@ PrefabInstance:
     - target: {fileID: 5067251926919382798, guid: b0ca2144b5612df4c892cc1ab3b47521, type: 3}
       propertyPath: script
       value: 
-      objectReference: {fileID: 2043249688}
+      objectReference: {fileID: 734549435}
     - target: {fileID: 5417121625301612250, guid: b0ca2144b5612df4c892cc1ab3b47521, type: 3}
       propertyPath: m_Pivot.x
       value: 0

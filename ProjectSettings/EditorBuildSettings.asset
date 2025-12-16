@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/LevelScene.unity
     guid: fbe04be8eff1a134fbe3408ead1ed750
   - enabled: 1
+    path: Assets/Scenes/HangarSpace.unity
+    guid: 4703e6177ac988b4b8e4c7287c314bd3
+  - enabled: 1
     path: Assets/Scenes/Hangar.unity
     guid: 12d235c9d08f9104aa888d784caf85d5
   - enabled: 1
