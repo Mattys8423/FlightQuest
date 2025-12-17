@@ -955,9 +955,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3797895849935016861, guid: 6f203315b2a7dc549aade689dc3a0d4b, type: 3}
+      propertyPath: Number
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3797895849935016861, guid: 6f203315b2a7dc549aade689dc3a0d4b, type: 3}
       propertyPath: scripts
       value: 
       objectReference: {fileID: 1710769337}
+    - target: {fileID: 3797895849935016861, guid: 6f203315b2a7dc549aade689dc3a0d4b, type: 3}
+      propertyPath: NumberOfCinematicWatch
+      value: 4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

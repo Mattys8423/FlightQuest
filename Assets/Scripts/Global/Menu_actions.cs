@@ -45,10 +45,9 @@ public class Menu_actions : MonoBehaviour
 
     IEnumerator WaitAndScene()
     {
-        yield return new WaitForSeconds(1.35f);
+        yield return new WaitForSeconds(1.20f);
         if (SaveStars.GetCine() < 1)
         {
-            SaveStars.AddCine();
             SceneManager.LoadScene("FirstCinematique");
         }
         else

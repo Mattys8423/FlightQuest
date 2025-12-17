@@ -1039,7 +1039,6 @@ GameObject:
   - component: {fileID: 293431358}
   - component: {fileID: 293431357}
   - component: {fileID: 293431359}
-  - component: {fileID: 293431360}
   m_Layer: 0
   m_Name: OutSpace
   m_TagString: Untagged
@@ -1178,23 +1177,6 @@ MonoBehaviour:
   script: {fileID: 1127499196}
   script2: {fileID: 54087391}
   Transition: {fileID: 930617286}
---- !u!114 &293431360
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 293431353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f14248de19a6ee4409b3302ec87b9e5d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Plane: {fileID: 1127499195}
-  Explosion: {fileID: 1127499197}
-  script: {fileID: 1127499196}
-  script3: {fileID: 955316301}
-  script4: {fileID: 54087391}
 --- !u!1001 &314891478
 PrefabInstance:
   m_ObjectHideFlags: 0

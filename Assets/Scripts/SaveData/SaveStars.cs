@@ -139,7 +139,30 @@ public class SaveStars : MonoBehaviour
         return starsdata.hasThirtyStars;
     }
 
-    
+    public void SetBoolCineSpace()
+    {
+        starsdata.CineSpace = true;
+        SaveToJson();
+    }
+
+
+    public bool GetBoolCineSpace()
+    {
+        return starsdata.CineSpace;
+    }
+
+    public void SetBoolCineFalseEnd()
+    {
+        starsdata.CineFalseEnd = true;
+        SaveToJson();
+    }
+
+
+    public bool GetBoolCineFalseEnd()
+    {
+        return starsdata.CineFalseEnd;
+    }
+
     public int GetMaxPlane()
     {
         if (GetBoolTeStar())
@@ -223,8 +246,10 @@ public class StarData
     public int StarsNb;
     public int Plane;
     public int Deaths;
-    public int NbCinematic = 0;
+    public int NbCinematic;
     public bool hasTenStars;
+    public bool CineSpace;
+    public bool CineFalseEnd;
     public bool hasTwentyStars;
     public bool hasThirtyStars;
     public bool SecretLevelUnlocked;

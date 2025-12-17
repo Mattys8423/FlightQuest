@@ -12,11 +12,6 @@ public class GroundSetOutSpace : MonoBehaviour
     private void Start()
     {
         LevelName = SceneManager.GetActiveScene().name;
-        if (script2.GetCine() >= 3)
-        {
-            gameObject.GetComponent<BoxCollider2D>().isTrigger = true;
-            gameObject.GetComponent<Poison>().enabled = false;
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

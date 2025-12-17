@@ -34,23 +34,19 @@ public class CinematicManager : MonoBehaviour
             case ChoiceValor.Un:
                 if (script.GetTotalStars() + add_coin >= 10 && script.GetBoolTeStar() == false)
                 {
-                    script.SetBoolTeStar();
                     return true;
                 }
                 break;
             case ChoiceValor.Deux:
                 if (script.GetTotalStars() + add_coin >= 20 && script.GetBoolTwStar() == false)
                 {
-                    script.SetBoolTwStar();
                     return true;
                 }
                 break;
             case ChoiceValor.Trois:
                 if (script.GetTotalStars() + add_coin >= 30 && script.GetBoolThStar() == false)
                 {
-                    script.SetBoolThStar();
-                    return true;
-                    
+                    return true;                    
                 }
                 break;
         }
