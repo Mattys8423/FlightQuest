@@ -230,6 +230,18 @@ public class SaveStars : MonoBehaviour
         return starsdata.FromCinematic;
     }
 
+    public void SetBoolFromCineReviewScene(bool boolean)
+    {
+        starsdata.FromCineReviewScene = boolean;
+        SaveToJson();
+    }
+
+
+    public bool GetBoolFromCineReviewScene()
+    {
+        return starsdata.FromCineReviewScene;
+    }
+
     public void ResetSave()
     {
         starsdata = new StarData();
@@ -255,6 +267,7 @@ public class StarData
     public bool SecretLevelUnlocked;
     public bool IsInversed = false;
     public bool FromCinematic = false;
+    public bool FromCineReviewScene = false;
 }
 
 [System.Serializable]

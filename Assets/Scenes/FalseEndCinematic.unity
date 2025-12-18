@@ -723,11 +723,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3590755773979557388, guid: 2d57241144025954186e17fa5f202919, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.67
+      value: -0.656
       objectReference: {fileID: 0}
     - target: {fileID: 3590755773979557388, guid: 2d57241144025954186e17fa5f202919, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.11
+      value: -3.195
       objectReference: {fileID: 0}
     - target: {fileID: 3590755773979557388, guid: 2d57241144025954186e17fa5f202919, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1896,6 +1896,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CanvasSkip
       objectReference: {fileID: 0}
+    - target: {fileID: 7339663302391289292, guid: 58b3576d0ecc3f246a60df85b7fdc90c, type: 3}
+      propertyPath: script
+      value: 
+      objectReference: {fileID: 384930716}
     - target: {fileID: 7339663302391289292, guid: 58b3576d0ecc3f246a60df85b7fdc90c, type: 3}
       propertyPath: SceneToLoad
       value: LevelScene

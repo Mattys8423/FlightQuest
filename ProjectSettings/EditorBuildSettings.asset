@@ -36,6 +36,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Cinematique.unity
     guid: 2855ad3c8af8e364b98af6e140be55f1
   - enabled: 1
+    path: Assets/Scenes/EndCinematic.unity
+    guid: 01880b1689f3bf0488f078aa3fc475e2
+  - enabled: 1
+    path: Assets/Scenes/CineReviewScene.unity
+    guid: 7c81c486679084f4d8eeb4c867487ba0
+  - enabled: 1
     path: Assets/Scenes/GalaxyEG.unity
     guid: 3734edd10174922479724fcfb95b481d
   - enabled: 1

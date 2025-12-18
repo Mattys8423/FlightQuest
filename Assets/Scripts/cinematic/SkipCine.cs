@@ -44,8 +44,8 @@ public class SkipCine : MonoBehaviour
 
         if (HoldTime > 2 && !Skipped) 
         {
-            SceneManager.LoadScene(SceneToLoad);
             Skipped = true;
+            SceneManager.LoadScene(SceneToLoad);
         }
 
         if (DontHoldTime > 1 && State)
