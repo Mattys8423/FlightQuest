@@ -29,7 +29,7 @@ public class CinematicManager : MonoBehaviour
     public bool DecideMandatory(int add_coin)
     {
         if (SceneToLoad != "NewPlaneCine" + valor.ToString()) return true;
-            switch (valor)
+        switch (valor)
         {
             case ChoiceValor.Un:
                 if (script.GetTotalStars() + add_coin >= 10 && script.GetBoolTeStar() == false)

@@ -48,6 +48,9 @@ public class TypewriterEffect : MonoBehaviour
             }
         }
         yield return new WaitForSeconds(.2f);
-        Button.SetActive(true);
+        if (Button != null)
+        {
+            Button.SetActive(true);
+        }
     }
 }

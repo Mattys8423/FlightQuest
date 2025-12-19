@@ -1773,6 +1773,7 @@ GameObject:
   - component: {fileID: 489067560}
   - component: {fileID: 489067561}
   - component: {fileID: 489067562}
+  - component: {fileID: 489067563}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1877,7 +1878,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfcc29f2cd04bcd4ab97189239fab121, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SaveStars: {fileID: 1503958416}
 --- !u!82 &489067561
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1997,6 +1997,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &489067563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489067555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11aa2796f7fd6fe4d89867842a742b6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  script: {fileID: 1503958416}
 --- !u!1 &494402107
 GameObject:
   m_ObjectHideFlags: 0
@@ -2991,6 +3004,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 496fee614b0dae148bd8c02f91e1ce60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  script: {fileID: 1503958416}
   Landscape: {fileID: 2138380144}
   Canvas: {fileID: 489067562}
   Titre: {fileID: 1746353864}
@@ -3923,9 +3937,9 @@ MonoBehaviour:
           m_StringArgument: bg
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 489067560}
-        m_TargetAssemblyTypeName: Menu_actions, Assembly-CSharp
-        m_MethodName: ChooseScenePlay
+      - m_Target: {fileID: 489067563}
+        m_TargetAssemblyTypeName: PlayButton, Assembly-CSharp
+        m_MethodName: ButtonPlay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

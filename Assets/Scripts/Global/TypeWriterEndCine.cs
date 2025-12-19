@@ -34,7 +34,7 @@ public class TypewriterEffectEndCine : MonoBehaviour
         }
     }
 
-    public IEnumerator TypeText()
+public IEnumerator TypeText()
     {
         textComponent.text = "";
 
@@ -50,6 +50,7 @@ public class TypewriterEffectEndCine : MonoBehaviour
                 fullText[i - 1] == '\r' &&
                 fullText[i] == '\n')
             {
+                textComponent.text = "";
                 yield return new WaitForSeconds(1.2f);
                 continue;
             }
@@ -105,7 +106,14 @@ public class TypewriterEffectEndCine : MonoBehaviour
             yield return null;
         }
         yield return new WaitForSeconds(.2f);
-        SceneManager.LoadScene("MenuScene");
+        if (script.GetBoolFromCineReviewScene())
+        {
+            SceneManager.LoadScene("CineReviewScene");
+        }
+        else
+        {
+            SceneManager.LoadScene("MenuScene");
+        }            
         gameObject.SetActive(false);
     }
 }

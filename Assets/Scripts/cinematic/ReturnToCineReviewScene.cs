@@ -4,7 +4,6 @@ using UnityEngine.SceneManagement;
 
 public class ReturnToCineReviewScene : MonoBehaviour
 {
-    [SerializeField] private SaveStars script;
     [SerializeField] private float SecondsBeforeReturn;
 
     private void Start()

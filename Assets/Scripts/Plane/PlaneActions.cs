@@ -391,6 +391,36 @@ public class PlaneActions : MonoBehaviour
         isFlying = false;
     }
 
+    public void DisablePlaneWithoutExplosion()
+    {
+        rb.linearVelocity = Vector2.zero;
+        rb.angularVelocity = 0f;
+        rb.isKinematic = true;
+        rb.constraints = RigidbodyConstraints2D.FreezeAll;
+
+        Animator anim = GetComponent<Animator>();
+        if (anim != null)
+        {
+            anim.SetBool("IsFlying", false);
+        }
+
+        SpriteRenderer sr = GetComponent<SpriteRenderer>();
+        if (sr != null)
+        {
+            sr.enabled = false;
+        }
+
+        Collider2D col = GetComponent<Collider2D>();
+        if (col != null)
+        {
+            col.enabled = false;
+        }
+
+        IsGrounded = false;
+        isFlying = false;
+        isDragging = false;
+    }
+
     public void SetGrounded(bool grounded) { IsGrounded = grounded; }
 
     public bool GetDJ() { return Skill; }

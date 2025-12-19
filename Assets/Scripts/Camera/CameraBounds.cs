@@ -13,6 +13,11 @@ public class CameraBounds : MonoBehaviour
     [Header("Settings")]
     [SerializeField] private float margin = 0f;
 
+    [SerializeField] private bool checkTop = true;
+    [SerializeField] private bool checkBottom = true;
+    [SerializeField] private bool checkLeft = true;
+    [SerializeField] private bool checkRight = true;
+
     private string levelName;
     private bool defeated = false;
     private PlaneActions planeScript;
@@ -28,19 +33,16 @@ public class CameraBounds : MonoBehaviour
     void Update()
     {
         if (defeated) return;
+
         Vector3 pos = cam.WorldToViewportPoint(planeGO.transform.position);
 
-        //Check with margin if the plane is in the camera bounds
-        if (pos.x < 0 - margin || pos.x > 1 + margin || pos.y < 0 - margin || pos.y > 1 + margin)
+        if ((checkLeft && pos.x < 0 - margin) ||
+            (checkRight && pos.x > 1 + margin) ||
+            (checkBottom && pos.y < 0 - margin) ||
+            (checkTop && pos.y > 1 + margin) ||
+            pos.z < 0)
         {
             TriggerDefeat();
-        }
-
-        //or behind
-        if (pos.z < 0)
-        {
-            TriggerDefeat();
-            return;
         }
     }
 
@@ -60,5 +62,13 @@ public class CameraBounds : MonoBehaviour
         yield return new WaitForSeconds(.6f);
         StartCoroutine(script3.ShowMenuDefeat());
         script4.SetStars(levelName, 0);
+    }
+
+    public void SetCheckSides(bool top, bool bottom, bool left, bool right)
+    {
+        checkTop = top;
+        checkBottom = bottom;
+        checkLeft = left;
+        checkRight = right;
     }
 }

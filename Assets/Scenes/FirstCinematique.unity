@@ -3331,6 +3331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   script: {fileID: 862484004}
+  script2: {fileID: 1297152440}
   Canvas: {fileID: 862483997}
 --- !u!1 &1899112590
 GameObject:

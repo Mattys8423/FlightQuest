@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 public class FirstCinematique : MonoBehaviour
 {
     [SerializeField] TypewriterEffect1 script;
+    [SerializeField] SaveStars script2;
     [SerializeField] GameObject Canvas;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -25,6 +26,13 @@ public class FirstCinematique : MonoBehaviour
     IEnumerator WaitAndScene()
     {
         yield return new WaitForSeconds(23.30f);
-        SceneManager.LoadScene("LevelScene");
+        if (script2.GetBoolFromCineReviewScene())
+        {
+            SceneManager.LoadScene("CineReviewScene");
+        }
+        else
+        {
+            SceneManager.LoadScene("LevelScene");
+        }
     }
 }
