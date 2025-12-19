@@ -1,11 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class SetStarsCinematicx : MonoBehaviour
+public class SetStarsCinematic : MonoBehaviour
 {
     [SerializeField] private SaveStars script;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         string sceneName = SceneManager.GetActiveScene().name;
@@ -14,12 +13,15 @@ public class SetStarsCinematicx : MonoBehaviour
         {
             case ("NewPlaneCineUn"):
                 script.SetBoolTeStar();
+                script.SetBoolFromCinematic(true);
                 break;
             case ("NewPlaneCineDeux"):
                 script.SetBoolTwStar();
+                script.SetBoolFromCinematic(true);
                 break;
             case ("NewPlaneCineTrois"):
                 script.SetBoolThStar();
+                script.SetBoolFromCinematic(true);
                 break;
         }
     }

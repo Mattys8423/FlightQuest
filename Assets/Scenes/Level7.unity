@@ -236,6 +236,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 921766217247552720, guid: a4cd26b69b31f464b808c595a53bbb54, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: 2082865146105918914, guid: a4cd26b69b31f464b808c595a53bbb54, type: 3}
       propertyPath: Main
       value: 
@@ -3578,6 +3582,10 @@ MonoBehaviour:
   script3: {fileID: 2086147494}
   script4: {fileID: 724451239}
   margin: -0.02
+  checkTop: 1
+  checkBottom: 1
+  checkLeft: 1
+  checkRight: 1
 --- !u!1 &1472410888
 GameObject:
   m_ObjectHideFlags: 0

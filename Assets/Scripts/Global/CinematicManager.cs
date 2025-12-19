@@ -55,7 +55,6 @@ public class CinematicManager : MonoBehaviour
 
     public IEnumerator LoadCinematicScene()
     {
-        script.SetBoolFromCinematic(true);
         yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene(SceneToLoad);
     }

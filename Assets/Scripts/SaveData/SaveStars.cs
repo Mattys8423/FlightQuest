@@ -165,15 +165,15 @@ public class SaveStars : MonoBehaviour
 
     public int GetMaxPlane()
     {
-        if (GetBoolTeStar())
+        if (GetTotalStars() <= 10)
         {
             return 1;
         }
-        if (GetBoolTwStar())
+        else if (GetTotalStars() <= 29 && GetTotalStars() > 10)
         {
             return 2;
         }
-        if (GetBoolThStar())
+        else if (GetTotalStars() >= 30)
         {
             return 3;
         }
