@@ -7,13 +7,6 @@ public class CinematicManager : MonoBehaviour
     [SerializeField] public string SceneToLoad;
     [SerializeField] SaveStars script;
     [SerializeField] public bool MandatoryCine = false;
-    public enum ChoiceValor
-    {
-        Un = 1,
-        Deux = 2,
-        Trois = 3
-    }
-    [SerializeField] private ChoiceValor valor = ChoiceValor.Un;
 
     private void Start()
     {
@@ -21,30 +14,27 @@ public class CinematicManager : MonoBehaviour
         {
             MandatoryCine = true;
         }
-        else {
-            SceneToLoad = "NewPlaneCine"+valor.ToString();
-        }
     }
 
     public bool DecideMandatory(int add_coin)
     {
-        if (SceneToLoad != "NewPlaneCine" + valor.ToString()) return true;
-        switch (valor)
+        if (SceneToLoad != "NewPlaneCine") return true;
+        switch (script.GetTotalStars() + add_coin)
         {
-            case ChoiceValor.Un:
-                if (script.GetTotalStars() + add_coin >= 10 && script.GetBoolTeStar() == false)
+            case (>= 30):
+                if (script.GetBoolThStar() == false)
                 {
                     return true;
                 }
                 break;
-            case ChoiceValor.Deux:
-                if (script.GetTotalStars() + add_coin >= 20 && script.GetBoolTwStar() == false)
+            case (>= 20):
+                if (script.GetBoolTwStar() == false)
                 {
                     return true;
                 }
                 break;
-            case ChoiceValor.Trois:
-                if (script.GetTotalStars() + add_coin >= 30 && script.GetBoolThStar() == false)
+            case (>= 10):
+                if (script.GetBoolTeStar() == false)
                 {
                     return true;                    
                 }

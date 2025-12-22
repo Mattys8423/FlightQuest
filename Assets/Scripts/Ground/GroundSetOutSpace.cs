@@ -7,6 +7,7 @@ public class GroundSetOutSpace : MonoBehaviour
     [SerializeField] private PlaneActions script;
     [SerializeField] private SaveStars script2;
     [SerializeField] private Animator Transition;
+    [SerializeField] private Animator GroundSnowHint;
     [SerializeField] private GameObject Change;
 
     private bool CanSeeCine;
@@ -54,18 +55,25 @@ public class GroundSetOutSpace : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player") && CanSeeCine)
         {
-            StartCoroutine(WaitAndPlayCine());
+            StartCoroutine(WaitAndPlayCine(collision.gameObject));
         }
     }
 
-    IEnumerator WaitAndPlayCine()
+    IEnumerator WaitAndPlayCine(GameObject Plane)
     {
-        Transition.Play("helice");
-        yield return new WaitForSeconds(1.30f);
-        script.SetGrounded(true);
-        script.StopPlane(false);
-        script2.SetBoolUnlocked();
-        SceneManager.LoadScene("Cinematique");
+        print("hello");
+        GroundSnowHint.SetBool("Pass", true);
+        yield return new WaitForSeconds(.2f);
+        if (Plane.GetComponent<PlaneActions>().GetIsFlying() == true)
+        {
+            GroundSnowHint.SetBool("Transi", true);
+            Transition.Play("helice");
+            yield return new WaitForSeconds(1.30f);
+            script.SetGrounded(true);
+            script.StopPlane(false);
+            script2.SetBoolUnlocked();
+            SceneManager.LoadScene("Cinematique");
+        }
     }
 }
 
