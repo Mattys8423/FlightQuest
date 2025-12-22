@@ -1,35 +1,51 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.UI;
 
 public class CineReviewManager : MonoBehaviour
 {
     [SerializeField] private SaveStars script;
-    private int CinematicCount = 0;
+    [SerializeField] private int NumberCinematic;
 
     private void Start()
     {
-        script.SetBoolFromCineReviewScene(false);
-        int childCount = transform.childCount;
-        for (int i = 0; i < childCount; i++)
-        {
-            GameObject ActualChild = transform.GetChild(i).gameObject;
-            int childCountOfChild = ActualChild.transform.childCount;
-
-            for ( int j = 0; j < childCountOfChild; j++)
-            {
-                if (CinematicCount < script.GetCine())
+        switch (NumberCinematic) 
+        { 
+            case(3):
+                if (script.GetCine() >= NumberCinematic && script.GetBoolCineFalseEnd())
                 {
-                    ActualChild.transform.GetChild(j).gameObject.GetComponent<Button>().interactable = true;
-                    ActualChild.transform.GetChild(j).gameObject.transform.GetChild(0).gameObject.SetActive(true);
-                    CinematicCount++;
+                    gameObject.GetComponent<Button>().interactable = true;
+                    gameObject.GetComponent<Transform>().GetChild(0).gameObject.SetActive(true);
                 }
                 else
                 {
-                    ActualChild.transform.GetChild(j).gameObject.GetComponent<Button>().interactable = false;
-                    ActualChild.transform.GetChild(j).gameObject.transform.GetChild(0).gameObject.SetActive(false);
-                    CinematicCount++;
+                    gameObject.GetComponent<Button>().interactable = false;
+                    gameObject.GetComponent<Transform>().GetChild(0).gameObject.SetActive(false);
                 }
-            }
+                break;
+            case (4):
+                if (script.GetCine() >= NumberCinematic && script.GetBoolCineSpace())
+                {
+                    gameObject.GetComponent<Button>().interactable = true;
+                    gameObject.GetComponent<Transform>().GetChild(0).gameObject.SetActive(true);
+                }
+                else
+                {
+                    gameObject.GetComponent<Button>().interactable = false;
+                    gameObject.GetComponent<Transform>().GetChild(0).gameObject.SetActive(false);
+                }
+                break;
+            default:
+                if (script.GetCine() >= NumberCinematic)
+                {
+                    gameObject.GetComponent<Button>().interactable = true;
+                    gameObject.GetComponent<Transform>().GetChild(0).gameObject.SetActive(true);
+                }
+                else
+                {
+                    gameObject.GetComponent<Button>().interactable = false;
+                    gameObject.GetComponent<Transform>().GetChild(0).gameObject.SetActive(false);
+                }
+                break;
         }
     }
 }

@@ -1,50 +1,53 @@
-using System.Collections;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class CinematicManager : MonoBehaviour
 {
-    [SerializeField] public string SceneToLoad;
-    [SerializeField] SaveStars script;
-    [SerializeField] public bool MandatoryCine = false;
+    [SerializeField] private string SceneToLoad;
+    [SerializeField] private SaveStars script;
+    [SerializeField] private int NumberCine;
 
-    private void Start()
+    private bool mandatoryCine;
+
+    private void Awake()
     {
-        if (SceneToLoad != "NewPlaneCine")
+        if (script.GetCine() >= NumberCine)
         {
-            MandatoryCine = true;
+            enabled = false;
+            return;
         }
+
+        mandatoryCine = SceneToLoad != "NewPlaneCine";
     }
 
     public bool DecideMandatory(int add_coin)
     {
-        if (SceneToLoad != "NewPlaneCine") return true;
-        switch (script.GetTotalStars() + add_coin)
-        {
-            case (>= 30):
-                if (script.GetBoolThStar() == false)
-                {
-                    return true;
-                }
-                break;
-            case (>= 20):
-                if (script.GetBoolTwStar() == false)
-                {
-                    return true;
-                }
-                break;
-            case (>= 10):
-                if (script.GetBoolTeStar() == false)
-                {
-                    return true;                    
-                }
-                break;
-        }
+        if (!enabled)
+            return false;
+
+        if (SceneToLoad != "NewPlaneCine")
+            return true;
+
+        int totalStars = script.GetTotalStars() + add_coin;
+
+        if (totalStars >= 30 && !script.GetBoolThStar())
+            return true;
+
+        if (totalStars >= 20 && !script.GetBoolTwStar())
+            return true;
+
+        if (totalStars >= 10 && !script.GetBoolTeStar())
+            return true;
+
         return false;
     }
 
     public IEnumerator LoadCinematicScene()
     {
+        if (!enabled)
+            yield break;
+
         yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene(SceneToLoad);
     }

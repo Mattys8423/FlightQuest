@@ -5,7 +5,7 @@ public class HasSeenCine : MonoBehaviour
     [SerializeField] private SaveStars script;
     [SerializeField] private int NumberCine;
 
-    void Start()
+    void Awake()
     {
      if (script.GetCine() >= NumberCine)
         {

@@ -99,9 +99,10 @@ public class EndLevelMenu : MonoBehaviour
                 Transform child = Menu.transform.Find("ButtonMenu");
                 Transform child2 = Menu.transform.Find("ButtonNextLevel");
                 Transform child3 = Menu.transform.Find("ButtonRetry");
-                child.gameObject.GetComponent<Button>().interactable = false;
-                child2.gameObject.GetComponent<Button>().interactable = false;
-                child3.gameObject.GetComponent<Button>().interactable = false;
+                
+                if (child != null) child.gameObject.GetComponent<Button>().interactable = false;
+                if (child2 != null) child2.gameObject.GetComponent<Button>().interactable = false;
+                if (child3 != null) child3.gameObject.GetComponent<Button>().interactable = false;
             }
         }
 
