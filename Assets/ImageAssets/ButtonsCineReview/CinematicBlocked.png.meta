@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      CinematicBlocked_0: -5237007814141224090
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -304,6 +304,10 @@ MonoBehaviour:
   script3: {fileID: 96637276}
   script4: {fileID: 1102710524}
   margin: -0.02
+  checkTop: 1
+  checkBottom: 1
+  checkLeft: 1
+  checkRight: 1
 --- !u!1 &144640492
 GameObject:
   m_ObjectHideFlags: 0
@@ -946,7 +950,19 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1102710524}
     - target: {fileID: 3471143525163650917, guid: 84397528751ff47459cb6004c5df1634, type: 3}
+      propertyPath: NumberCine
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3471143525163650917, guid: 84397528751ff47459cb6004c5df1634, type: 3}
+      propertyPath: numberCine
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3471143525163650917, guid: 84397528751ff47459cb6004c5df1634, type: 3}
       propertyPath: SceneToLoad
+      value: CineEndTuto
+      objectReference: {fileID: 0}
+    - target: {fileID: 3471143525163650917, guid: 84397528751ff47459cb6004c5df1634, type: 3}
+      propertyPath: sceneToLoad
       value: CineEndTuto
       objectReference: {fileID: 0}
     - target: {fileID: 3471143525163650917, guid: 84397528751ff47459cb6004c5df1634, type: 3}
@@ -1000,30 +1016,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 5109959422359696134, guid: 84397528751ff47459cb6004c5df1634, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 617528983}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 84397528751ff47459cb6004c5df1634, type: 3}
---- !u!1 &617528982 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5109959422359696134, guid: 84397528751ff47459cb6004c5df1634, type: 3}
-  m_PrefabInstance: {fileID: 617528981}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &617528983
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 617528982}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef6fca0e214a8cc489dde1eef75563da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  script: {fileID: 1102710524}
-  NumberCine: 2
 --- !u!1 &648686442
 GameObject:
   m_ObjectHideFlags: 0

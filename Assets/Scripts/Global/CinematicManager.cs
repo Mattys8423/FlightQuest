@@ -12,40 +12,56 @@ public class CinematicManager : MonoBehaviour
 
     private void Awake()
     {
-        if (script.GetCine() >= NumberCine)
-        {
-            enabled = false;
-            return;
-        }
-
-        mandatoryCine = SceneToLoad != "NewPlaneCine";
+        mandatoryCine = false;
     }
 
-    public bool DecideMandatory(int add_coin)
+    public bool DecideMandatory(int addStars)
     {
-        if (!enabled)
+        if (SceneToLoad == "NewPlaneCine")
+        {
+            int totalStars = script.GetTotalStars() + addStars;
+
+            if (totalStars >= 30 && !script.GetBoolThStar())
+            {
+                script.SetBoolThStar();
+                mandatoryCine = true;
+                return true;
+            }
+
+            if (totalStars >= 20 && !script.GetBoolTwStar())
+            {
+                script.SetBoolTwStar();
+                mandatoryCine = true;
+                return true;
+            }
+
+            if (totalStars >= 10 && !script.GetBoolTeStar())
+            {
+                script.SetBoolTeStar();
+                mandatoryCine = true;
+                return true;
+            }
+
+            mandatoryCine = false;
             return false;
+        }
 
-        if (SceneToLoad != "NewPlaneCine")
+        else
+        {
+            if (script.GetCine() >= NumberCine)
+            {
+                mandatoryCine = false;
+                return false;
+            }
+
+            mandatoryCine = true;
             return true;
-
-        int totalStars = script.GetTotalStars() + add_coin;
-
-        if (totalStars >= 30 && !script.GetBoolThStar())
-            return true;
-
-        if (totalStars >= 20 && !script.GetBoolTwStar())
-            return true;
-
-        if (totalStars >= 10 && !script.GetBoolTeStar())
-            return true;
-
-        return false;
+        }
     }
 
     public IEnumerator LoadCinematicScene()
     {
-        if (!enabled)
+        if (!mandatoryCine)
             yield break;
 
         yield return new WaitForSeconds(0.5f);

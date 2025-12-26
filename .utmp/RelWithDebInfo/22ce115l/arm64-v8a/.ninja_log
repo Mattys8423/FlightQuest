@@ -1,12 +1,12 @@
 # ninja log v5
-295	2901	7694899985007457	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	4721aca42ccfa338
-3337	5119	7694900011407121	D:/Repository/FlightQuest/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/22ce115l/obj/arm64-v8a/libswappywrapper.so	cf60f91428b220f3
-72	7431	7694900034398876	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	54cb68286e785bab
-4	7506	7694900035047140	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	e762408e62a8c506
-288	7516	7694900035725334	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	8fdf7c5473c4e63c
-120	7728	7694900038011694	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	40db3bfe0c95161
-52	7819	7694900039434871	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	bcf27182be41a437
-130	7885	7694900039245385	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	b2a5764f24bd0f7d
-114	8404	7694900045381299	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	8ae4af86c8887025
-38	8421	7694900045530890	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	de38b8d113816439
-8421	8584	7694900047351146	D:/Repository/FlightQuest/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/22ce115l/obj/arm64-v8a/libgame.so	e934315efc93eb46
+92	590	7884189768115511	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	4721aca42ccfa338
+592	790	7884189770105937	D:/Repository/FlightQuest/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/22ce115l/obj/arm64-v8a/libswappywrapper.so	cf60f91428b220f3
+56	2227	7884189784391565	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	54cb68286e785bab
+41	2244	7884189784548195	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	40db3bfe0c95161
+67	2274	7884189784839238	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	8fdf7c5473c4e63c
+21	2285	7884189784981620	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	e762408e62a8c506
+11	2370	7884189785877439	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	bcf27182be41a437
+80	2382	7884189785877439	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	b2a5764f24bd0f7d
+30	2568	7884189787883584	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	8ae4af86c8887025
+1	2647	7884189788662964	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	de38b8d113816439
+2648	2760	7884189789816521	D:/Repository/FlightQuest/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/22ce115l/obj/arm64-v8a/libgame.so	e934315efc93eb46

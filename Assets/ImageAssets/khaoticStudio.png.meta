@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      khaoticStudio_0: 1114384971387184499
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

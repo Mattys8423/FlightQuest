@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Cinematic5Img_0: 6895494329557846283
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

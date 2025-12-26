@@ -93,8 +93,8 @@ public class EndLevelMenu : MonoBehaviour
     {
         if (GameObject.FindWithTag("Cinematic"))
         {
-            cine.MandatoryCine = cine.DecideMandatory(script2.GetCoin());
-            if (cine.MandatoryCine == true)
+            cine.DecideMandatory(script2.GetCoin());
+            if (cine.DecideMandatory(script2.GetCoin()) == true)
             {
                 Transform child = Menu.transform.Find("ButtonMenu");
                 Transform child2 = Menu.transform.Find("ButtonNextLevel");
@@ -144,7 +144,7 @@ public class EndLevelMenu : MonoBehaviour
         }
 
         if (GameObject.FindWithTag("Cinematic")){
-            if (cine.MandatoryCine)
+            if (cine.DecideMandatory(script2.GetCoin()))
             {
                 StartCoroutine(cine.LoadCinematicScene());
             }

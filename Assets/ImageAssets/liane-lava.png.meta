@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      liane-lava_0: 9012388435465451497
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

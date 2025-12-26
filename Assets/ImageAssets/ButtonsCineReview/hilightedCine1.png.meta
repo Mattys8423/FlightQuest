@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      hilightedCine1_0: 694249115688586391
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -298,7 +298,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      planeRed3snow_0: -5035481549874818221
+      planeRed3snow_1: 3031394144310654172
+      planeRed3snow_2: 189580138176523745
+      planeRed3snow_3: -7625300341713992611
+      planeRed3snow_4: 8500884225085258454
+      planeRed3snow_5: 1468482574443781800
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
