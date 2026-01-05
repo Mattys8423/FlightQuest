@@ -25,6 +25,7 @@ public class ScrollSnapToCenter : MonoBehaviour
     private void Start()
     {
         IsSnapped = false;
+        print(script.GetMaxPlane());
         if (script.GetBoolFromCinematic())
         {
             StartCoroutine(ScrollStartAfterCinematic());
@@ -85,12 +86,12 @@ public class ScrollSnapToCenter : MonoBehaviour
     private IEnumerator ScrollStart()
     {
         yield return new WaitForSeconds(0.5f);
-        scrollRect.velocity = new Vector2(-(3700 * script.GetPlane()), 0);
+        scrollRect.velocity = new Vector2(-(3200 * script.GetPlane()), 0);
     }
 
     private IEnumerator ScrollStartAfterCinematic()
     {
         yield return new WaitForSeconds(0.5f);
-        scrollRect.velocity = new Vector2(-(3700 * script.GetMaxPlane()), 0);
+        scrollRect.velocity = new Vector2(-(3200 * script.GetMaxPlane()), 0);
     }
 }

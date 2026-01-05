@@ -7,8 +7,9 @@ public class CinematicManager : MonoBehaviour
     [SerializeField] private string SceneToLoad;
     [SerializeField] private SaveStars script;
     [SerializeField] private int NumberCine;
+    [SerializeField] private bool mandatoryCine;
 
-    private bool mandatoryCine;
+    private bool hasDecided = false;
 
     private void Awake()
     {
@@ -17,28 +18,33 @@ public class CinematicManager : MonoBehaviour
 
     public bool DecideMandatory(int addStars)
     {
+        if (hasDecided) return mandatoryCine;
+
+        hasDecided = true;
+
         if (SceneToLoad == "NewPlaneCine")
         {
             int totalStars = script.GetTotalStars() + addStars;
+            print(totalStars);
 
             if (totalStars >= 30 && !script.GetBoolThStar())
             {
-                script.SetBoolThStar();
                 mandatoryCine = true;
+                SceneToLoad = "NewPlaneCineTrois";
                 return true;
             }
 
             if (totalStars >= 20 && !script.GetBoolTwStar())
             {
-                script.SetBoolTwStar();
                 mandatoryCine = true;
+                SceneToLoad = "NewPlaneCineDeux";
                 return true;
             }
 
             if (totalStars >= 10 && !script.GetBoolTeStar())
             {
-                script.SetBoolTeStar();
                 mandatoryCine = true;
+                SceneToLoad = "NewPlaneCineUn";
                 return true;
             }
 

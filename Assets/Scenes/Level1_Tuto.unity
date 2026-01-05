@@ -951,7 +951,7 @@ PrefabInstance:
       objectReference: {fileID: 1102710524}
     - target: {fileID: 3471143525163650917, guid: 84397528751ff47459cb6004c5df1634, type: 3}
       propertyPath: NumberCine
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3471143525163650917, guid: 84397528751ff47459cb6004c5df1634, type: 3}
       propertyPath: numberCine

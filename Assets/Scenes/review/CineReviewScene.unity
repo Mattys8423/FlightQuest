@@ -3164,7 +3164,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Easy Start
+  m_text: Child's Play...
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 85ceed50176d72741ae9759edb3924ab, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 1886709b65a719d4f9e08d6d27992009, type: 2}

@@ -3865,7 +3865,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bfcc29f2cd04bcd4ab97189239fab121, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SaveStars: {fileID: 0}
 --- !u!1 &1813262697
 GameObject:
   m_ObjectHideFlags: 0
@@ -4792,6 +4791,10 @@ PrefabInstance:
     - target: {fileID: 4243683418340586011, guid: 58b3576d0ecc3f246a60df85b7fdc90c, type: 3}
       propertyPath: m_Name
       value: CanvasSkip
+      objectReference: {fileID: 0}
+    - target: {fileID: 7339663302391289292, guid: 58b3576d0ecc3f246a60df85b7fdc90c, type: 3}
+      propertyPath: TimeToDeactivate
+      value: 10.1
       objectReference: {fileID: 0}
     - target: {fileID: 8045094889510923754, guid: 58b3576d0ecc3f246a60df85b7fdc90c, type: 3}
       propertyPath: m_AnchorMax.x
