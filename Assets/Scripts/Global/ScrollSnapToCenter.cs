@@ -16,61 +16,66 @@ public class ScrollSnapToCenter : MonoBehaviour
 
     public string[] ItemNames;
 
-    private bool IsSnapped;
+    [SerializeField, Min(0f)] private float initialScrollDuration = 0.6f;
 
     public float snapForce;
     public int ItemNumber;
     float snapSpeed;
+    private bool isAutoScrolling;
 
     private void Start()
     {
-        IsSnapped = false;
-        print(script.GetMaxPlane());
-        if (script.GetBoolFromCinematic())
-        {
-            StartCoroutine(ScrollStartAfterCinematic());
-            script.SetBoolFromCinematic(false);
-        }
-        else
-        {
-            StartCoroutine(ScrollStart());
-        }
+        StartCoroutine(InitializeScrollPosition());
     }
 
     void Update()
     {
-        int currentItem = Mathf.RoundToInt((0 - content.localPosition.x / (SampleListItem.rect.width + horizontalLayoutGroup.spacing)));
+        int itemCount = GetItemCount();
+        if (itemCount == 0)
+        {
+            return;
+        }
+
+        int currentItem = GetClosestItemIndex(itemCount);
         ItemNumber = currentItem;
+
+        if (isAutoScrolling)
+        {
+            SetDisplayedName(currentItem);
+            return;
+        }
 
         if (scrollRect.velocity.magnitude < 200)
         {
             scrollRect.velocity = Vector2.zero;
             snapSpeed += snapForce * Time.deltaTime;
+            float targetX = GetItemPositionX(currentItem);
             content.localPosition = new Vector3(
-                Mathf.MoveTowards(content.localPosition.x, 0 - (currentItem * (SampleListItem.rect.width + horizontalLayoutGroup.spacing)), snapSpeed),
+                Mathf.MoveTowards(content.localPosition.x, targetX, snapSpeed),
                 content.localPosition.y,
                 content.localPosition.z);
-            Name.text = ItemNames[currentItem];
-            if (content.localPosition.x == 0 - (currentItem) * (SampleListItem.rect.width + horizontalLayoutGroup.spacing))
-            {
-                IsSnapped = true;
-            }
+            SetDisplayedName(currentItem);
         }
-        if (scrollRect.velocity.magnitude > 200)
+        else
         {
             Name.text = "  ";
-            IsSnapped = false;
             snapSpeed = 0;
         }
     }
 
     public void Apply()
     {
+        if (ItemNumber < 0 || ItemNumber >= content.childCount)
+        {
+            return;
+        }
+
         Image currentImage = content.GetChild(ItemNumber).GetComponent<Image>();
 
         if (currentImage != null)
         {
-            if (!currentImage.GetComponent<Lock>().GetIsLocked())
+            Lock planeLock = currentImage.GetComponent<Lock>();
+            if (planeLock != null && !planeLock.GetIsLocked())
             {
                 script.SetPlane(ItemNumber);
             }
@@ -79,19 +84,107 @@ public class ScrollSnapToCenter : MonoBehaviour
 
     public bool GetLockCurrentImage()
     {
+        if (ItemNumber < 0 || ItemNumber >= content.childCount)
+        {
+            return true;
+        }
+
         Image currentImage = content.GetChild(ItemNumber).GetComponent<Image>();
-        return currentImage.GetComponent<Lock>().GetIsLocked();
+        Lock planeLock = currentImage != null ? currentImage.GetComponent<Lock>() : null;
+        return planeLock == null || planeLock.GetIsLocked();
     }
 
-    private IEnumerator ScrollStart()
+    private IEnumerator InitializeScrollPosition()
     {
-        yield return new WaitForSeconds(0.5f);
-        scrollRect.velocity = new Vector2(-(3200 * script.GetPlane()), 0);
+        bool comesFromCinematic = script.GetBoolFromCinematic();
+        if (comesFromCinematic)
+        {
+            script.SetBoolFromCinematic(false);
+        }
+
+        // Attend la construction du layout afin que les tailles utilisées pour
+        // centrer les avions soient définitives, quelle que soit la résolution.
+        yield return null;
+        Canvas.ForceUpdateCanvases();
+        LayoutRebuilder.ForceRebuildLayoutImmediate(content);
+
+        int itemCount = GetItemCount();
+        if (itemCount == 0)
+        {
+            yield break;
+        }
+
+        int targetItem = comesFromCinematic ? script.GetMaxPlane() : script.GetPlane();
+        targetItem = Mathf.Clamp(targetItem, 0, itemCount - 1);
+        yield return ScrollToItem(targetItem);
     }
 
-    private IEnumerator ScrollStartAfterCinematic()
+    private IEnumerator ScrollToItem(int targetItem)
     {
-        yield return new WaitForSeconds(0.5f);
-        scrollRect.velocity = new Vector2(-(3200 * script.GetMaxPlane()), 0);
+        isAutoScrolling = true;
+        scrollRect.StopMovement();
+
+        float startX = content.localPosition.x;
+        float targetX = GetItemPositionX(targetItem);
+        float elapsed = 0f;
+
+        while (elapsed < initialScrollDuration)
+        {
+            elapsed += Time.unscaledDeltaTime;
+            float progress = initialScrollDuration <= 0f
+                ? 1f
+                : Mathf.Clamp01(elapsed / initialScrollDuration);
+            float easedProgress = Mathf.SmoothStep(0f, 1f, progress);
+
+            content.localPosition = new Vector3(
+                Mathf.Lerp(startX, targetX, easedProgress),
+                content.localPosition.y,
+                content.localPosition.z);
+            scrollRect.velocity = Vector2.zero;
+            yield return null;
+        }
+
+        content.localPosition = new Vector3(
+            targetX,
+            content.localPosition.y,
+            content.localPosition.z);
+        scrollRect.StopMovement();
+
+        ItemNumber = targetItem;
+        snapSpeed = 0f;
+        SetDisplayedName(targetItem);
+        isAutoScrolling = false;
+    }
+
+    private int GetItemCount()
+    {
+        int namedItemCount = ItemNames != null ? ItemNames.Length : 0;
+        return Mathf.Min(content.childCount, namedItemCount);
+    }
+
+    private int GetClosestItemIndex(int itemCount)
+    {
+        float itemStep = SampleListItem.rect.width + horizontalLayoutGroup.spacing;
+        if (itemStep <= Mathf.Epsilon)
+        {
+            return 0;
+        }
+
+        int currentItem = Mathf.RoundToInt(-content.localPosition.x / itemStep);
+        return Mathf.Clamp(currentItem, 0, itemCount - 1);
+    }
+
+    private float GetItemPositionX(int itemIndex)
+    {
+        float itemStep = SampleListItem.rect.width + horizontalLayoutGroup.spacing;
+        return -itemIndex * itemStep;
+    }
+
+    private void SetDisplayedName(int itemIndex)
+    {
+        if (Name != null && ItemNames != null && itemIndex >= 0 && itemIndex < ItemNames.Length)
+        {
+            Name.text = ItemNames[itemIndex];
+        }
     }
 }

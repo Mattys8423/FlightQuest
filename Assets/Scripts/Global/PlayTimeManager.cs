@@ -54,7 +54,7 @@ public class PlayTimeManager : MonoBehaviour
 
     public int GetFormattedTimeMin()
     {
-        int minutes = Mathf.FloorToInt((TotalPlayTime % 60) / 60);
+        int minutes = Mathf.FloorToInt((TotalPlayTime % 3600) / 60);
         return minutes;
     }
 }

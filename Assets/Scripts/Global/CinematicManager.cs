@@ -24,7 +24,12 @@ public class CinematicManager : MonoBehaviour
 
         if (SceneToLoad == "NewPlaneCine")
         {
-            int totalStars = script.GetTotalStars() + addStars;
+            string levelName = SceneManager.GetActiveScene().name;
+            if (levelName == "Level1_Tuto") levelName = "Level1";
+
+            int previousBest = script.GetStars(levelName);
+            int addedStars = Mathf.Max(0, addStars - previousBest);
+            int totalStars = script.GetTotalStars() + addedStars;
             print(totalStars);
 
             if (totalStars >= 30 && !script.GetBoolThStar())

@@ -23,7 +23,7 @@ public class Stats : MonoBehaviour
         if (timerGO != null)
         {
             script2 = timerGO.GetComponent<PlayTimeManager>();
-            Time.text = script2.GetFormattedTimeHours().ToString() + " H " + script2.GetFormattedTimeHours().ToString() + "M";
+            Time.text = script2.GetFormattedTimeHours().ToString() + " H " + script2.GetFormattedTimeMin().ToString("00") + " M";
         }
     }
 }

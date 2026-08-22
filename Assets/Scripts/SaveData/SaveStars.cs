@@ -34,8 +34,9 @@ public class SaveStars : MonoBehaviour
         {
             if (levelEntry.number < Stars)
             {
+                int addedStars = Stars - levelEntry.number;
                 levelEntry.number = Stars;
-                starsdata.StarsNb += Stars;
+                starsdata.StarsNb += addedStars;
                 SaveToJson();
             }
         }
@@ -165,22 +166,24 @@ public class SaveStars : MonoBehaviour
 
     public int GetMaxPlane()
     {
-        if (GetTotalStars() <= 19 && GetTotalStars() > 10)
-        {
-            return 1;
-        }
-        else if (GetTotalStars() <= 29 && GetTotalStars() > 20)
-        {
-            return 2;
-        }
-        else if (GetTotalStars() >= 30)
+        int totalStars = GetTotalStars();
+
+        if (totalStars >= 30)
         {
             return 3;
         }
-        else
+
+        if (totalStars >= 20)
         {
-            return 0;
+            return 2;
         }
+
+        if (totalStars >= 10)
+        {
+            return 1;
+        }
+
+        return 0;
     }
 
     public void AddDeath()

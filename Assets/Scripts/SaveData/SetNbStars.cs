@@ -11,6 +11,10 @@ public class SetNbStars : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        // Recalcule d'abord le total pour corriger les anciennes sauvegardes qui
+        // ont pu compter plusieurs fois les étoiles d'un même niveau.
+        script.SetTotalStars();
+
         if (script.GetTotalStars() >= 10 && !script.GetBoolTeStar())
         {
             script.SetBoolFromCinematic(true);
@@ -29,7 +33,6 @@ public class SetNbStars : MonoBehaviour
             GoHangar.SetActive(true);
             script.SetBoolThStar();
         }
-        script.SetTotalStars();
         numStars.SetText(script.GetTotalStars().ToString());
     }
 }

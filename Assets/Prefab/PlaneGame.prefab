@@ -221,8 +221,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   launchForce: 1
+  maxDragDistance: 8
   NumberOfLaunch: 1
-  trajectoryPoints: 8
+  trajectoryPoints: 30
+  trajectoryDuration: 3
   lineRenderer: {fileID: 278108250126061209}
   alpha: 45
   f2: 0.1

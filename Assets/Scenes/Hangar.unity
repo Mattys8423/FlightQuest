@@ -5486,6 +5486,7 @@ MonoBehaviour:
   - Falcon V
   - Skyloop
   - Aether Glide
+  initialScrollDuration: 0.6
   snapForce: 10
   ItemNumber: 0
 --- !u!114 &1944405884

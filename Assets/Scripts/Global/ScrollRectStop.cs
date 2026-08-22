@@ -33,9 +33,10 @@ public class ScrollRectStop : MonoBehaviour
         {
             timePassed += Time.deltaTime;
 
-            if (timePassed == 1f)
+            if (timePassed >= 1f)
             {
                 script2.SetBool(true);
+                timePassed = 0f;
             }
         }
         else
