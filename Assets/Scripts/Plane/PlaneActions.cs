@@ -21,8 +21,9 @@ public class PlaneActions : MonoBehaviour
     public float launchForce = 2f;
     [SerializeField, Min(0.1f)] private float maxDragDistance = 8f;
     public int NumberOfLaunch;
-    public int trajectoryPoints = 30;
-    [SerializeField, Min(0.5f)] private float trajectoryDuration = 3f;
+    public int trajectoryPoints = 20;
+    [SerializeField, Min(0.5f)] private float trajectoryDuration = 1.5f;
+    [SerializeField, Range(0.1f, 1f)] private float predictionCollisionScale = 0.65f;
     public int SkillNumber = 0;
     public LineRenderer lineRenderer;
     public GameObject impactMarkerPrefab;
@@ -197,7 +198,10 @@ public class PlaneActions : MonoBehaviour
         Vector2 vel = rb.linearVelocity + impulse / Mathf.Max(rb.mass, Mathf.Epsilon);
 
         Collider2D planeCollider = GetComponent<Collider2D>();
-        Vector2 castSize = planeCollider != null ? planeCollider.bounds.size : Vector2.one * 0.7f;
+        // La prévision est volontairement un peu plus étroite que l'avion :
+        // elle indique une zone de risque, sans révéler trop facilement chaque crash.
+        Vector2 planeSize = planeCollider != null ? planeCollider.bounds.size : Vector2.one * 0.7f;
+        Vector2 castSize = planeSize * predictionCollisionScale;
         LayerMask obstacleLayer = LayerMask.GetMask("Obstacle");
         ContactFilter2D obstacleFilter = new ContactFilter2D();
         obstacleFilter.SetLayerMask(obstacleLayer);

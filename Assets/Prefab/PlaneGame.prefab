@@ -223,8 +223,9 @@ MonoBehaviour:
   launchForce: 1
   maxDragDistance: 8
   NumberOfLaunch: 1
-  trajectoryPoints: 30
-  trajectoryDuration: 3
+  trajectoryPoints: 20
+  trajectoryDuration: 1.5
+  predictionCollisionScale: 0.65
   lineRenderer: {fileID: 278108250126061209}
   alpha: 45
   f2: 0.1
