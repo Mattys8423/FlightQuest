@@ -25,15 +25,31 @@ public class TypewriterEffectEndCine : MonoBehaviour
     {
         if (script.GetDeaths() == 0)
         {
-            fullText = "Finally, you arrived.\r\nThis is the end of the road.\r\nYou’re back home.\r\n\r\nThis time, there were no second try.\r\nNo hesitation.\r\nNo mistakes.\r\n\r\nSo tell me…\r\nDo you still wonder who I am?\r\n\r\nI am what you never became.\r\nA path you didn’t take.\r\nA failure that never existed.\r\n\r\nYou didn’t leave anything behind.\r\nNo echoes.\r\nNo broken versions of yourself.\r\n\r\nYou reached the end.";
+            fullText = "Finally, you arrived.\r\nThis is home.\r\n\r\nYou crossed every planet without falling once.\r\nNo crash.\r\nNo second try.\r\nNo long chain of mistakes to learn from.\r\n\r\nNot everyone reaches their goal so quickly.\r\nSome need time.\r\nSome need failure.\r\nSome need to lose their way before they understand the road.\r\n\r\nBut you found it on your first flight.\r\n\r\nA long and difficult path stood between you and home...\r\nand somehow,\r\nyou made it look almost simple.\r\n\r\nWelcome home.";
         }
         else
         {
-            fullText = "Finally, you arrived.\r\nThis is the end of the road.\r\nYou're back home.\r\n\r\nIt took you a long time…\r\nAnd many deaths. " + script.GetDeaths() + " Exactly.\r\n\r\nHow do I know all this?\r\nBecause I am you.\r\nOr rather…\r\none of your failed attempts.\r\n\r\nThe one who never reached the end.\r\nThe one who never saw home again.";
+            fullText = "Finally, you arrived.\r\nThis is home.\r\n\r\nYou fell " + script.GetDeaths() + " times before reaching this sky.\r\n" +
+                       script.GetDeaths() + " attempts.\r\n" +
+                       script.GetDeaths() + " lessons written across the stars.\r\n\r\n" +
+                       "But that is how a goal is reached.\r\n" +
+                       "Not all at once.\r\n" +
+                       "Not without doubt.\r\n" +
+                       "Not without falling short again and again.\r\n\r\n" +
+                       "The road home was long.\r\n" +
+                       "It was slow.\r\n" +
+                       "It was difficult.\r\n\r\n" +
+                       "And still, you kept trying.\r\n\r\n" +
+                       "Every mistake brought you closer.\r\n" +
+                       "Every failure taught you where not to fall.\r\n" +
+                       "Every attempt carried you a little farther.\r\n\r\n" +
+                       "You did not arrive because the journey was easy.\r\n" +
+                       "You arrived because you refused to stop.\r\n\r\n" +
+                       "Welcome home.";
         }
     }
 
-public IEnumerator TypeText()
+    public IEnumerator TypeText()
     {
         textComponent.text = "";
 

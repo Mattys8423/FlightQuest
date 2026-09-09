@@ -5,6 +5,7 @@ public class PlayTimeManager : MonoBehaviour
     public static PlayTimeManager Instance;
 
     public float TotalPlayTime { get; private set; }
+    private float saveTimer;
 
     private void Awake()
     {
@@ -23,6 +24,13 @@ public class PlayTimeManager : MonoBehaviour
     void Update()
     {
         TotalPlayTime += Time.unscaledDeltaTime;
+        saveTimer += Time.unscaledDeltaTime;
+
+        if (saveTimer >= 30f)
+        {
+            SaveTime();
+            saveTimer = 0f;
+        }
     }
 
     void OnApplicationPause(bool pause)
