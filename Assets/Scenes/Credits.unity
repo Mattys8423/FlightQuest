@@ -1007,7 +1007,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7339663302391289292, guid: 58b3576d0ecc3f246a60df85b7fdc90c, type: 3}
       propertyPath: SceneToLoad
-      value: LevelScene
+      value: MenuScene
       objectReference: {fileID: 0}
     - target: {fileID: 7339663302391289292, guid: 58b3576d0ecc3f246a60df85b7fdc90c, type: 3}
       propertyPath: TimeToDeactivate

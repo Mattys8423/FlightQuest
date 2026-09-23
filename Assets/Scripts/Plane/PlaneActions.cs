@@ -27,6 +27,7 @@ public class PlaneActions : MonoBehaviour
     [SerializeField, Min(0.1f)] private float maxTrajectoryDistance = 6f;
     public int SkillNumber = 0;
     public LineRenderer lineRenderer;
+    [SerializeField] private Shader trajectoryFlowShader;
     public GameObject impactMarkerPrefab;
 
     public float alpha = 45f;
@@ -36,6 +37,9 @@ public class PlaneActions : MonoBehaviour
     private readonly PlaneTrajectory trajectory = new PlaneTrajectory();
     private readonly List<Vector3> predictedPoints = new List<Vector3>();
     private CameraBounds cameraBounds;
+    private Material trajectoryMaterial;
+    private static readonly int TilingAmountId = Shader.PropertyToID("_TilingAmount");
+    private static readonly int IsAnimateId = Shader.PropertyToID("_IsAnimate");
 
     void Start()
     {
@@ -49,6 +53,7 @@ public class PlaneActions : MonoBehaviour
         cameraBounds = Camera.main != null ? Camera.main.GetComponent<CameraBounds>() : null;
 
         lineRenderer.useWorldSpace = true;
+        ConfigureTrajectoryAppearance();
         HideTrajectoryPreview();
     }
 
@@ -205,7 +210,42 @@ public class PlaneActions : MonoBehaviour
         else if (activeImpactMarker != null)
             activeImpactMarker.SetActive(false);
 
-        lineRenderer.material.SetFloat("_TilingAmount", (impulse / rb.mass).magnitude * 1.2f);
+        UpdateTrajectoryAppearance();
+    }
+
+    private void ConfigureTrajectoryAppearance()
+    {
+        // A full UV interval covers the whole line, regardless of its point count.
+        lineRenderer.textureMode = LineTextureMode.Stretch;
+        lineRenderer.textureScale = Vector2.one;
+        lineRenderer.widthCurve = AnimationCurve.Constant(0f, 1f, 1f);
+        lineRenderer.numCornerVertices = 4;
+        // The transparent border of each texture tile already rounds the dots.
+        lineRenderer.numCapVertices = 0;
+        lineRenderer.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+        lineRenderer.receiveShadows = false;
+        lineRenderer.startColor = new Color(1f, 1f, 1f, 0.95f);
+        lineRenderer.endColor = new Color(1f, 1f, 1f, 0.75f);
+
+        trajectoryMaterial = lineRenderer.material;
+        if (trajectoryFlowShader != null)
+            trajectoryMaterial.shader = trajectoryFlowShader;
+        trajectoryMaterial.SetFloat(IsAnimateId, 1f);
+        trajectoryMaterial.SetFloat("_AnimationSpeed", 6f);
+    }
+
+    private void UpdateTrajectoryAppearance()
+    {
+        float length = 0f;
+        for (int i = 1; i < lineRenderer.positionCount; i++)
+            length += Vector3.Distance(lineRenderer.GetPosition(i - 1), lineRenderer.GetPosition(i));
+
+        const float preferredSpacing = 0.32f;
+        int dotCount = Mathf.Max(1, Mathf.RoundToInt(length / preferredSpacing));
+        trajectoryMaterial.SetFloat(TilingAmountId, dotCount);
+        // Square texture tiles keep the dots circular. Their transparent margin
+        // provides spacing and leaves the first and last circles completely visible.
+        lineRenderer.widthMultiplier = length / dotCount;
     }
 
     private PlaneTrajectory.ContactKind ClassifyTrajectoryContact(Collider2D other)
@@ -252,6 +292,8 @@ public class PlaneActions : MonoBehaviour
 
     private void OnDestroy()
     {
+        if (trajectoryMaterial != null)
+            Destroy(trajectoryMaterial);
         if (activeImpactMarker != null)
             Destroy(activeImpactMarker);
     }

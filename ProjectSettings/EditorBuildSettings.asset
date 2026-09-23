@@ -119,6 +119,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level15.unity
     guid: c174d0347cf7c4545acc084c2f6f4032
+  - enabled: 1
+    path: Assets/Scenes/CamilleLevel.unity
+    guid: 38129982d927a7e479a601c7c1fc7489
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

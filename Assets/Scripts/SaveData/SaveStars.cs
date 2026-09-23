@@ -252,6 +252,18 @@ public class SaveStars : MonoBehaviour
         Debug.Log("Reset");
     }
 
+    public void SetBoolStory()
+    {
+        starsdata.StoryFinished = true;
+        SaveToJson();
+    }
+
+
+    public bool GetBoolStory()
+    {
+        return starsdata.StoryFinished;
+    }
+
 }
 
 [System.Serializable]
@@ -271,6 +283,7 @@ public class StarData
     public bool IsInversed = false;
     public bool FromCinematic = false;
     public bool FromCineReviewScene = false;
+    public bool StoryFinished = false;
 }
 
 [System.Serializable]

@@ -227,6 +227,7 @@ MonoBehaviour:
   trajectoryDuration: 1.5
   maxTrajectoryDistance: 6
   lineRenderer: {fileID: 278108250126061209}
+  trajectoryFlowShader: {fileID: 4800000, guid: ae96117312574d63baee82daf739712a, type: 3}
   alpha: 45
   f2: 0.1
   g: 9.81

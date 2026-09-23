@@ -23,6 +23,10 @@ public class DynamicHorizontalPadding : MonoBehaviour
 
     void AdjustPadding()
     {
+        // Sans avant-dernier enfant, conserver les marges configurées dans la scène.
+        if (content.childCount < 2)
+            return;
+
         float viewportWidth = scrollRect.viewport.rect.width;
 
         // Largeur des boutons

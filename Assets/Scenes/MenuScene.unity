@@ -1855,6 +1855,7 @@ GameObject:
   - component: {fileID: 489067560}
   - component: {fileID: 489067561}
   - component: {fileID: 489067562}
+  - component: {fileID: 489067563}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -2080,6 +2081,20 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &489067563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 489067555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9da38ffa8ec4fb644a3f7786b8dc1837, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  script: {fileID: 1503958416}
+  Creditbtn: {fileID: 1369831065}
 --- !u!1 &494402107
 GameObject:
   m_ObjectHideFlags: 0
@@ -6033,7 +6048,7 @@ GameObject:
   - component: {fileID: 1369831068}
   - component: {fileID: 1369831067}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ButtonCredits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6078,7 +6093,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
+  m_Transition: 2
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -6088,9 +6103,9 @@ MonoBehaviour:
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
+    m_HighlightedSprite: {fileID: 21300000, guid: 10bbbdb20377b0a4ea7de3c178a8f27d, type: 3}
+    m_PressedSprite: {fileID: 21300000, guid: 10bbbdb20377b0a4ea7de3c178a8f27d, type: 3}
+    m_SelectedSprite: {fileID: 21300000, guid: 10bbbdb20377b0a4ea7de3c178a8f27d, type: 3}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
     m_NormalTrigger: Normal
@@ -6098,7 +6113,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 1369831068}
   m_OnClick:
     m_PersistentCalls:
