@@ -34,16 +34,21 @@ public class CameraBounds : MonoBehaviour
     {
         if (defeated) return;
 
-        Vector3 pos = cam.WorldToViewportPoint(planeGO.transform.position);
-
-        if ((checkLeft && pos.x < 0 - margin) ||
-            (checkRight && pos.x > 1 + margin) ||
-            (checkBottom && pos.y < 0 - margin) ||
-            (checkTop && pos.y > 1 + margin) ||
-            pos.z < 0)
+        if (IsOutsideBounds(planeGO.transform.position))
         {
             TriggerDefeat();
         }
+    }
+
+    public bool IsOutsideBounds(Vector3 worldPosition)
+    {
+        if (cam == null)
+            cam = GetComponent<Camera>();
+        Vector3 pos = cam.WorldToViewportPoint(worldPosition);
+        return (checkLeft && pos.x < -margin) ||
+            (checkRight && pos.x > 1 + margin) ||
+            (checkBottom && pos.y < -margin) ||
+            (checkTop && pos.y > 1 + margin) || pos.z < 0;
     }
 
     private void TriggerDefeat()

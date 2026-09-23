@@ -28,7 +28,7 @@ public class GroundCollide : MonoBehaviour
         {
             script.SetGrounded(true);
             script.StopPlane(false);
-            if (Plane.transform.rotation.eulerAngles.z > 40f && Plane.transform.rotation.eulerAngles.z < 320f)
+            if (IsCrashAngle(Plane.transform.rotation.eulerAngles.z))
             {
                 StartCoroutine(DefeatExplode());
             }
@@ -56,6 +56,12 @@ public class GroundCollide : MonoBehaviour
             }
             this.gameObject.GetComponent<PolygonCollider2D>().isTrigger = true;
         }
+    }
+
+    public static bool IsCrashAngle(float angle)
+    {
+        angle = Mathf.Repeat(angle, 360f);
+        return angle > 40f && angle < 320f;
     }
 
     IEnumerator DefeatExplode()

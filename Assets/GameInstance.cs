@@ -7,6 +7,9 @@ using UnityEngine.Audio;
 public class GameInstance : MonoBehaviour
 {
     public static GameInstance instance;
+
+    [Header ("Game Instance Parameters")]
+    public bool FromModeScene { get; set; }
     [SerializeField] private AudioMixer Main;
     private float VolumeMusic = 0.5f;
     private float VolumeEffects = 0.5f;

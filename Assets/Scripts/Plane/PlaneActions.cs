@@ -23,7 +23,8 @@ public class PlaneActions : MonoBehaviour
     public int NumberOfLaunch;
     public int trajectoryPoints = 20;
     [SerializeField, Min(0.5f)] private float trajectoryDuration = 1.5f;
-    [SerializeField, Range(0.1f, 1f)] private float predictionCollisionScale = 0.65f;
+    [Tooltip("Longueur maximale de la trajectoire affichée, en unités du monde.")]
+    [SerializeField, Min(0.1f)] private float maxTrajectoryDistance = 6f;
     public int SkillNumber = 0;
     public LineRenderer lineRenderer;
     public GameObject impactMarkerPrefab;
@@ -32,6 +33,10 @@ public class PlaneActions : MonoBehaviour
     public float f2 = 0.1f;
     public float g = 9.81f;
 
+    private readonly PlaneTrajectory trajectory = new PlaneTrajectory();
+    private readonly List<Vector3> predictedPoints = new List<Vector3>();
+    private CameraBounds cameraBounds;
+
     void Start()
     {
         SkillNumber = Main.GetPlane();
@@ -39,8 +44,12 @@ public class PlaneActions : MonoBehaviour
         rb.gravityScale = 0;
         rb.linearDamping = f2;
         rb.bodyType = RigidbodyType2D.Kinematic;
+        // Keep fast flights from passing through thin hazards between physics steps.
+        rb.collisionDetectionMode = CollisionDetectionMode2D.Continuous;
+        cameraBounds = Camera.main != null ? Camera.main.GetComponent<CameraBounds>() : null;
 
-        lineRenderer.positionCount = trajectoryPoints;
+        lineRenderer.useWorldSpace = true;
+        HideTrajectoryPreview();
     }
 
     void Update()
@@ -60,6 +69,7 @@ public class PlaneActions : MonoBehaviour
                     Vector2 currentPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                     Vector2 direction = GetLimitedLaunchDirection(currentPos);
                     Vector2 endPos = currentPos;
+                    FaceLaunchDirection(direction);
 
                     switch (FirstLaunch)
                     {
@@ -71,7 +81,7 @@ public class PlaneActions : MonoBehaviour
                             else
                             {
                                 lineRenderer.enabled = true;
-                                ShowTrajectory(transform.position, direction * launchForce);
+                                ShowTrajectory(direction * launchForce);
                             }
                             break;
                         case true:
@@ -82,37 +92,16 @@ public class PlaneActions : MonoBehaviour
                             else
                             {
                                 lineRenderer.enabled = true;
-                                ShowTrajectory(transform.position, direction * launchForce);
+                                ShowTrajectory(direction * launchForce);
                             }
                             break;
-                    }
-                    if (Main.GetBoolInversed() == false)
-                    {
-                        if (endPos.x - startPos.x >= 0)
-                        {
-                            transform.rotation = Quaternion.Euler(0, 0, 0);
-                        }
-                        else
-                        {
-                            transform.rotation = Quaternion.Euler(0, 180, 0);
-                        }
-                    }
-                    else
-                    {
-                        if (startPos.x - endPos.x >= 0)
-                        {
-                            transform.rotation = Quaternion.Euler(0, 0, 0);
-                        }
-                        else
-                        {
-                            transform.rotation = Quaternion.Euler(0, 180, 0);
-                        }
                     }
                 }
                 else if (Input.GetMouseButtonUp(0) && isDragging)
                 {                   
                     Vector2 endPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                     Vector2 direction = GetLimitedLaunchDirection(endPos);
+                    FaceLaunchDirection(direction);
                     switch (FirstLaunch)
                     {                        
                         case false:
@@ -190,140 +179,81 @@ public class PlaneActions : MonoBehaviour
         return Vector2.ClampMagnitude(rawDirection, maxDragDistance);
     }
 
-    void ShowTrajectory(Vector2 start, Vector2 impulse)
+    private void FaceLaunchDirection(Vector2 direction)
     {
-        List<Vector3> points = new List<Vector3>();
+        transform.rotation = Quaternion.Euler(0f, direction.x >= 0f ? 0f : 180f, 0f);
+    }
 
-        Vector2 pos = start;
-        Vector2 vel = rb.linearVelocity + impulse / Mathf.Max(rb.mass, Mathf.Epsilon);
+    void ShowTrajectory(Vector2 impulse)
+    {
+        // Facing may have changed this frame; queries must use the same mirrored polygon as launch.
+        Physics2D.SyncTransforms();
+        PlaneTrajectory.Result result = trajectory.Predict(rb, impulse, g, f2,
+            trajectoryDuration, maxTrajectoryDistance, predictedPoints, ClassifyTrajectoryContact,
+            IsOutsideFlightBounds);
 
-        Collider2D planeCollider = GetComponent<Collider2D>();
-        // La prévision est volontairement un peu plus étroite que l'avion :
-        // elle indique une zone de risque, sans révéler trop facilement chaque crash.
-        Vector2 planeSize = planeCollider != null ? planeCollider.bounds.size : Vector2.one * 0.7f;
-        Vector2 castSize = planeSize * predictionCollisionScale;
-        LayerMask obstacleLayer = LayerMask.GetMask("Obstacle");
-        ContactFilter2D obstacleFilter = new ContactFilter2D();
-        obstacleFilter.SetLayerMask(obstacleLayer);
-        obstacleFilter.useTriggers = false;
-
-        float dt = Time.fixedDeltaTime;
-        int simulationSteps = Mathf.CeilToInt(trajectoryDuration / dt);
-        int renderedPointCount = Mathf.Max(2, trajectoryPoints);
-        float sampleInterval = trajectoryDuration / (renderedPointCount - 1);
-        float nextSampleTime = sampleInterval;
-        RaycastHit2D[] hits = new RaycastHit2D[16];
-
-        bool collisionDetected = false;
-        points.Add(pos);
-
-        for (int i = 1; i <= simulationSteps; i++)
+        int count = Mathf.Min(predictedPoints.Count, Mathf.Max(2, trajectoryPoints));
+        lineRenderer.positionCount = count;
+        for (int i = 0; i < count; i++)
         {
-            Vector2 previousPos = pos;
-
-            // FixedUpdate applique cette gravité manuelle avant que Rigidbody2D
-            // n'applique son amortissement et intègre la nouvelle position.
-            vel.y -= g * dt;
-            vel /= 1f + f2 * dt;
-            pos += vel * dt;
-
-            Vector2 deltaPos = pos - previousPos;
-            RaycastHit2D hit;
-            if (TryGetFirstImpact(previousPos, deltaPos, castSize, obstacleFilter, hits, out hit))
-            {
-                collisionDetected = true;
-                points.Add(hit.centroid);
-                ShowImpactMarker(hit);
-                break;
-            }
-
-            float elapsedTime = i * dt;
-            if (elapsedTime + dt * 0.5f >= nextSampleTime)
-            {
-                points.Add(pos);
-                nextSampleTime += sampleInterval;
-            }
+            int index = count == 1 ? 0 : Mathf.RoundToInt(i * (predictedPoints.Count - 1f) / (count - 1));
+            lineRenderer.SetPosition(i, predictedPoints[index]);
         }
 
-        if (!collisionDetected && activeImpactMarker != null)
-        {
+        if (result.crash)
+            ShowImpactMarker(result.point, result.normal);
+        else if (activeImpactMarker != null)
             activeImpactMarker.SetActive(false);
-        }
 
-        lineRenderer.positionCount = points.Count;
-        lineRenderer.SetPositions(points.ToArray());
-
-        Gradient gradient = new Gradient();
-        gradient.SetKeys(
-            new GradientColorKey[] {
-            new GradientColorKey(Color.white, 0.0f),
-            new GradientColorKey(Color.white, 1.0f)
-            },
-            new GradientAlphaKey[] {
-            new GradientAlphaKey(1.0f, 0.0f),
-            new GradientAlphaKey(1.0f, 1.0f)
-            }
-        );
-
-        lineRenderer.colorGradient = gradient;
-
-        lineRenderer.material.SetFloat("_TilingAmount", vel.magnitude * 1.2f);
+        lineRenderer.material.SetFloat("_TilingAmount", (impulse / rb.mass).magnitude * 1.2f);
     }
 
-    private bool TryGetFirstImpact(
-        Vector2 origin,
-        Vector2 delta,
-        Vector2 castSize,
-        ContactFilter2D obstacleFilter,
-        RaycastHit2D[] hits,
-        out RaycastHit2D firstHit)
+    private PlaneTrajectory.ContactKind ClassifyTrajectoryContact(Collider2D other)
     {
-        firstHit = default;
-        float distance = delta.magnitude;
-        if (distance <= Mathf.Epsilon)
-        {
-            return false;
-        }
+        // A cross means an actual crash, not merely touching a collider.
+        if (!other.isTrigger && other.TryGetComponent<Poison>(out var poison) && poison.isActiveAndEnabled)
+            return PlaneTrajectory.ContactKind.Crash;
+        if (other.TryGetComponent<GroundCollide>(out var ground) && ground.isActiveAndEnabled)
+            return GroundCollide.IsCrashAngle(transform.eulerAngles.z)
+                ? PlaneTrajectory.ContactKind.DangerousGround : PlaneTrajectory.ContactKind.Ground;
+        if (other.TryGetComponent<GroundCollideTuto>(out var tutorialGround) && tutorialGround.isActiveAndEnabled)
+            return PlaneTrajectory.ContactKind.Ground;
+        if (!other.isTrigger)
+            return PlaneTrajectory.ContactKind.Stop;
 
-        int hitCount = Physics2D.BoxCast(
-            origin,
-            castSize,
-            rb.rotation,
-            delta / distance,
-            obstacleFilter,
-            hits,
-            distance);
-
-        float nearestDistance = float.PositiveInfinity;
-        bool found = false;
-
-        for (int i = 0; i < hitCount; i++)
-        {
-            // Un avion posé touche déjà le sol. Les impacts à distance
-            // nulle correspondent à ce contact initial, pas au futur crash.
-            if (hits[i].collider == null || hits[i].distance <= 0.001f || hits[i].distance >= nearestDistance)
-            {
-                continue;
-            }
-
-            nearestDistance = hits[i].distance;
-            firstHit = hits[i];
-            found = true;
-        }
-
-        return found;
+        // These triggers alter/stop the real flight. Do not show an invented path beyond them.
+        if (other.GetComponent<Booster>() != null || other.GetComponent<StopZone>() != null ||
+            other.GetComponent<StopZone1>() != null || other.GetComponent<DetectLanding>() != null ||
+            other.GetComponent<DetectLandingHangar>() != null || other.GetComponent<DetectOutSpace>() != null ||
+            other.GetComponent<GroundSetOutSpace>() != null || other.GetComponent<Pyramid>() != null)
+            return PlaneTrajectory.ContactKind.Stop;
+        return PlaneTrajectory.ContactKind.Ignore;
     }
 
-    private void ShowImpactMarker(RaycastHit2D hit)
+    private bool IsOutsideFlightBounds(Vector2 position)
     {
+        return cameraBounds != null && cameraBounds.isActiveAndEnabled &&
+            cameraBounds.IsOutsideBounds(new Vector3(position.x, position.y, transform.position.z));
+    }
+
+    private void ShowImpactMarker(Vector2 point, Vector2 normal)
+    {
+        if (impactMarkerPrefab == null)
+            return;
         if (activeImpactMarker == null)
         {
-            activeImpactMarker = Instantiate(impactMarkerPrefab, hit.point, Quaternion.identity);
+            activeImpactMarker = Instantiate(impactMarkerPrefab, point, Quaternion.identity);
         }
 
-        activeImpactMarker.transform.position = hit.point;
-        activeImpactMarker.transform.rotation = Quaternion.LookRotation(Vector3.forward, hit.normal);
+        activeImpactMarker.transform.position = point;
+        activeImpactMarker.transform.rotation = Quaternion.LookRotation(Vector3.forward, normal);
         activeImpactMarker.SetActive(true);
+    }
+
+    private void OnDestroy()
+    {
+        if (activeImpactMarker != null)
+            Destroy(activeImpactMarker);
     }
 
     private void HideTrajectoryPreview()

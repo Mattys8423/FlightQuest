@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Unity.VectorGraphics;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -9,6 +10,10 @@ public class Menu_actions : MonoBehaviour
     public void play(int SceneIndex)
     {
         StartCoroutine(WaitAndPlay(SceneIndex));
+    }
+    public void PlayFromMenu(string SceneName)
+    {
+        StartCoroutine(WaitAndPlayName2(SceneName));
     }
 
     public void playlevel(string SceneName)
@@ -40,6 +45,12 @@ public class Menu_actions : MonoBehaviour
     IEnumerator WaitAndPlayName(string SceneName)
     {
         yield return new WaitForSeconds(.25f);
+        SceneManager.LoadScene(SceneName);
+    }
+
+    IEnumerator WaitAndPlayName2(string SceneName)
+    {
+        yield return new WaitForSeconds(1.20f);
         SceneManager.LoadScene(SceneName);
     }
 
