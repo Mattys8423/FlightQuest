@@ -15,6 +15,9 @@ public class ScrollToButton : MonoBehaviour
 
     private void Start()
     {
+        if (scrollRect != null && scrollRect.GetComponent<ScrollClickGuard>() == null)
+            scrollRect.gameObject.AddComponent<ScrollClickGuard>();
+
         StartCoroutine(FindButtonLevelAndScroll());
     }
 

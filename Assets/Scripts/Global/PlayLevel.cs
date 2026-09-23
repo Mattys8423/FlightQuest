@@ -35,6 +35,9 @@ public class PlayLevel : MonoBehaviour
 
     public void playlevel()
     {
+        if (ScrollClickGuard.ShouldSuppressClick)
+            return;
+
         StartCoroutine(WaitAndPlayName(gameObject.name));
     }
 

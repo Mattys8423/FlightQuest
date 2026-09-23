@@ -18,6 +18,9 @@ public class Menu_actions : MonoBehaviour
 
     public void playlevel(string SceneName)
     {
+        if (ScrollClickGuard.ShouldSuppressClick)
+            return;
+
         StartCoroutine(WaitAndPlayName(SceneName));
     }
 
