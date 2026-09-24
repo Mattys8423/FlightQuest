@@ -6,49 +6,49 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MenuScene.unity
+    path: Assets/Scenes/Menus/MenuScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
     path: Assets/Scenes/LevelScene.unity
     guid: fbe04be8eff1a134fbe3408ead1ed750
   - enabled: 1
-    path: Assets/Scenes/ModeScene.unity
+    path: Assets/Scenes/Menus/ModeScene.unity
     guid: 6755bf75b29f3624cac740346c2aeeaf
   - enabled: 1
     path: Assets/Scenes/EndlessModeScene.unity
     guid: 70686152ce58eda4aa9f2f2b54600f1c
   - enabled: 1
-    path: Assets/Scenes/Credits.unity
+    path: Assets/Scenes/Cinematics/Credits.unity
     guid: 2df9d53ae53c7af49a35a15f902634d6
   - enabled: 1
-    path: Assets/Scenes/HangarSpace.unity
+    path: Assets/Scenes/Hangars/HangarSpace.unity
     guid: 4703e6177ac988b4b8e4c7287c314bd3
   - enabled: 1
-    path: Assets/Scenes/Hangar.unity
+    path: Assets/Scenes/Hangars/Hangar.unity
     guid: 12d235c9d08f9104aa888d784caf85d5
   - enabled: 1
-    path: Assets/Scenes/FirstCinematique.unity
+    path: Assets/Scenes/Cinematics/FirstCinematique.unity
     guid: 0c206ff1adbfd5d439c83649d6a384bd
   - enabled: 1
-    path: Assets/Scenes/CineEndTuto.unity
+    path: Assets/Scenes/Cinematics/CineEndTuto.unity
     guid: b89b9b9d6cf37494c9f7f3ca1f2d471f
   - enabled: 1
-    path: Assets/Scenes/NewPlaneCineUn.unity
+    path: Assets/Scenes/Cinematics/NewPlaneCineUn.unity
     guid: f670677a6340c1845b48892fa2ed8200
   - enabled: 1
-    path: Assets/Scenes/NewPlaneCineDeux.unity
+    path: Assets/Scenes/Cinematics/NewPlaneCineDeux.unity
     guid: f4fa6d0bc9d14dc4cb1fbe5346c68f67
   - enabled: 1
-    path: Assets/Scenes/NewPlaneCineTrois.unity
+    path: Assets/Scenes/Cinematics/NewPlaneCineTrois.unity
     guid: b60b454c2bdfb1546a1a032efe0ccf3c
   - enabled: 1
-    path: Assets/Scenes/FalseEndCinematic.unity
+    path: Assets/Scenes/Cinematics/FalseEndCinematic.unity
     guid: 3024bf187adb4f5499874765c81e08b0
   - enabled: 1
-    path: Assets/Scenes/Cinematique.unity
+    path: Assets/Scenes/Cinematics/Cinematique.unity
     guid: 2855ad3c8af8e364b98af6e140be55f1
   - enabled: 1
-    path: Assets/Scenes/EndCinematic.unity
+    path: Assets/Scenes/Cinematics/EndCinematic.unity
     guid: 01880b1689f3bf0488f078aa3fc475e2
   - enabled: 1
     path: Assets/Scenes/review/CineReviewScene.unity
@@ -72,52 +72,52 @@ EditorBuildSettings:
     path: Assets/Scenes/GalaxyEG.unity
     guid: 3734edd10174922479724fcfb95b481d
   - enabled: 1
-    path: Assets/Scenes/LevelSecret.unity
+    path: Assets/Scenes/LevelStory/LevelSecret.unity
     guid: 70fe1eb2d865ef24093894cee72bbcc0
   - enabled: 1
-    path: Assets/Scenes/Level1_Tuto.unity
+    path: Assets/Scenes/LevelStory/Level1_Tuto.unity
     guid: 9809e9ba54db9dc4e96e3a774ab0db6b
   - enabled: 1
-    path: Assets/Scenes/Level2.unity
+    path: Assets/Scenes/LevelStory/Level2.unity
     guid: ac85935f43b29984aa90b93a7d2de99d
   - enabled: 1
-    path: Assets/Scenes/Level3.unity
+    path: Assets/Scenes/LevelStory/Level3.unity
     guid: 2391a6eab11c80841a2a3d7b936f5e51
   - enabled: 1
-    path: Assets/Scenes/Level4.unity
+    path: Assets/Scenes/LevelStory/Level4.unity
     guid: 7e2d505095b0bed48870bb21df3680b0
   - enabled: 1
-    path: Assets/Scenes/Level5.unity
+    path: Assets/Scenes/LevelStory/Level5.unity
     guid: 58b37beedc07a1a45872cc7f609e019e
   - enabled: 1
-    path: Assets/Scenes/Level6.unity
+    path: Assets/Scenes/LevelStory/Level6.unity
     guid: a4bcd030aaf41634d9a943d0803943e3
   - enabled: 1
-    path: Assets/Scenes/Level7.unity
+    path: Assets/Scenes/LevelStory/Level7.unity
     guid: 4d66d37a42f85cf4b8ae2c6a79c3a8e9
   - enabled: 1
-    path: Assets/Scenes/Level8.unity
+    path: Assets/Scenes/LevelStory/Level8.unity
     guid: ad13a20e8b2b7eb469c38f180a0279d3
   - enabled: 1
-    path: Assets/Scenes/Level9.unity
+    path: Assets/Scenes/LevelStory/Level9.unity
     guid: d99c79c8cfca2c24580f93700bade0a0
   - enabled: 1
-    path: Assets/Scenes/Level10.unity
+    path: Assets/Scenes/LevelStory/Level10.unity
     guid: c0b7d1e152fa4b040b6022ffc934d77b
   - enabled: 1
-    path: Assets/Scenes/Level11.unity
+    path: Assets/Scenes/LevelStory/Level11.unity
     guid: 4ae3d2b632eff1c47839c313dc977651
   - enabled: 1
-    path: Assets/Scenes/Level12.unity
+    path: Assets/Scenes/LevelStory/Level12.unity
     guid: 76c0a6886e0b1684e8b5507cab68aacd
   - enabled: 1
-    path: Assets/Scenes/Level13.unity
+    path: Assets/Scenes/LevelStory/Level13.unity
     guid: 29d1ea7ab733ebb43b586e5d3b16424c
   - enabled: 1
-    path: Assets/Scenes/Level14.unity
+    path: Assets/Scenes/LevelStory/Level14.unity
     guid: 8335fce3596576f45a6be4d54a663e30
   - enabled: 1
-    path: Assets/Scenes/Level15.unity
+    path: Assets/Scenes/LevelStory/Level15.unity
     guid: c174d0347cf7c4545acc084c2f6f4032
   - enabled: 1
     path: Assets/Scenes/CamilleLevel.unity
